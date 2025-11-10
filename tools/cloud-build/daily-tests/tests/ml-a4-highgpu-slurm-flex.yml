@@ -16,7 +16,7 @@
 
 # region, zone must be defined in build file with --extra-vars flag!
 test_name: a4h-slurm-flex
-deployment_name: a4h-slurm-flex-{{ build }}
+deployment_name: "{{ build[0:4] }}{{ build[-4:] }}-a4h-slurm-flex"
 slurm_cluster_name: "a4hf{{ build[0:4] }}"
 workspace: /workspace
 blueprint_yaml: "{{ workspace }}/examples/machine-learning/a4-highgpu-8g/a4high-slurm-blueprint.yaml"

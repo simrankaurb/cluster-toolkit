@@ -15,7 +15,7 @@
 ---
 
 test_name: a3h-image
-deployment_name: a3himg{{ build }}
+deployment_name: "{{ build[0:4] }}{{ build[-4:] }}a3himg"
 workspace: /workspace
 blueprint_yaml: "{{ workspace }}/examples/machine-learning/a3-highgpu-8g/ml-slurm-a3-1-image.yaml"
 packer_group_name: slurm-build
