@@ -162,9 +162,6 @@ if [[ "${SUCCESS}" == "true" ]]; then
 
 	sed -i -e '/deletion_protection:/{n;s/enabled: true/enabled: false/}' "${BLUEPRINT_PATH}"
 	sed -i -e '/reason:/d' "${BLUEPRINT_PATH}"
-
-	# sed -i -E 's/^[[:space:]]*(.*reservation_name:)/# &/g' "${BLUEPRINT_PATH}"
-	sed -i -E '/reservation_name:/d' "${BLUEPRINT_PATH}"
 	cat "${BLUEPRINT_PATH}"
 	ansible-playbook tools/cloud-build/daily-tests/ansible_playbooks/slurm-integration-test.yml \
 		--user=sa_106486320838376751393 \
