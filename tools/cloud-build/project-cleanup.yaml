@@ -1,0 +1,203 @@
+# cloudbuild.yaml
+substitutions:
+  _DRY_RUN: "true" # Set to "false" to enable actual deletion
+  _PROJECT_ID: "hpc-toolkit-dev"
+  _EXCLUSION_BUCKET: "hpc-ctk1357" # CHANGE: Your bucket name
+  _EXCLUSION_FILE: "cleanup/exclusions.txt"  # CHANGE: Path to the exclusion file in the bucket
+
+steps:
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: /bin/bash
+  args:
+  - '-c'
+  - |
+    set -e # Exit immediately if a command exits with a non-zero status.
+    set -u # Treat unset variables as an error.
+    set -o pipefail # Return value of a pipeline is the status of the last command to exit with a non-zero status.
+
+    PROJECT_ID="${_PROJECT_ID}"
+    DRY_RUN="${_DRY_RUN}"
+    EXCLUSION_GCS_PATH="gs://${_EXCLUSION_BUCKET}/${_EXCLUSION_FILE}"
+
+    echo "--- STARTING RESOURCE CLEANUP in project $$PROJECT_ID ---"
+    echo "DRY_RUN mode: $$DRY_RUN"
+    echo "Fetching exclusion list from: $$EXCLUSION_GCS_PATH"
+
+    # --- Safety Mechanism: Load Exclusion List from GCS ---
+    EXCLUDE_LIST=()
+    while IFS= read -r line || [[ -n "$$line" ]]; do
+      # Trim whitespace and ignore empty lines or comments
+      trimmed_line=$(echo "$$line" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' | grep -v '^#' | grep -v '^$$')
+      if [[ -n "$$trimmed_line" ]]; then
+        EXCLUDE_LIST+=("$$trimmed_line")
+      fi
+    done < <(gcloud storage cat "$$EXCLUSION_GCS_PATH")
+
+    if [[ $${#EXCLUDE_LIST[@]} -eq 0 ]]; then
+      echo "WARNING: Exclusion list from $$EXCLUSION_GCS_PATH is empty or the file was not found."
+      # exit 1 # Consider exiting if the list is mandatory
+    fi
+
+    echo "Exclusion list loaded with $${#EXCLUDE_LIST[@]} entries:"
+    printf "  - %s\n" "$${EXCLUDE_LIST[@]}"
+
+    is_excluded() {
+      local resource_name="$$1"
+      # Always exclude the default network
+      for excluded in "$${EXCLUDE_LIST[@]}"; do
+        if [[ "$$resource_name" == "$$excluded" ]]; then
+          return 0 # True - is excluded
+        fi
+      done
+      return 1 # False - not excluded
+    }
+
+    run_command() {
+      if [[ "$$DRY_RUN" == "true" ]]; then
+        echo "[DRY RUN] Would run: gcloud $$@"
+      else
+        echo "[EXECUTE] No running"
+      fi
+    }
+
+    echo "--- Deletion Phase 1: GKE Clusters ---"
+    gcloud container clusters list --project="$$PROJECT_ID" --format="value(name,zone)" | while read -r NAME LOCATION; do
+      if ! is_excluded "$$NAME"; then
+        run_command container clusters delete "$$NAME" --project="$$PROJECT_ID" --zone="$$LOCATION" --quiet
+      else
+        echo "Skipping GKE Cluster: $$NAME (In exclusion list)"
+      fi
+    done
+
+    echo "--- Deletion Phase 1: Compute Instances ---"
+    gcloud compute instances list --project="$$PROJECT_ID" --format="value(name,zone)" | while read -r NAME ZONE; do
+      if ! is_excluded "$$NAME"; then
+        run_command compute instances delete "$$NAME" --project="$$PROJECT_ID" --zone="$$ZONE" --quiet
+      else
+        echo "Skipping Instance: $$NAME (In exclusion list)"
+      fi
+    done
+
+    echo "--- Deletion Phase 1: Filestore Instances ---"
+    gcloud filestore instances list --project="$$PROJECT_ID" --format="value(name,location)" | while read -r NAME LOCATION; do
+      if ! is_excluded "$$NAME"; then
+        run_command filestore instances delete "$$NAME" --project="$$PROJECT_ID" --location="$$LOCATION" --quiet
+      else
+        echo "Skipping Filestore: $$NAME (In exclusion list)"
+      fi
+    done
+
+    REGIONS=$(gcloud compute regions list --project="$$PROJECT_ID" --format="value(name)")
+
+    echo "--- Deletion Phase 2: Routers ---"
+    for REGION in $$REGIONS; do
+      gcloud compute routers list --project="$$PROJECT_ID" --filter="region:($$REGION)" --format="value(name)" | while read -r NAME; do
+        if ! is_excluded "$$NAME"; then
+          run_command compute routers delete "$$NAME" --project="$$PROJECT_ID" --region="$$REGION" --quiet
+        else
+          echo "Skipping Router: $$NAME in $$REGION (In exclusion list)"
+        fi
+      done
+    done
+
+    echo "--- Deletion Phase 2: Firewall Rules ---"
+    gcloud compute firewall-rules list --project="$$PROJECT_ID" --format="value(name,network)" | while read -r NAME NETWORK; do
+      NETWORK_NAME=$(basename "$$NETWORK")
+      if ! is_excluded "$$NAME"; then
+         if [[ "$$NETWORK_NAME" == "default" ]]; then
+            echo "Skipping Firewall: $$NAME (On default network, not typically managed by tests)"
+            continue
+         fi
+         run_command compute firewall-rules delete "$$NAME" --project="$$PROJECT_ID" --quiet
+      else
+        echo "Skipping Firewall: $$NAME (In exclusion list)"
+      fi
+    done
+
+    echo "--- Deletion Phase 3: Service Networking Connections ---"
+    gcloud compute networks list --project="$$PROJECT_ID" --format="value(name)" | while read -r NETWORK_NAME; do
+      if is_excluded "$$NETWORK_NAME"; then
+        echo "Skipping Service Networking deletion for excluded network: $$NETWORK_NAME"
+        continue
+      fi
+
+      echo "Attempting to remove Service Networking connection from network: $$NETWORK_NAME"
+      # The --service defaults to servicenetworking.googleapis.com
+      # This command will not fail the script if the connection doesn't exist.
+      run_command services vpc-peerings delete --network="$$NETWORK_NAME" --project="$$PROJECT_ID" --quiet
+    done
+
+    echo "--- Deletion Phase 4: Subnetworks ---"
+    for REGION in $$REGIONS; do
+      gcloud compute networks subnets list --project="$$PROJECT_ID" --filter="region:($$REGION)" --format="value(name,network)" | while read -r NAME NETWORK; do
+        NETWORK_NAME=$(basename "$$NETWORK")
+        if ! is_excluded "$$NAME"; then
+          run_command compute networks subnets delete "$$NAME" --project="$$PROJECT_ID" --region="$$REGION" --quiet
+        else
+          echo "Skipping Subnet: $$NAME in $$REGION (In exclusion list)"
+        fi
+      done
+    done
+
+    echo "--- Deletion Phase 5: Networks ---"
+    gcloud compute networks list --project="$$PROJECT_ID" --format="value(name)" | while read -r NAME; do
+      if ! is_excluded "$$NAME"; then
+        run_command compute networks delete "$$NAME" --project="$$PROJECT_ID" --quiet
+      else
+        echo "Skipping Network: $$NAME (In exclusion list or is default)"
+      fi
+    done
+
+    echo "--- Deletion Phase 6: Instance Templates ---"
+    gcloud compute instance-templates list --project="$$PROJECT_ID" --format="value(name)" | while read -r NAME; do
+      if ! is_excluded "$$NAME"; then
+        run_command compute instance-templates delete "$$NAME" --project="$$PROJECT_ID" --quiet
+      else
+        echo "Skipping Instance Template: $$NAME (In exclusion list)"
+      fi
+    done
+
+    echo "--- Deletion Phase 7: Disks ---"
+    gcloud compute disks list --project="$$PROJECT_ID" --format="value(name,zone)" | while read -r NAME ZONE; do
+      if ! is_excluded "$$NAME"; then
+        run_command compute disks delete "$$NAME" --project="$$PROJECT_ID" --zone="$$ZONE" --quiet
+      else
+        echo "Skipping Disk: $$NAME (In exclusion list)"
+      fi
+    done
+
+    echo "--- Deletion Phase 8: Addresses ---"
+    for REGION in $$REGIONS; do
+      gcloud compute addresses list --project="$$PROJECT_ID" --filter="region:($$REGION)" --format="value(name)" | while read -r NAME; do
+        if ! is_excluded "$$NAME"; then
+          run_command compute addresses delete "$$NAME" --project="$$PROJECT_ID" --region="$$REGION" --quiet
+        else
+          echo "Skipping Address: $$NAME in $$REGION (In exclusion list)"
+        fi
+      done
+    done
+    gcloud compute addresses list --project="$$PROJECT_ID" --global --format="value(name)" | while read -r NAME; do
+      if ! is_excluded "$$NAME"; then
+        run_command compute addresses delete "$$NAME" --project="$$PROJECT_ID" --global --quiet
+      else
+        echo "Skipping Global Address: $$NAME (In exclusion list)"
+      fi
+    done
+
+    echo "--- Deletion Phase 9: GCS Buckets (CAUTION) ---"
+    gcloud storage ls --project="$$PROJECT_ID" | while read -r BUCKET; do
+      BUCKET_NAME=$(echo "$$BUCKET" | sed 's|gs://||; s|/||')
+      if ! is_excluded "$$BUCKET_NAME"; then
+         if [[ "$$DRY_RUN" == "true" ]]; then
+           echo "[DRY RUN - BUCKET] Would run: gcloud storage rm -r $$BUCKET"
+         else
+           echo "[EXECUTE - BUCKET] Running: gcloud storage rm -r $$BUCKET"
+           gcloud storage rm -r "$$BUCKET"
+         fi
+      else
+        echo "Skipping Bucket: $$BUCKET_NAME (In exclusion list)"
+      fi
+    done
+
+    echo "--- CLEANUP SCRIPT FINISHED ---"
+
