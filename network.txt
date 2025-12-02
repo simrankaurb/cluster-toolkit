@@ -1,0 +1,2708 @@
+--- Thu Nov 27 09:55:54 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T05:55:54+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 60 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+lustre-06-primary-subnet in us-central1
+lustre-test-06-primary-subnet in us-central1
+--- Processing Subnet: lustre-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-06-primary-subnet in us-central1.
+[EXECUTE] Subnetwork: Deleting lustre-06-primary-subnet in us-central1
+ERROR: (gcloud.compute.networks.subnets.delete) Could not fetch resource:
+ - The subnetwork resource 'projects/hpc-toolkit-dev/regions/us-central1/subnetworks/lustre-06-primary-subnet' is already being used by 'projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustre06-slurm-login-001'
+
+ERROR: Failed to delete Subnetwork lustre-06-primary-subnet in us-central1. Check for other dependencies.
+--- Processing Subnet: lustre-test-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-test-06-primary-subnet in us-central1.
+[EXECUTE] Subnetwork: Deleting lustre-test-06-primary-subnet in us-central1
+ERROR: (gcloud.compute.networks.subnets.delete) Could not fetch resource:
+ - The subnetwork resource 'projects/hpc-toolkit-dev/regions/us-central1/subnetworks/lustre-test-06-primary-subnet' is already being used by 'projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustretest-controller'
+
+ERROR: Failed to delete Subnetwork lustre-test-06-primary-subnet in us-central1. Check for other dependencies.
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+The following Networks are targeted for deletion in this run:
+a3u-onspot-slurm-829610-net-0
+a3u-slurm-net
+a4hsarthakag-net
+a4htest-net-0
+a4newimgek-net
+a4newimgek-net-0
+a4newimgek-net-1
+a4newimgek-rdma-net
+a4oldimgek-net
+a4oldimgek-net-0
+a4oldimgek-net-1
+a4oldimgek-rdma-net
+a4oldimg-net
+a4xlavhpcnew-a4x-net-0
+a4xlavhpcnew-a4x-net-1
+a4xlavhpcnew-a4x-rdma-net
+a4xslurm-net
+cx-a3u-net-0
+db451c7-ml-slurm-v6-net
+dynpoc-net
+g4-dwsq-1-net-1
+g4qclav-net
+gke-1395b4-net
+gke-managed-lustre-basic-net
+h4d-cluster-rdma-net-0
+h4dqc-net
+h4dqc-rdma-net-0
+h4d-res-swarnabm4-3-net
+h4d-res-swarnabm4-3-rdma-net
+hanu-a3u-net
+[EXECUTE] Network: Deleting a3u-onspot-slurm-829610-net-0
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/a3u-onspot-slurm-829610-net-0' is already being used by 'projects/hpc-toolkit-dev/global/routes/default-route-ea3b20e196a82d45'
+
+[EXECUTE] Network: Deleting a3u-slurm-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/global/networks/a3u-slurm-net' was not found
+
+[EXECUTE] Network: Deleting a4hsarthakag-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/a4hsarthakag-net' is already being used by 'projects/hpc-toolkit-dev/global/routes/default-route-6884ebdc9d4edd99'
+
+[EXECUTE] Network: Deleting a4htest-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4htest-net-0].
+[EXECUTE] Network: Deleting a4newimgek-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4newimgek-net].
+[EXECUTE] Network: Deleting a4newimgek-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4newimgek-net-0].
+[EXECUTE] Network: Deleting a4newimgek-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4newimgek-net-1].
+[EXECUTE] Network: Deleting a4newimgek-rdma-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4newimgek-rdma-net].
+[EXECUTE] Network: Deleting a4oldimgek-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4oldimgek-net].
+[EXECUTE] Network: Deleting a4oldimgek-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4oldimgek-net-0].
+[EXECUTE] Network: Deleting a4oldimgek-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4oldimgek-net-1].
+[EXECUTE] Network: Deleting a4oldimgek-rdma-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4oldimgek-rdma-net].
+[EXECUTE] Network: Deleting a4oldimg-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4oldimg-net].
+[EXECUTE] Network: Deleting a4xlavhpcnew-a4x-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4xlavhpcnew-a4x-net-0].
+[EXECUTE] Network: Deleting a4xlavhpcnew-a4x-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4xlavhpcnew-a4x-net-1].
+[EXECUTE] Network: Deleting a4xlavhpcnew-a4x-rdma-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4xlavhpcnew-a4x-rdma-net].
+[EXECUTE] Network: Deleting a4xslurm-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4xslurm-net].
+[EXECUTE] Network: Deleting cx-a3u-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/cx-a3u-net-0].
+[EXECUTE] Network: Deleting db451c7-ml-slurm-v6-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/db451c7-ml-slurm-v6-net].
+[EXECUTE] Network: Deleting dynpoc-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/dynpoc-net].
+[EXECUTE] Network: Deleting g4-dwsq-1-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/g4-dwsq-1-net-1].
+[EXECUTE] Network: Deleting g4qclav-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/g4qclav-net].
+[EXECUTE] Network: Deleting gke-1395b4-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/gke-1395b4-net].
+[EXECUTE] Network: Deleting gke-managed-lustre-basic-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/gke-managed-lustre-basic-net' is already being used by 'projects/hpc-toolkit-dev/global/firewalls/gke-managed-lustre-basic-net-fw-allow-iap-ingress'
+
+[EXECUTE] Network: Deleting h4d-cluster-rdma-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/h4d-cluster-rdma-net-0].
+[EXECUTE] Network: Deleting h4dqc-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/h4dqc-net].
+[EXECUTE] Network: Deleting h4dqc-rdma-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/h4dqc-rdma-net-0].
+[EXECUTE] Network: Deleting h4d-res-swarnabm4-3-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/h4d-res-swarnabm4-3-net].
+[EXECUTE] Network: Deleting h4d-res-swarnabm4-3-rdma-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/h4d-res-swarnabm4-3-rdma-net].
+[EXECUTE] Network: Deleting hanu-a3u-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hanu-a3u-net].
+./cleanup.sh: line 470: syntax error near unexpected token `then'
+./cleanup.sh: line 470: ` then'
+--- Thu Nov 27 10:14:54 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T06:14:54+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 60 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+lustre-06-primary-subnet in us-central1
+lustre-test-06-primary-subnet in us-central1
+--- Processing Subnet: lustre-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-06-primary-subnet in us-central1.
+[DRY RUN] Subnetwork: Would delete lustre-06-primary-subnet in us-central1
+  Command: gcloud compute networks subnets delete "lustre-06-primary-subnet" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Processing Subnet: lustre-test-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-test-06-primary-subnet in us-central1.
+[DRY RUN] Subnetwork: Would delete lustre-test-06-primary-subnet in us-central1
+  Command: gcloud compute networks subnets delete "lustre-test-06-primary-subnet" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+a3u-onspot-slurm-829610-net-0
+a4hsarthakag-net
+gke-managed-lustre-basic-net
+hanu-test-net
+hpc-01-net
+hpcdydis-net
+hpcdy-net
+hpc-exr-2-net-0
+hpcimg-net
+hpc-lustre-test-02-net
+khu-h4d-cluster-test-net
+khu-h4d-cluster-test-rdma-net-0
+laveeek29-net-0
+laveeek29-net-1
+laveeek29-net
+laveeek29-rdma-net
+lavoldchk-net
+lavold-net
+lavrohek29-net-0
+lustre-06-net
+lustre-test-06-net
+mainek-net-0
+mainek-net-1
+mainek-net
+mainek-rdma-net
+managed-lustre-03-net
+mglsa-net
+mglsard-net
+ml-gke-e2e-a8fae6-net
+ml-gke-net
+--- Processing Network: a3u-onspot-slurm-829610-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-ea3b20e196a82d45 for network a3u-onspot-slurm-829610-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete a3u-onspot-slurm-829610-net-0
+  Command: gcloud compute networks delete "a3u-onspot-slurm-829610-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: a4hsarthakag-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-6884ebdc9d4edd99 for network a4hsarthakag-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete a4hsarthakag-net
+  Command: gcloud compute networks delete "a4hsarthakag-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: gke-managed-lustre-basic-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-98972e97de7c239b for network gke-managed-lustre-basic-net
+Checking for dependent firewall rules...
+[DRY RUN] Firewall Rule: Would delete gke-managed-lustre-basic-net-fw-allow-iap-ingress for network gke-managed-lustre-basic-net
+[DRY RUN] Firewall Rule: Would delete gke-managed-lustre-basic-net-fw-allow-internal-traffic for network gke-managed-lustre-basic-net
+[DRY RUN] Network: Would delete gke-managed-lustre-basic-net
+  Command: gcloud compute networks delete "gke-managed-lustre-basic-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hanu-test-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-d487416773e0d26a for network hanu-test-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hanu-test-net
+  Command: gcloud compute networks delete "hanu-test-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpc-01-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-bff8e31ecb82ca1f for network hpc-01-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpc-01-net
+  Command: gcloud compute networks delete "hpc-01-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpcdydis-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-83226775efe0e36f for network hpcdydis-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpcdydis-net
+  Command: gcloud compute networks delete "hpcdydis-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpcdy-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-11ccedffb21834f9 for network hpcdy-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpcdy-net
+  Command: gcloud compute networks delete "hpcdy-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpc-exr-2-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-ca20f8f43f32a6ad for network hpc-exr-2-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpc-exr-2-net-0
+  Command: gcloud compute networks delete "hpc-exr-2-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpcimg-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-78cfceb7232d782e for network hpcimg-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpcimg-net
+  Command: gcloud compute networks delete "hpcimg-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpc-lustre-test-02-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-0d79bd2bca25d91e for network hpc-lustre-test-02-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpc-lustre-test-02-net
+  Command: gcloud compute networks delete "hpc-lustre-test-02-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: khu-h4d-cluster-test-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-87a3ee47eaab9ab6 for network khu-h4d-cluster-test-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete khu-h4d-cluster-test-net
+  Command: gcloud compute networks delete "khu-h4d-cluster-test-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: khu-h4d-cluster-test-rdma-net-0 ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete khu-h4d-cluster-test-rdma-net-0
+  Command: gcloud compute networks delete "khu-h4d-cluster-test-rdma-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-1a384a0ae7610067 for network laveeek29-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-net-0
+  Command: gcloud compute networks delete "laveeek29-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-net-1 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-70d6a0878f6e1100 for network laveeek29-net-1
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-net-1
+  Command: gcloud compute networks delete "laveeek29-net-1" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-1a384a0ae7610067 for network laveeek29-net
+[DRY RUN] Route: Would delete default-route-3f3b00742a1eca0f for network laveeek29-net
+[DRY RUN] Route: Would delete default-route-70d6a0878f6e1100 for network laveeek29-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-net
+  Command: gcloud compute networks delete "laveeek29-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-rdma-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-rdma-net
+  Command: gcloud compute networks delete "laveeek29-rdma-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lavoldchk-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-5df8aadab663ab36 for network lavoldchk-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lavoldchk-net
+  Command: gcloud compute networks delete "lavoldchk-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lavold-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-6e021fe7f303c1fe for network lavold-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lavold-net
+  Command: gcloud compute networks delete "lavold-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lavrohek29-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-3af10cb6b3f7804e for network lavrohek29-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lavrohek29-net-0
+  Command: gcloud compute networks delete "lavrohek29-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-a798499d8bf40405 for network lustre-06-net
+[DRY RUN] Route: Would delete default-route-r-d1138650da68a40d for network lustre-06-net
+[DRY RUN] Route: Would delete peering-route-ce292d9a6fb17bbc for network lustre-06-net
+Checking for dependent firewall rules...
+[DRY RUN] Firewall Rule: Would delete lustre-06-net-fw-allow-iap-ingress for network lustre-06-net
+[DRY RUN] Firewall Rule: Would delete lustre-06-net-fw-allow-internal-traffic for network lustre-06-net
+[DRY RUN] Network: Would delete lustre-06-net
+  Command: gcloud compute networks delete "lustre-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-test-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-799f13a785b25782 for network lustre-test-06-net
+[DRY RUN] Route: Would delete default-route-r-802e2cad48aae840 for network lustre-test-06-net
+[DRY RUN] Route: Would delete peering-route-2273ac2f3dccd077 for network lustre-test-06-net
+Checking for dependent firewall rules...
+[DRY RUN] Firewall Rule: Would delete lustre-test-06-net-fw-allow-iap-ingress for network lustre-test-06-net
+[DRY RUN] Firewall Rule: Would delete lustre-test-06-net-fw-allow-internal-traffic for network lustre-test-06-net
+[DRY RUN] Network: Would delete lustre-test-06-net
+  Command: gcloud compute networks delete "lustre-test-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-4dce75664c4c0cf2 for network mainek-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-net-0
+  Command: gcloud compute networks delete "mainek-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-net-1 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-ceb2655d4bb6b336 for network mainek-net-1
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-net-1
+  Command: gcloud compute networks delete "mainek-net-1" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-4dce75664c4c0cf2 for network mainek-net
+[DRY RUN] Route: Would delete default-route-936046db1078bf03 for network mainek-net
+[DRY RUN] Route: Would delete default-route-ceb2655d4bb6b336 for network mainek-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-net
+  Command: gcloud compute networks delete "mainek-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-rdma-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-rdma-net
+  Command: gcloud compute networks delete "mainek-rdma-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: managed-lustre-03-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-912e02dbc2c43267 for network managed-lustre-03-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete managed-lustre-03-net
+  Command: gcloud compute networks delete "managed-lustre-03-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsa-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-111ca8b8a3346fb4 for network mglsa-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsa-net
+  Command: gcloud compute networks delete "mglsa-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsard-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-4afd256f7ddc3be2 for network mglsard-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsard-net
+  Command: gcloud compute networks delete "mglsard-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: ml-gke-e2e-a8fae6-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-2c3a152cc75c7587 for network ml-gke-e2e-a8fae6-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete ml-gke-e2e-a8fae6-net
+  Command: gcloud compute networks delete "ml-gke-e2e-a8fae6-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: ml-gke-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-1dadbcd4c82ffb80 for network ml-gke-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete ml-gke-net
+  Command: gcloud compute networks delete "ml-gke-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 10:17:13 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 10:17:29 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T06:17:29+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 56 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+lustre06-controller us-central1-a
+lustre06-slurm-login-001 us-central1-a
+lustretest-controller us-central1-a
+lustretest-slurm-login-001 us-central1-a
+ gcloud compute instances delete "lustre06-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+ gcloud compute instances delete "lustre06-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+ gcloud compute instances delete "lustretest-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+ gcloud compute instances delete "lustretest-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+lustre-06-primary-subnet in us-central1
+lustre-test-06-primary-subnet in us-central1
+--- Processing Subnet: lustre-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-06-primary-subnet in us-central1.
+[DRY RUN] Subnetwork: Would delete lustre-06-primary-subnet in us-central1
+  Command: gcloud compute networks subnets delete "lustre-06-primary-subnet" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Processing Subnet: lustre-test-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-test-06-primary-subnet in us-central1.
+[DRY RUN] Subnetwork: Would delete lustre-test-06-primary-subnet in us-central1
+  Command: gcloud compute networks subnets delete "lustre-test-06-primary-subnet" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+a3u-onspot-slurm-829610-net-0
+a4hsarthakag-net
+gke-managed-lustre-basic-net
+hanu-test-net
+hpc-01-net
+hpcdydis-net
+hpcdy-net
+hpc-exr-2-net-0
+hpcimg-net
+hpc-lustre-test-02-net
+khu-h4d-cluster-test-net
+khu-h4d-cluster-test-rdma-net-0
+laveeek29-net-0
+laveeek29-net-1
+laveeek29-net
+laveeek29-rdma-net
+lavoldchk-net
+lavold-net
+lavrohek29-net-0
+lustre-06-net
+lustre-test-06-net
+mainek-net-0
+mainek-net-1
+mainek-net
+mainek-rdma-net
+managed-lustre-03-net
+mglsa-net
+mglsard-net
+ml-gke-e2e-a8fae6-net
+ml-gke-net
+--- Processing Network: a3u-onspot-slurm-829610-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-ea3b20e196a82d45 for network a3u-onspot-slurm-829610-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete a3u-onspot-slurm-829610-net-0
+  Command: gcloud compute networks delete "a3u-onspot-slurm-829610-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: a4hsarthakag-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-6884ebdc9d4edd99 for network a4hsarthakag-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete a4hsarthakag-net
+  Command: gcloud compute networks delete "a4hsarthakag-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: gke-managed-lustre-basic-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-98972e97de7c239b for network gke-managed-lustre-basic-net
+Checking for dependent firewall rules...
+[DRY RUN] Firewall Rule: Would delete gke-managed-lustre-basic-net-fw-allow-iap-ingress for network gke-managed-lustre-basic-net
+[DRY RUN] Firewall Rule: Would delete gke-managed-lustre-basic-net-fw-allow-internal-traffic for network gke-managed-lustre-basic-net
+[DRY RUN] Network: Would delete gke-managed-lustre-basic-net
+  Command: gcloud compute networks delete "gke-managed-lustre-basic-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hanu-test-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-d487416773e0d26a for network hanu-test-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hanu-test-net
+  Command: gcloud compute networks delete "hanu-test-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpc-01-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-bff8e31ecb82ca1f for network hpc-01-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpc-01-net
+  Command: gcloud compute networks delete "hpc-01-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpcdydis-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-83226775efe0e36f for network hpcdydis-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpcdydis-net
+  Command: gcloud compute networks delete "hpcdydis-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpcdy-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-11ccedffb21834f9 for network hpcdy-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpcdy-net
+  Command: gcloud compute networks delete "hpcdy-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpc-exr-2-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-ca20f8f43f32a6ad for network hpc-exr-2-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpc-exr-2-net-0
+  Command: gcloud compute networks delete "hpc-exr-2-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpcimg-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-78cfceb7232d782e for network hpcimg-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpcimg-net
+  Command: gcloud compute networks delete "hpcimg-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: hpc-lustre-test-02-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-0d79bd2bca25d91e for network hpc-lustre-test-02-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete hpc-lustre-test-02-net
+  Command: gcloud compute networks delete "hpc-lustre-test-02-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: khu-h4d-cluster-test-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-87a3ee47eaab9ab6 for network khu-h4d-cluster-test-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete khu-h4d-cluster-test-net
+  Command: gcloud compute networks delete "khu-h4d-cluster-test-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: khu-h4d-cluster-test-rdma-net-0 ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete khu-h4d-cluster-test-rdma-net-0
+  Command: gcloud compute networks delete "khu-h4d-cluster-test-rdma-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-1a384a0ae7610067 for network laveeek29-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-net-0
+  Command: gcloud compute networks delete "laveeek29-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-net-1 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-70d6a0878f6e1100 for network laveeek29-net-1
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-net-1
+  Command: gcloud compute networks delete "laveeek29-net-1" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-1a384a0ae7610067 for network laveeek29-net
+[DRY RUN] Route: Would delete default-route-3f3b00742a1eca0f for network laveeek29-net
+[DRY RUN] Route: Would delete default-route-70d6a0878f6e1100 for network laveeek29-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-net
+  Command: gcloud compute networks delete "laveeek29-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: laveeek29-rdma-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete laveeek29-rdma-net
+  Command: gcloud compute networks delete "laveeek29-rdma-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lavoldchk-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-5df8aadab663ab36 for network lavoldchk-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lavoldchk-net
+  Command: gcloud compute networks delete "lavoldchk-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lavold-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-6e021fe7f303c1fe for network lavold-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lavold-net
+  Command: gcloud compute networks delete "lavold-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lavrohek29-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-3af10cb6b3f7804e for network lavrohek29-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lavrohek29-net-0
+  Command: gcloud compute networks delete "lavrohek29-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-a798499d8bf40405 for network lustre-06-net
+[DRY RUN] Route: Would delete default-route-r-d1138650da68a40d for network lustre-06-net
+[DRY RUN] Route: Would delete peering-route-ce292d9a6fb17bbc for network lustre-06-net
+Checking for dependent firewall rules...
+[DRY RUN] Firewall Rule: Would delete lustre-06-net-fw-allow-iap-ingress for network lustre-06-net
+[DRY RUN] Firewall Rule: Would delete lustre-06-net-fw-allow-internal-traffic for network lustre-06-net
+[DRY RUN] Network: Would delete lustre-06-net
+  Command: gcloud compute networks delete "lustre-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-test-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-799f13a785b25782 for network lustre-test-06-net
+[DRY RUN] Route: Would delete default-route-r-802e2cad48aae840 for network lustre-test-06-net
+[DRY RUN] Route: Would delete peering-route-2273ac2f3dccd077 for network lustre-test-06-net
+Checking for dependent firewall rules...
+[DRY RUN] Firewall Rule: Would delete lustre-test-06-net-fw-allow-iap-ingress for network lustre-test-06-net
+[DRY RUN] Firewall Rule: Would delete lustre-test-06-net-fw-allow-internal-traffic for network lustre-test-06-net
+[DRY RUN] Network: Would delete lustre-test-06-net
+  Command: gcloud compute networks delete "lustre-test-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-4dce75664c4c0cf2 for network mainek-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-net-0
+  Command: gcloud compute networks delete "mainek-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-net-1 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-ceb2655d4bb6b336 for network mainek-net-1
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-net-1
+  Command: gcloud compute networks delete "mainek-net-1" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-4dce75664c4c0cf2 for network mainek-net
+[DRY RUN] Route: Would delete default-route-936046db1078bf03 for network mainek-net
+[DRY RUN] Route: Would delete default-route-ceb2655d4bb6b336 for network mainek-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-net
+  Command: gcloud compute networks delete "mainek-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mainek-rdma-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mainek-rdma-net
+  Command: gcloud compute networks delete "mainek-rdma-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: managed-lustre-03-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-912e02dbc2c43267 for network managed-lustre-03-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete managed-lustre-03-net
+  Command: gcloud compute networks delete "managed-lustre-03-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsa-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-111ca8b8a3346fb4 for network mglsa-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsa-net
+  Command: gcloud compute networks delete "mglsa-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsard-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-4afd256f7ddc3be2 for network mglsard-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsard-net
+  Command: gcloud compute networks delete "mglsard-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: ml-gke-e2e-a8fae6-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-2c3a152cc75c7587 for network ml-gke-e2e-a8fae6-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete ml-gke-e2e-a8fae6-net
+  Command: gcloud compute networks delete "ml-gke-e2e-a8fae6-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: ml-gke-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-1dadbcd4c82ffb80 for network ml-gke-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete ml-gke-net
+  Command: gcloud compute networks delete "ml-gke-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 10:19:45 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 10:19:57 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T06:19:57+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 50 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+lustre06-controller us-central1-a
+lustre06-slurm-login-001 us-central1-a
+lustretest-controller us-central1-a
+lustretest-slurm-login-001 us-central1-a
+[EXECUTE] Instance: Deleting lustre06-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustre06-controller].
+[EXECUTE] Instance: Deleting lustre06-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustre06-slurm-login-001].
+[EXECUTE] Instance: Deleting lustretest-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustretest-controller].
+[EXECUTE] Instance: Deleting lustretest-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustretest-slurm-login-001].
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+lustre-06-net-router us-central1
+lustre-test-06-net-router us-central1
+[EXECUTE] Cloud Router: Deleting lustre-06-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/lustre-06-net-router].
+[EXECUTE] Cloud Router: Deleting lustre-test-06-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/lustre-test-06-net-router].
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+lustre-06-net-fw-allow-iap-ingress
+lustre-06-net-fw-allow-internal-traffic
+lustre-test-06-net-fw-allow-iap-ingress
+lustre-test-06-net-fw-allow-internal-traffic
+[EXECUTE] Firewall Rule: Deleting lustre-06-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lustre-06-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting lustre-06-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lustre-06-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting lustre-test-06-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lustre-test-06-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting lustre-test-06-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lustre-test-06-net-fw-allow-internal-traffic].
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+lustre-06-primary-subnet in us-central1
+lustre-test-06-primary-subnet in us-central1
+--- Processing Subnet: lustre-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-06-primary-subnet in us-central1.
+[EXECUTE] Subnetwork: Deleting lustre-06-primary-subnet in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/subnetworks/lustre-06-primary-subnet].
+Successfully deleted Subnetwork lustre-06-primary-subnet in us-central1.
+--- Processing Subnet: lustre-test-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-test-06-primary-subnet in us-central1.
+[EXECUTE] Subnetwork: Deleting lustre-test-06-primary-subnet in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/subnetworks/lustre-test-06-primary-subnet].
+Successfully deleted Subnetwork lustre-test-06-primary-subnet in us-central1.
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+a3u-onspot-slurm-829610-net-0
+a4hsarthakag-net
+gke-managed-lustre-basic-net
+hanu-test-net
+hpc-01-net
+hpcdydis-net
+hpcdy-net
+hpc-exr-2-net-0
+hpcimg-net
+hpc-lustre-test-02-net
+khu-h4d-cluster-test-net
+khu-h4d-cluster-test-rdma-net-0
+laveeek29-net-0
+laveeek29-net-1
+laveeek29-net
+laveeek29-rdma-net
+lavoldchk-net
+lavold-net
+lavrohek29-net-0
+lustre-06-net
+lustre-test-06-net
+mainek-net-0
+mainek-net-1
+mainek-net
+mainek-rdma-net
+managed-lustre-03-net
+mglsa-net
+mglsard-net
+ml-gke-e2e-a8fae6-net
+ml-gke-net
+--- Processing Network: a3u-onspot-slurm-829610-net-0 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-ea3b20e196a82d45 for network a3u-onspot-slurm-829610-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-ea3b20e196a82d45].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting a3u-onspot-slurm-829610-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a3u-onspot-slurm-829610-net-0].
+Successfully deleted Network a3u-onspot-slurm-829610-net-0.
+--- Processing Network: a4hsarthakag-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-6884ebdc9d4edd99 for network a4hsarthakag-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-6884ebdc9d4edd99].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting a4hsarthakag-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/a4hsarthakag-net].
+Successfully deleted Network a4hsarthakag-net.
+--- Processing Network: gke-managed-lustre-basic-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-98972e97de7c239b for network gke-managed-lustre-basic-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-98972e97de7c239b].
+Checking for dependent firewall rules...
+[EXECUTE] Firewall Rule: Deleting gke-managed-lustre-basic-net-fw-allow-iap-ingress for network gke-managed-lustre-basic-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/gke-managed-lustre-basic-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting gke-managed-lustre-basic-net-fw-allow-internal-traffic for network gke-managed-lustre-basic-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/gke-managed-lustre-basic-net-fw-allow-internal-traffic].
+[EXECUTE] Network: Deleting gke-managed-lustre-basic-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/gke-managed-lustre-basic-net].
+Successfully deleted Network gke-managed-lustre-basic-net.
+--- Processing Network: hanu-test-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-d487416773e0d26a for network hanu-test-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-d487416773e0d26a].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting hanu-test-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hanu-test-net].
+Successfully deleted Network hanu-test-net.
+--- Processing Network: hpc-01-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-bff8e31ecb82ca1f for network hpc-01-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-bff8e31ecb82ca1f].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting hpc-01-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hpc-01-net].
+Successfully deleted Network hpc-01-net.
+--- Processing Network: hpcdydis-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-83226775efe0e36f for network hpcdydis-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-83226775efe0e36f].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting hpcdydis-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hpcdydis-net].
+Successfully deleted Network hpcdydis-net.
+--- Processing Network: hpcdy-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-11ccedffb21834f9 for network hpcdy-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-11ccedffb21834f9].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting hpcdy-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hpcdy-net].
+Successfully deleted Network hpcdy-net.
+--- Processing Network: hpc-exr-2-net-0 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-ca20f8f43f32a6ad for network hpc-exr-2-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-ca20f8f43f32a6ad].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting hpc-exr-2-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hpc-exr-2-net-0].
+Successfully deleted Network hpc-exr-2-net-0.
+--- Processing Network: hpcimg-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-78cfceb7232d782e for network hpcimg-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-78cfceb7232d782e].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting hpcimg-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hpcimg-net].
+Successfully deleted Network hpcimg-net.
+--- Processing Network: hpc-lustre-test-02-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-0d79bd2bca25d91e for network hpc-lustre-test-02-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-0d79bd2bca25d91e].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting hpc-lustre-test-02-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/hpc-lustre-test-02-net].
+Successfully deleted Network hpc-lustre-test-02-net.
+--- Processing Network: khu-h4d-cluster-test-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-87a3ee47eaab9ab6 for network khu-h4d-cluster-test-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-87a3ee47eaab9ab6].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting khu-h4d-cluster-test-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/khu-h4d-cluster-test-net].
+Successfully deleted Network khu-h4d-cluster-test-net.
+--- Processing Network: khu-h4d-cluster-test-rdma-net-0 ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting khu-h4d-cluster-test-rdma-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/khu-h4d-cluster-test-rdma-net-0].
+Successfully deleted Network khu-h4d-cluster-test-rdma-net-0.
+--- Processing Network: laveeek29-net-0 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-1a384a0ae7610067 for network laveeek29-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-1a384a0ae7610067].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting laveeek29-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/laveeek29-net-0].
+Successfully deleted Network laveeek29-net-0.
+--- Processing Network: laveeek29-net-1 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-70d6a0878f6e1100 for network laveeek29-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-70d6a0878f6e1100].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting laveeek29-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/laveeek29-net-1].
+Successfully deleted Network laveeek29-net-1.
+--- Processing Network: laveeek29-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-3f3b00742a1eca0f for network laveeek29-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-3f3b00742a1eca0f].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting laveeek29-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/laveeek29-net].
+Successfully deleted Network laveeek29-net.
+--- Processing Network: laveeek29-rdma-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting laveeek29-rdma-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/laveeek29-rdma-net].
+Successfully deleted Network laveeek29-rdma-net.
+--- Processing Network: lavoldchk-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-5df8aadab663ab36 for network lavoldchk-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-5df8aadab663ab36].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting lavoldchk-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/lavoldchk-net].
+Successfully deleted Network lavoldchk-net.
+--- Processing Network: lavold-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-6e021fe7f303c1fe for network lavold-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-6e021fe7f303c1fe].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting lavold-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/lavold-net].
+Successfully deleted Network lavold-net.
+--- Processing Network: lavrohek29-net-0 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-3af10cb6b3f7804e for network lavrohek29-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-3af10cb6b3f7804e].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting lavrohek29-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/lavrohek29-net-0].
+Successfully deleted Network lavrohek29-net-0.
+--- Processing Network: lustre-06-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-a798499d8bf40405 for network lustre-06-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-a798499d8bf40405].
+[EXECUTE] Route: Deleting peering-route-ce292d9a6fb17bbc for network lustre-06-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-ce292d9a6fb17bbc
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting lustre-06-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/lustre-06-net].
+Successfully deleted Network lustre-06-net.
+--- Processing Network: lustre-test-06-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-799f13a785b25782 for network lustre-test-06-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-799f13a785b25782].
+[EXECUTE] Route: Deleting peering-route-2273ac2f3dccd077 for network lustre-test-06-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-2273ac2f3dccd077
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting lustre-test-06-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/lustre-test-06-net].
+Successfully deleted Network lustre-test-06-net.
+--- Processing Network: mainek-net-0 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-4dce75664c4c0cf2 for network mainek-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-4dce75664c4c0cf2].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mainek-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/mainek-net-0].
+Successfully deleted Network mainek-net-0.
+--- Processing Network: mainek-net-1 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-ceb2655d4bb6b336 for network mainek-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-ceb2655d4bb6b336].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mainek-net-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/mainek-net-1].
+Successfully deleted Network mainek-net-1.
+--- Processing Network: mainek-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-936046db1078bf03 for network mainek-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-936046db1078bf03].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mainek-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/mainek-net].
+Successfully deleted Network mainek-net.
+--- Processing Network: mainek-rdma-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mainek-rdma-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/mainek-rdma-net].
+Successfully deleted Network mainek-rdma-net.
+--- Processing Network: managed-lustre-03-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-912e02dbc2c43267 for network managed-lustre-03-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-912e02dbc2c43267].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting managed-lustre-03-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/managed-lustre-03-net].
+Successfully deleted Network managed-lustre-03-net.
+--- Processing Network: mglsa-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-111ca8b8a3346fb4 for network mglsa-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-111ca8b8a3346fb4].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mglsa-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/mglsa-net' is already being used by 'projects/hpc-toolkit-dev/regions/us-central1/routers/mglsa-net-router'
+
+ERROR: Failed to delete Network mglsa-net. Check for remaining dependencies.
+--- Processing Network: mglsard-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-4afd256f7ddc3be2 for network mglsard-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-4afd256f7ddc3be2].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mglsard-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/mglsard-net' is already being used by 'projects/hpc-toolkit-dev/regions/us-west4/routers/mglsard-net-router'
+
+ERROR: Failed to delete Network mglsard-net. Check for remaining dependencies.
+--- Processing Network: ml-gke-e2e-a8fae6-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-2c3a152cc75c7587 for network ml-gke-e2e-a8fae6-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-2c3a152cc75c7587].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting ml-gke-e2e-a8fae6-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/ml-gke-e2e-a8fae6-net].
+Successfully deleted Network ml-gke-e2e-a8fae6-net.
+--- Processing Network: ml-gke-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-1dadbcd4c82ffb80 for network ml-gke-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-1dadbcd4c82ffb80].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting ml-gke-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/ml-gke-net].
+Successfully deleted Network ml-gke-net.
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 10:50:43 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 11:01:01 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:01:01+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 50 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+lustreqa05-controller us-central1-a
+lustreqa05-slurm-login-001 us-central1-a
+ gcloud compute instances delete "lustreqa05-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+ gcloud compute instances delete "lustreqa05-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+lustre-qa-05-net-router us-central1
+[DRY RUN] Cloud Router: Would delete lustre-qa-05-net-router in us-central1
+  Command: gcloud compute routers delete "lustre-qa-05-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+lustre-qa-05-net-fw-allow-iap-ingress
+lustre-qa-05-net-fw-allow-internal-traffic
+[DRY RUN] Firewall Rule: Would delete lustre-qa-05-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "lustre-qa-05-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete lustre-qa-05-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "lustre-qa-05-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+lustre-qa-05-primary-subnet in us-central1
+--- Processing Subnet: lustre-qa-05-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-qa-05-primary-subnet in us-central1.
+[DRY RUN] Subnetwork: Would delete lustre-qa-05-primary-subnet in us-central1
+  Command: gcloud compute networks subnets delete "lustre-qa-05-primary-subnet" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-qa-05-net
+mglsa-net
+mglsard-net
+monitoring-8323fe-net
+pkrv6ff952b-net
+sa-chs-ops-net-0
+sarthakagrr-net
+sispot3u-net-0
+slurm-a3-base-sysnet
+sp-helmtest1-net
+static-sarthakag-net
+test-ssd-psc
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-659a1f3173aa28ed for network lustre-qa-05-net
+[DRY RUN] Route: Would delete default-route-r-58923476b12e6284 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-3b91a4552351d170 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+Checking for dependent firewall rules...
+[DRY RUN] Firewall Rule: Would delete lustre-qa-05-net-fw-allow-iap-ingress for network lustre-qa-05-net
+[DRY RUN] Firewall Rule: Would delete lustre-qa-05-net-fw-allow-internal-traffic for network lustre-qa-05-net
+[DRY RUN] Network: Would delete lustre-qa-05-net
+  Command: gcloud compute networks delete "lustre-qa-05-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsa-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsa-net
+  Command: gcloud compute networks delete "mglsa-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsard-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsard-net
+  Command: gcloud compute networks delete "mglsard-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: monitoring-8323fe-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-b3d726b99719ebcd for network monitoring-8323fe-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete monitoring-8323fe-net
+  Command: gcloud compute networks delete "monitoring-8323fe-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: pkrv6ff952b-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-e6359607fabd1429 for network pkrv6ff952b-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete pkrv6ff952b-net
+  Command: gcloud compute networks delete "pkrv6ff952b-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: sa-chs-ops-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-e4841ee375dabbb7 for network sa-chs-ops-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete sa-chs-ops-net-0
+  Command: gcloud compute networks delete "sa-chs-ops-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: sarthakagrr-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-60f6e9638a61ada1 for network sarthakagrr-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete sarthakagrr-net
+  Command: gcloud compute networks delete "sarthakagrr-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: sispot3u-net-0 ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-5330704133972804 for network sispot3u-net-0
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete sispot3u-net-0
+  Command: gcloud compute networks delete "sispot3u-net-0" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: slurm-a3-base-sysnet ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-6345135f78abc28d for network slurm-a3-base-sysnet
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete slurm-a3-base-sysnet
+  Command: gcloud compute networks delete "slurm-a3-base-sysnet" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: sp-helmtest1-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-b4f451a5b7595629 for network sp-helmtest1-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete sp-helmtest1-net
+  Command: gcloud compute networks delete "sp-helmtest1-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: static-sarthakag-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-31f39ec480a9048d for network static-sarthakag-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete static-sarthakag-net
+  Command: gcloud compute networks delete "static-sarthakag-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: test-ssd-psc ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete default-route-6484ee065c661d7a for network test-ssd-psc
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete test-ssd-psc
+  Command: gcloud compute networks delete "test-ssd-psc" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 11:02:06 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 11:02:47 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:02:47+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 50 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+lustreqa05-controller us-central1-a
+lustreqa05-slurm-login-001 us-central1-a
+[EXECUTE] Instance: Deleting lustreqa05-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustreqa05-controller].
+[EXECUTE] Instance: Deleting lustreqa05-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/lustreqa05-slurm-login-001].
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+lustre-qa-05-net-router us-central1
+[EXECUTE] Cloud Router: Deleting lustre-qa-05-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/lustre-qa-05-net-router].
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+lustre-qa-05-net-fw-allow-iap-ingress
+lustre-qa-05-net-fw-allow-internal-traffic
+[EXECUTE] Firewall Rule: Deleting lustre-qa-05-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lustre-qa-05-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting lustre-qa-05-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lustre-qa-05-net-fw-allow-internal-traffic].
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+lustre-qa-05-primary-subnet in us-central1
+--- Processing Subnet: lustre-qa-05-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-qa-05-primary-subnet in us-central1.
+[EXECUTE] Subnetwork: Deleting lustre-qa-05-primary-subnet in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/subnetworks/lustre-qa-05-primary-subnet].
+Successfully deleted Subnetwork lustre-qa-05-primary-subnet in us-central1.
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-qa-05-net
+mglsa-net
+mglsard-net
+monitoring-8323fe-net
+pkrv6ff952b-net
+sa-chs-ops-net-0
+sarthakagrr-net
+sispot3u-net-0
+slurm-a3-base-sysnet
+sp-helmtest1-net
+static-sarthakag-net
+test-ssd-psc
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-659a1f3173aa28ed for network lustre-qa-05-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-659a1f3173aa28ed].
+[EXECUTE] Route: Deleting peering-route-3b91a4552351d170 for network lustre-qa-05-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-3b91a4552351d170
+[EXECUTE] Route: Deleting peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-6f7c1d8537c80540
+[EXECUTE] Route: Deleting peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-c2ff29e0ce578be2
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting lustre-qa-05-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/lustre-qa-05-net' is already being used by 'projects/hpc-toolkit-dev/global/addresses/global-psconnect-ip-25305862'
+
+ERROR: Failed to delete Network lustre-qa-05-net. Check for remaining dependencies.
+--- Processing Network: mglsa-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mglsa-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/mglsa-net' is already being used by 'projects/hpc-toolkit-dev/regions/us-central1/routers/mglsa-net-router'
+
+ERROR: Failed to delete Network mglsa-net. Check for remaining dependencies.
+--- Processing Network: mglsard-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mglsard-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/mglsard-net' is already being used by 'projects/hpc-toolkit-dev/regions/us-west4/routers/mglsard-net-router'
+
+ERROR: Failed to delete Network mglsard-net. Check for remaining dependencies.
+--- Processing Network: monitoring-8323fe-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-b3d726b99719ebcd for network monitoring-8323fe-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-b3d726b99719ebcd].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting monitoring-8323fe-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/monitoring-8323fe-net].
+Successfully deleted Network monitoring-8323fe-net.
+--- Processing Network: pkrv6ff952b-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-e6359607fabd1429 for network pkrv6ff952b-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-e6359607fabd1429].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting pkrv6ff952b-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/pkrv6ff952b-net].
+Successfully deleted Network pkrv6ff952b-net.
+--- Processing Network: sa-chs-ops-net-0 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-e4841ee375dabbb7 for network sa-chs-ops-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-e4841ee375dabbb7].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting sa-chs-ops-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/sa-chs-ops-net-0].
+Successfully deleted Network sa-chs-ops-net-0.
+--- Processing Network: sarthakagrr-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-60f6e9638a61ada1 for network sarthakagrr-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-60f6e9638a61ada1].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting sarthakagrr-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/sarthakagrr-net].
+Successfully deleted Network sarthakagrr-net.
+--- Processing Network: sispot3u-net-0 ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-5330704133972804 for network sispot3u-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-5330704133972804].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting sispot3u-net-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/sispot3u-net-0].
+Successfully deleted Network sispot3u-net-0.
+--- Processing Network: slurm-a3-base-sysnet ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-6345135f78abc28d for network slurm-a3-base-sysnet
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-6345135f78abc28d].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting slurm-a3-base-sysnet
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/slurm-a3-base-sysnet].
+Successfully deleted Network slurm-a3-base-sysnet.
+--- Processing Network: sp-helmtest1-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-b4f451a5b7595629 for network sp-helmtest1-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-b4f451a5b7595629].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting sp-helmtest1-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/sp-helmtest1-net].
+Successfully deleted Network sp-helmtest1-net.
+--- Processing Network: static-sarthakag-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-31f39ec480a9048d for network static-sarthakag-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-31f39ec480a9048d].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting static-sarthakag-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/static-sarthakag-net].
+Successfully deleted Network static-sarthakag-net.
+--- Processing Network: test-ssd-psc ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting default-route-6484ee065c661d7a for network test-ssd-psc
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/routes/default-route-6484ee065c661d7a].
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting test-ssd-psc
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/test-ssd-psc].
+Successfully deleted Network test-ssd-psc.
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 11:13:01 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 11:13:51 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:13:51+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+mglsa-net-router us-central1
+mglsard-net-router us-west4
+[DRY RUN] Cloud Router: Would delete mglsa-net-router in us-central1
+  Command: gcloud compute routers delete "mglsa-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+[DRY RUN] Cloud Router: Would delete mglsard-net-router in us-west4
+  Command: gcloud compute routers delete "mglsard-net-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+--- Thu Nov 27 11:17:54 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:17:54+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+mglsa-net-router us-central1
+mglsard-net-router us-west4
+[EXECUTE] Cloud Router: Deleting mglsa-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/mglsa-net-router].
+[EXECUTE] Cloud Router: Deleting mglsard-net-router in us-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-west4/routers/mglsard-net-router].
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+--- Thu Nov 27 11:19:04 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:19:04+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+ in 
+--- Processing Subnet:  in  ---
+ERROR: (gcloud.compute.addresses.list) could not parse resource []
+ERROR: Failed to list dependent addresses for  in .
+WARNING: Skipping deletion of Subnet  in .
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-qa-05-net
+mglsa-net
+mglsard-net
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b91a4552351d170 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-qa-05-net
+  Command: gcloud compute networks delete "lustre-qa-05-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsa-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsa-net
+  Command: gcloud compute networks delete "mglsa-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: mglsard-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete mglsard-net
+  Command: gcloud compute networks delete "mglsard-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 11:19:31 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 11:19:45 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:19:45+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+ in 
+--- Processing Subnet:  in  ---
+ERROR: (gcloud.compute.addresses.list) could not parse resource []
+ERROR: Failed to list dependent addresses for  in .
+WARNING: Skipping deletion of Subnet  in .
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-qa-05-net
+mglsa-net
+mglsard-net
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[EXECUTE] Route: Deleting peering-route-3b91a4552351d170 for network lustre-qa-05-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-3b91a4552351d170
+[EXECUTE] Route: Deleting peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-6f7c1d8537c80540
+[EXECUTE] Route: Deleting peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+ERROR: (gcloud.compute.routes.delete) Could not fetch resource:
+ - The auto-generated peering route cannot be deleted.
+
+ERROR: Failed to delete route peering-route-c2ff29e0ce578be2
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting lustre-qa-05-net
+ERROR: (gcloud.compute.networks.delete) Could not fetch resource:
+ - The network resource 'projects/hpc-toolkit-dev/global/networks/lustre-qa-05-net' is already being used by 'projects/hpc-toolkit-dev/global/addresses/global-psconnect-ip-25305862'
+
+ERROR: Failed to delete Network lustre-qa-05-net. Check for remaining dependencies.
+--- Processing Network: mglsa-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mglsa-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/mglsa-net].
+Successfully deleted Network mglsa-net.
+--- Processing Network: mglsard-net ---
+Checking for dependent routes...
+No dependent routes found.
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[EXECUTE] Network: Deleting mglsard-net
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/networks/mglsard-net].
+Successfully deleted Network mglsard-net.
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 11:21:42 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 11:35:00 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:35:00+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+ in 
+--- Processing Subnet:  in  ---
+ERROR: (gcloud.compute.addresses.list) could not parse resource []
+ERROR: Failed to list dependent addresses for  in .
+WARNING: Skipping deletion of Subnet  in .
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-qa-05-net
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b91a4552351d170 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-qa-05-net
+  Command: gcloud compute networks delete "lustre-qa-05-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 11:35:24 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 11:54:19 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:54:19+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+--- Subnetwork Deletion Phase Complete ---
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-qa-05-net
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b91a4552351d170 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-qa-05-net
+  Command: gcloud compute networks delete "lustre-qa-05-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 11:54:37 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 11:55:13 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T07:55:13+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+--- Subnetwork Deletion Phase Complete ---
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-qa-05-net
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b91a4552351d170 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-qa-05-net
+  Command: gcloud compute networks delete "lustre-qa-05-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Thu Nov 27 11:55:29 AM UTC 2025 --- Cleanup Script Run Finished ---
+

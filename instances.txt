@@ -1,0 +1,2847 @@
+--- Wed Nov 26 09:53:14 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+The following GKE clusters are targeted for deletion in this run:
+h4d-res-swarnabm4-3 us-central1
+ml-gke-e2e-a8fae6 asia-southeast1
+  gcloud container clusters delete "h4d-res-swarnabm4-3" --project="hpc-toolkit-dev" --location="us-central1" --quiet
+  gcloud container clusters delete "ml-gke-e2e-a8fae6" --project="hpc-toolkit-dev" --location="asia-southeast1" --quiet
+--- Wed Nov 26 09:53:16 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 09:53:42 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+The following GKE clusters are targeted for deletion in this run:
+h4d-res-swarnabm4-3 us-central1
+ml-gke-e2e-a8fae6 asia-southeast1
+[EXECUTE] GKE Cluster: Deleting h4d-res-swarnabm4-3 in us-central1
+Deleting cluster h4d-res-swarnabm4-3...
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................done.
+Deleted [https://container.googleapis.com/v1/projects/hpc-toolkit-dev/zones/us-central1/clusters/h4d-res-swarnabm4-3].
+[EXECUTE] GKE Cluster: Deleting ml-gke-e2e-a8fae6 in asia-southeast1
+Deleting cluster ml-gke-e2e-a8fae6...
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................done.
+Deleted [https://container.googleapis.com/v1/projects/hpc-toolkit-dev/zones/asia-southeast1/clusters/ml-gke-e2e-a8fae6].
+--- Wed Nov 26 10:02:05 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:03:24 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+a1c0c3topo-nodeset-2 us-central1-a
+a3hca628-controller us-west1-a
+a3hca628-login-001 us-west1-a
+a3hcb15f-controller us-west1-a
+a3hcb15f-login-001 us-west1-a
+a3hcdf00-controller us-west1-a
+a3hcdf00-login-001 us-west1-a
+a3hnfsa628c1-ff9f3704-nfs-instance us-west1-a
+a3hnfsb15fa8-57b77541-nfs-instance us-west1-a
+a3hnfsdf0061-6327333f-nfs-instance us-west1-a
+[DRY RUN] Instance: Would delete a1c0c3topo-nodeset-2 in us-central1-a
+  Command: gcloud compute instances delete "a1c0c3topo-nodeset-2" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+[DRY RUN] Instance: Would delete a3hca628-controller in us-west1-a
+  Command: gcloud compute instances delete "a3hca628-controller" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hca628-login-001 in us-west1-a
+  Command: gcloud compute instances delete "a3hca628-login-001" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hcb15f-controller in us-west1-a
+  Command: gcloud compute instances delete "a3hcb15f-controller" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hcb15f-login-001 in us-west1-a
+  Command: gcloud compute instances delete "a3hcb15f-login-001" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hcdf00-controller in us-west1-a
+  Command: gcloud compute instances delete "a3hcdf00-controller" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hcdf00-login-001 in us-west1-a
+  Command: gcloud compute instances delete "a3hcdf00-login-001" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hnfsa628c1-ff9f3704-nfs-instance in us-west1-a
+  Command: gcloud compute instances delete "a3hnfsa628c1-ff9f3704-nfs-instance" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hnfsb15fa8-57b77541-nfs-instance in us-west1-a
+  Command: gcloud compute instances delete "a3hnfsb15fa8-57b77541-nfs-instance" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+[DRY RUN] Instance: Would delete a3hnfsdf0061-6327333f-nfs-instance in us-west1-a
+  Command: gcloud compute instances delete "a3hnfsdf0061-6327333f-nfs-instance" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+--- Wed Nov 26 10:03:28 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:03:57 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+a1c0c3topo-nodeset-2 us-central1-a
+a3hca628-controller us-west1-a
+a3hca628-login-001 us-west1-a
+a3hcb15f-controller us-west1-a
+a3hcb15f-login-001 us-west1-a
+a3hcdf00-controller us-west1-a
+a3hcdf00-login-001 us-west1-a
+a3hnfsa628c1-ff9f3704-nfs-instance us-west1-a
+a3hnfsb15fa8-57b77541-nfs-instance us-west1-a
+a3hnfsdf0061-6327333f-nfs-instance us-west1-a
+[EXECUTE] Instance: Deleting a1c0c3topo-nodeset-2 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/a1c0c3topo-nodeset-2].
+[EXECUTE] Instance: Deleting a3hca628-controller in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hca628-controller].
+[EXECUTE] Instance: Deleting a3hca628-login-001 in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hca628-login-001].
+[EXECUTE] Instance: Deleting a3hcb15f-controller in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hcb15f-controller].
+[EXECUTE] Instance: Deleting a3hcb15f-login-001 in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hcb15f-login-001].
+[EXECUTE] Instance: Deleting a3hcdf00-controller in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hcdf00-controller].
+[EXECUTE] Instance: Deleting a3hcdf00-login-001 in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hcdf00-login-001].
+[EXECUTE] Instance: Deleting a3hnfsa628c1-ff9f3704-nfs-instance in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hnfsa628c1-ff9f3704-nfs-instance].
+[EXECUTE] Instance: Deleting a3hnfsb15fa8-57b77541-nfs-instance in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hnfsb15fa8-57b77541-nfs-instance].
+[EXECUTE] Instance: Deleting a3hnfsdf0061-6327333f-nfs-instance in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/a3hnfsdf0061-6327333f-nfs-instance].
+--- Wed Nov 26 10:12:55 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:13:53 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+a3mega-controller us-west4-a
+a3mega-login-001 us-west4-a
+a4h639c-a4highnodeset-0 us-central1-b
+a4h639c-a4highnodeset-1 us-central1-b
+a4h639c-controller us-central1-b
+a4h639c-slurm-login-001 us-central1-b
+a7f7bcslur-controller us-central1-a
+a7f7bcslur-slurm-login-001 us-central1-a
+c379slurms-controller us-central1-a
+ce64slurms-controller us-central1-a
+  gcloud compute instances delete "a3mega-controller" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+  gcloud compute instances delete "a3mega-login-001" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+  gcloud compute instances delete "a4h639c-a4highnodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4h639c-a4highnodeset-1" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4h639c-controller" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4h639c-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a7f7bcslur-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "a7f7bcslur-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "c379slurms-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "ce64slurms-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Wed Nov 26 10:13:57 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:14:29 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+a3mega-controller us-west4-a
+a3mega-login-001 us-west4-a
+a4h639c-a4highnodeset-0 us-central1-b
+a4h639c-a4highnodeset-1 us-central1-b
+a4h639c-controller us-central1-b
+a4h639c-slurm-login-001 us-central1-b
+a7f7bcslur-controller us-central1-a
+a7f7bcslur-slurm-login-001 us-central1-a
+c379slurms-controller us-central1-a
+ce64slurms-controller us-central1-a
+[EXECUTE] Instance: Deleting a3mega-controller in us-west4-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west4-a/instances/a3mega-controller].
+[EXECUTE] Instance: Deleting a3mega-login-001 in us-west4-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west4-a/instances/a3mega-login-001].
+[EXECUTE] Instance: Deleting a4h639c-a4highnodeset-0 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4h639c-a4highnodeset-0].
+[EXECUTE] Instance: Deleting a4h639c-a4highnodeset-1 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4h639c-a4highnodeset-1].
+[EXECUTE] Instance: Deleting a4h639c-controller in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4h639c-controller].
+[EXECUTE] Instance: Deleting a4h639c-slurm-login-001 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4h639c-slurm-login-001].
+[EXECUTE] Instance: Deleting a7f7bcslur-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/a7f7bcslur-controller].
+[EXECUTE] Instance: Deleting a7f7bcslur-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/a7f7bcslur-slurm-login-001].
+[EXECUTE] Instance: Deleting c379slurms-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/c379slurms-controller].
+[EXECUTE] Instance: Deleting ce64slurms-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/ce64slurms-controller].
+--- Wed Nov 26 10:28:03 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:28:21 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+ce64slurms-slurm-login-001 us-central1-a
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-0 us-east5-a
+clustermce-nodeset1-1 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+  gcloud compute instances delete "ce64slurms-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "cluster0vk-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster0vk-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+--- Wed Nov 26 10:28:25 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:31:34 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+ce64slurms-slurm-login-001 us-central1-a
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-0 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+  gcloud compute instances delete "ce64slurms-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "cluster0vk-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster0vk-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+--- Wed Nov 26 10:31:38 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:31:55 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 26 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+ce64slurms-slurm-login-001 us-central1-a
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+clusterum7-nodeset1-3 us-central1-c
+[EXECUTE] Instance: Deleting ce64slurms-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/ce64slurms-slurm-login-001].
+[EXECUTE] Instance: Deleting cluster0vk-nodeset1-0 in us-central1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-c/instances/cluster0vk-nodeset1-0].
+[EXECUTE] Instance: Deleting cluster0vk-nodeset1-1 in us-central1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-c/instances/cluster0vk-nodeset1-1].
+[EXECUTE] Instance: Deleting cluster8ix-nodeset1-0 in us-east4-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-east4-b/instances/cluster8ix-nodeset1-0].
+[EXECUTE] Instance: Deleting cluster8ix-nodeset1-1 in us-east4-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-east4-b/instances/cluster8ix-nodeset1-1].
+[EXECUTE] Instance: Deleting clustermce-nodeset1-2 in us-east5-a
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-east5-a/instances/clustermce-nodeset1-2' was not found
+
+--- Wed Nov 26 10:43:27 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-0 us-east5-a
+clustermce-nodeset1-1 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+  gcloud compute instances delete "cluster0vk-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster0vk-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+--- Wed Nov 26 10:43:32 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:44:42 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-0 us-east5-a
+clustermce-nodeset1-1 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+  gcloud compute instances delete "cluster0vk-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster0vk-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+--- Wed Nov 26 10:44:47 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:45:01 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-0 us-east5-a
+clustermce-nodeset1-1 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+[EXECUTE] Instance: Deleting cluster0vk-nodeset1-0 in us-central1-c
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-c/instances/cluster0vk-nodeset1-0' was not found
+
+--- Wed Nov 26 10:47:32 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-1 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+clusterum7-nodeset1-3 us-central1-c
+  gcloud compute instances delete "cluster0vk-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster0vk-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-3" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+--- Wed Nov 26 10:47:36 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:47:49 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-0 us-central1-c
+cluster0vk-nodeset1-1 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-1 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+clusterum7-nodeset1-3 us-central1-c
+[EXECUTE] Instance: Deleting cluster0vk-nodeset1-0 in us-central1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-c/instances/cluster0vk-nodeset1-0].
+[EXECUTE] Instance: Deleting cluster0vk-nodeset1-1 in us-central1-c
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-c/instances/cluster0vk-nodeset1-1' was not found
+
+[EXECUTE] Instance: Deleting cluster8ix-nodeset1-0 in us-east4-b
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-east4-b/instances/cluster8ix-nodeset1-0' was not found
+
+[EXECUTE] Instance: Deleting cluster8ix-nodeset1-1 in us-east4-b
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-east4-b/instances/cluster8ix-nodeset1-1' was not found
+
+[EXECUTE] Instance: Deleting clustermce-nodeset1-1 in us-east5-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-east5-a/instances/clustermce-nodeset1-1].
+[EXECUTE] Instance: Deleting clustermce-nodeset1-2 in us-east5-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-east5-a/instances/clustermce-nodeset1-2].
+[EXECUTE] Instance: Deleting clusterum7-nodeset1-0 in us-central1-c
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-c/instances/clusterum7-nodeset1-0' was not found
+
+[EXECUTE] Instance: Deleting clusterum7-nodeset1-1 in us-central1-c
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-c/instances/clusterum7-nodeset1-1' was not found
+
+[EXECUTE] Instance: Deleting clusterum7-nodeset1-2 in us-central1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-c/instances/clusterum7-nodeset1-2].
+[EXECUTE] Instance: Deleting clusterum7-nodeset1-3 in us-central1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-c/instances/clusterum7-nodeset1-3].
+--- Wed Nov 26 10:58:13 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 10:58:47 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-0 us-central1-c
+cluster8ix-nodeset1-0 us-east4-b
+cluster8ix-nodeset1-1 us-east4-b
+clustermce-nodeset1-0 us-east5-a
+clustermce-nodeset1-1 us-east5-a
+clustermce-nodeset1-2 us-east5-a
+clusterum7-nodeset1-0 us-central1-c
+clusterum7-nodeset1-1 us-central1-c
+clusterum7-nodeset1-2 us-central1-c
+clusterum7-nodeset1-4 us-central1-c
+  gcloud compute instances delete "cluster0vk-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "cluster8ix-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east4-b" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clustermce-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-east5-a" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-0" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-2" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-4" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+--- Wed Nov 26 10:58:51 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:00:14 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: cluster0vk-nodeset1-0 in us-central1-c (In exclusion list)
+Skip Instance: cluster8ix-nodeset1-0 in us-east4-b (In exclusion list)
+Skip Instance: clustermce-nodeset1-0 in us-east5-a (In exclusion list)
+Skip Instance: clustermce-nodeset1-1 in us-east5-a (In exclusion list)
+Skip Instance: clustermce-nodeset1-2 in us-east5-a (In exclusion list)
+Skip Instance: clusterum7-nodeset1-0 in us-central1-c (In exclusion list)
+Skip Instance: clusterum7-nodeset1-1 in us-central1-c (In exclusion list)
+Skip Instance: clusterum7-nodeset1-2 in us-central1-c (In exclusion list)
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-1 us-central1-c
+clusterum7-nodeset1-5 us-central1-c
+clusteurop-nodeset1-0 europe-west1-b
+d3eslurmsi-controller us-central1-a
+d3eslurmsi-slurm-login-001 us-central1-a
+d3slurmsim-controller us-central1-a
+d3slurmsim-slurm-login-001 us-central1-a
+d72c8slurm-controller us-central1-a
+d72c8slurm-slurm-login-001 us-central1-a
+de3580slur-controller us-central1-a
+  gcloud compute instances delete "cluster0vk-nodeset1-1" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusterum7-nodeset1-5" --project="hpc-toolkit-dev" --zone="us-central1-c" --quiet
+  gcloud compute instances delete "clusteurop-nodeset1-0" --project="hpc-toolkit-dev" --zone="europe-west1-b" --quiet
+  gcloud compute instances delete "d3eslurmsi-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "d3eslurmsi-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "d3slurmsim-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "d3slurmsim-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "d72c8slurm-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "d72c8slurm-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Wed Nov 26 11:00:18 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:00:45 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: cluster0vk-nodeset1-0 in us-central1-c (In exclusion list)
+Skip Instance: cluster8ix-nodeset1-0 in us-east4-b (In exclusion list)
+Skip Instance: cluster8ix-nodeset1-1 in us-east4-b (In exclusion list)
+Skip Instance: clustermce-nodeset1-0 in us-east5-a (In exclusion list)
+Skip Instance: clustermce-nodeset1-1 in us-east5-a (In exclusion list)
+Skip Instance: clustermce-nodeset1-2 in us-east5-a (In exclusion list)
+Skip Instance: clusterum7-nodeset1-0 in us-central1-c (In exclusion list)
+Skip Instance: clusterum7-nodeset1-1 in us-central1-c (In exclusion list)
+Skip Instance: clusterum7-nodeset1-2 in us-central1-c (In exclusion list)
+The following Instances are targeted for deletion in this run:
+cluster0vk-nodeset1-1 us-central1-c
+clusterum7-nodeset1-3 us-central1-c
+clusterum7-nodeset1-5 us-central1-c
+clusteurop-nodeset1-0 europe-west1-b
+clusteurop-nodeset1-1 europe-west1-b
+d3eslurmsi-controller us-central1-a
+d3eslurmsi-slurm-login-001 us-central1-a
+d3slurmsim-controller us-central1-a
+d3slurmsim-slurm-login-001 us-central1-a
+d72c8slurm-controller us-central1-a
+[EXECUTE] Instance: Deleting cluster0vk-nodeset1-1 in us-central1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-c/instances/cluster0vk-nodeset1-1].
+[EXECUTE] Instance: Deleting clusterum7-nodeset1-3 in us-central1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-c/instances/clusterum7-nodeset1-3].
+[EXECUTE] Instance: Deleting clusterum7-nodeset1-5 in us-central1-c
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-c/instances/clusterum7-nodeset1-5' was not found
+
+[EXECUTE] Instance: Deleting clusteurop-nodeset1-0 in europe-west1-b
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/europe-west1-b/instances/clusteurop-nodeset1-0' was not found
+
+[EXECUTE] Instance: Deleting clusteurop-nodeset1-1 in europe-west1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west1-b/instances/clusteurop-nodeset1-1].
+[EXECUTE] Instance: Deleting d3eslurmsi-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d3eslurmsi-controller].
+[EXECUTE] Instance: Deleting d3eslurmsi-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d3eslurmsi-slurm-login-001].
+[EXECUTE] Instance: Deleting d3slurmsim-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d3slurmsim-controller].
+[EXECUTE] Instance: Deleting d3slurmsim-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d3slurmsim-slurm-login-001].
+[EXECUTE] Instance: Deleting d72c8slurm-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d72c8slurm-controller].
+--- Wed Nov 26 11:12:55 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:27:49 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+d72c8slurm-slurm-login-001 us-central1-a
+de3580slur-controller us-central1-a
+de3580slur-nodeset-0 us-central1-a
+de3580slur-nodeset-1 us-central1-a
+de3580slur-nodeset-2 us-central1-a
+de3580slur-nodeset-3 us-central1-a
+de3580slur-nodeset-4 us-central1-a
+de3580slur-slurm-login-001 us-central1-a
+dynpoc-controller us-central1-a
+dynpoc-slurm-login-001 us-central1-a
+  gcloud compute instances delete "d72c8slurm-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-nodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-nodeset-1" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-nodeset-2" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-nodeset-3" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-nodeset-4" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "de3580slur-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "dynpoc-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "dynpoc-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Wed Nov 26 11:27:53 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:28:14 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip GKE Cluster: mglsard (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+d72c8slurm-slurm-login-001 us-central1-a
+de3580slur-controller us-central1-a
+de3580slur-nodeset-0 us-central1-a
+de3580slur-nodeset-1 us-central1-a
+de3580slur-nodeset-2 us-central1-a
+de3580slur-nodeset-3 us-central1-a
+de3580slur-nodeset-4 us-central1-a
+de3580slur-slurm-login-001 us-central1-a
+dynpoc-controller us-central1-a
+dynpoc-slurm-login-001 us-central1-a
+[EXECUTE] Instance: Deleting d72c8slurm-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d72c8slurm-slurm-login-001].
+[EXECUTE] Instance: Deleting de3580slur-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/de3580slur-controller].
+[EXECUTE] Instance: Deleting de3580slur-nodeset-0 in us-central1-a
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-a/instances/de3580slur-nodeset-0' was not found
+
+[EXECUTE] Instance: Deleting de3580slur-nodeset-1 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/de3580slur-nodeset-1].
+[EXECUTE] Instance: Deleting de3580slur-nodeset-2 in us-central1-a
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-a/instances/de3580slur-nodeset-2' was not found
+
+[EXECUTE] Instance: Deleting de3580slur-nodeset-3 in us-central1-a
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-central1-a/instances/de3580slur-nodeset-3' was not found
+
+[EXECUTE] Instance: Deleting de3580slur-nodeset-4 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/de3580slur-nodeset-4].
+[EXECUTE] Instance: Deleting de3580slur-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/de3580slur-slurm-login-001].
+[EXECUTE] Instance: Deleting dynpoc-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/dynpoc-controller].
+[EXECUTE] Instance: Deleting dynpoc-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/dynpoc-slurm-login-001].
+--- Wed Nov 26 11:38:44 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:44:26 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+ebf828slur-controller us-central1-a
+ebf828slur-slurm-login-001 us-central1-a
+exascaler-cloud-4691-mds0 us-central1-a
+exascaler-cloud-4691-mgs0 us-central1-a
+exascaler-cloud-4691-oss0 us-central1-a
+exascaler-cloud-4691-oss1 us-central1-a
+exascaler-cloud-4691-oss2 us-central1-a
+exascaler-cloud-4a36-mds0 europe-west4-c
+exascaler-cloud-4a36-mgs0 europe-west4-c
+exascaler-cloud-4a36-oss0 europe-west4-c
+  gcloud compute instances delete "ebf828slur-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "ebf828slur-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "exascaler-cloud-4691-mds0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "exascaler-cloud-4691-mgs0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "exascaler-cloud-4691-oss0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "exascaler-cloud-4691-oss1" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "exascaler-cloud-4691-oss2" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "exascaler-cloud-4a36-mds0" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-4a36-mgs0" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-4a36-oss0" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+--- Wed Nov 26 11:44:30 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:45:08 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+ebf828slur-controller us-central1-a
+ebf828slur-slurm-login-001 us-central1-a
+exascaler-cloud-4691-mds0 us-central1-a
+exascaler-cloud-4691-mgs0 us-central1-a
+exascaler-cloud-4691-oss0 us-central1-a
+exascaler-cloud-4691-oss1 us-central1-a
+exascaler-cloud-4691-oss2 us-central1-a
+exascaler-cloud-4a36-mds0 europe-west4-c
+exascaler-cloud-4a36-mgs0 europe-west4-c
+exascaler-cloud-4a36-oss0 europe-west4-c
+[EXECUTE] Instance: Deleting ebf828slur-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/ebf828slur-controller].
+[EXECUTE] Instance: Deleting ebf828slur-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/ebf828slur-slurm-login-001].
+[EXECUTE] Instance: Deleting exascaler-cloud-4691-mds0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/exascaler-cloud-4691-mds0].
+[EXECUTE] Instance: Deleting exascaler-cloud-4691-mgs0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/exascaler-cloud-4691-mgs0].
+[EXECUTE] Instance: Deleting exascaler-cloud-4691-oss0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/exascaler-cloud-4691-oss0].
+[EXECUTE] Instance: Deleting exascaler-cloud-4691-oss1 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/exascaler-cloud-4691-oss1].
+[EXECUTE] Instance: Deleting exascaler-cloud-4691-oss2 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/exascaler-cloud-4691-oss2].
+[EXECUTE] Instance: Deleting exascaler-cloud-4a36-mds0 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-4a36-mds0].
+[EXECUTE] Instance: Deleting exascaler-cloud-4a36-mgs0 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-4a36-mgs0].
+[EXECUTE] Instance: Deleting exascaler-cloud-4a36-oss0 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-4a36-oss0].
+--- Wed Nov 26 11:50:39 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:51:04 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+exascaler-cloud-4a36-oss1 europe-west4-c
+exascaler-cloud-4a36-oss2 europe-west4-c
+exascaler-cloud-a2a0-mds0 europe-west4-c
+exascaler-cloud-a2a0-mgs0 europe-west4-c
+exascaler-cloud-a2a0-oss0 europe-west4-c
+exascaler-cloud-a2a0-oss1 europe-west4-c
+exascaler-cloud-a2a0-oss2 europe-west4-c
+f4e324slur-controller us-central1-a
+f4e324slur-slurm-login-001 us-central1-a
+f88073slur-controller us-central1-a
+  gcloud compute instances delete "exascaler-cloud-4a36-oss1" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-4a36-oss2" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-a2a0-mds0" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-a2a0-mgs0" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-a2a0-oss0" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-a2a0-oss1" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "exascaler-cloud-a2a0-oss2" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "f4e324slur-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "f4e324slur-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "f88073slur-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Wed Nov 26 11:51:08 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:51:22 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 38 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - cluster0vk-nodeset1-0
+  - cluster8ix-nodeset1-0
+  - cluster8ix-nodeset1-1
+  - clustermce-nodeset1-0
+  - clustermce-nodeset1-1
+  - clustermce-nodeset1-2
+  - clusterum7-nodeset1-0
+  - clusterum7-nodeset1-1
+  - clusterum7-nodeset1-2
+  - clusterum7-nodeset1-4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+exascaler-cloud-4a36-oss1 europe-west4-c
+exascaler-cloud-4a36-oss2 europe-west4-c
+exascaler-cloud-a2a0-mds0 europe-west4-c
+exascaler-cloud-a2a0-mgs0 europe-west4-c
+exascaler-cloud-a2a0-oss0 europe-west4-c
+exascaler-cloud-a2a0-oss1 europe-west4-c
+exascaler-cloud-a2a0-oss2 europe-west4-c
+f4e324slur-controller us-central1-a
+f4e324slur-slurm-login-001 us-central1-a
+f88073slur-controller us-central1-a
+[EXECUTE] Instance: Deleting exascaler-cloud-4a36-oss1 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-4a36-oss1].
+[EXECUTE] Instance: Deleting exascaler-cloud-4a36-oss2 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-4a36-oss2].
+[EXECUTE] Instance: Deleting exascaler-cloud-a2a0-mds0 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-a2a0-mds0].
+[EXECUTE] Instance: Deleting exascaler-cloud-a2a0-mgs0 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-a2a0-mgs0].
+[EXECUTE] Instance: Deleting exascaler-cloud-a2a0-oss0 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-a2a0-oss0].
+[EXECUTE] Instance: Deleting exascaler-cloud-a2a0-oss1 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-a2a0-oss1].
+[EXECUTE] Instance: Deleting exascaler-cloud-a2a0-oss2 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/exascaler-cloud-a2a0-oss2].
+[EXECUTE] Instance: Deleting f4e324slur-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/f4e324slur-controller].
+[EXECUTE] Instance: Deleting f4e324slur-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/f4e324slur-slurm-login-001].
+[EXECUTE] Instance: Deleting f88073slur-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/f88073slur-controller].
+--- Wed Nov 26 11:57:54 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 11:59:13 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+f88073slur-slurm-login-001 us-central1-a
+fa4slurmsi-controller us-central1-a
+fa4slurmsi-slurm-login-001 us-central1-a
+g4qclav-controller us-central1-b
+g4qclav-g4nodeset-0 us-central1-b
+g4qclav-slurm-login-001 us-central1-b
+gke-1395b4-0 us-central1-a
+hpcdy-controller europe-west4-c
+hpcdydis-controller europe-west4-c
+hpcdydis-slurm-login-001 europe-west4-c
+  gcloud compute instances delete "f88073slur-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "fa4slurmsi-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "fa4slurmsi-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "g4qclav-controller" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "g4qclav-g4nodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "g4qclav-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "gke-1395b4-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "hpcdy-controller" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "hpcdydis-controller" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "hpcdydis-slurm-login-001" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+--- Wed Nov 26 11:59:18 AM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 12:00:36 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+f88073slur-slurm-login-001 us-central1-a
+fa4slurmsi-controller us-central1-a
+fa4slurmsi-slurm-login-001 us-central1-a
+g4qclav-controller us-central1-b
+g4qclav-g4nodeset-0 us-central1-b
+g4qclav-slurm-login-001 us-central1-b
+gke-1395b4-0 us-central1-a
+hpcdy-controller europe-west4-c
+hpcdydis-controller europe-west4-c
+hpcdydis-slurm-login-001 europe-west4-c
+[EXECUTE] Instance: Deleting f88073slur-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/f88073slur-slurm-login-001].
+[EXECUTE] Instance: Deleting fa4slurmsi-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/fa4slurmsi-controller].
+[EXECUTE] Instance: Deleting fa4slurmsi-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/fa4slurmsi-slurm-login-001].
+[EXECUTE] Instance: Deleting g4qclav-controller in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/g4qclav-controller].
+[EXECUTE] Instance: Deleting g4qclav-g4nodeset-0 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/g4qclav-g4nodeset-0].
+[EXECUTE] Instance: Deleting g4qclav-slurm-login-001 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/g4qclav-slurm-login-001].
+[EXECUTE] Instance: Deleting gke-1395b4-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/gke-1395b4-0].
+[EXECUTE] Instance: Deleting hpcdy-controller in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/hpcdy-controller].
+[EXECUTE] Instance: Deleting hpcdydis-controller in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/hpcdydis-controller].
+[EXECUTE] Instance: Deleting hpcdydis-slurm-login-001 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/hpcdydis-slurm-login-001].
+--- Wed Nov 26 12:17:01 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 12:50:16 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 28 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+The following Instances are targeted for deletion in this run:
+a4he340-a4highnodeset-0 us-central1-b
+a4he340-a4highnodeset-1 us-central1-b
+a4he340-controller us-central1-b
+a4he340-slurm-login-001 us-central1-b
+hpcdy-slurm-login-001 europe-west4-c
+hpcimg-controller us-central1-a
+hpcimg-slurm-login-001 us-central1-a
+image-inspector-550 us-west1-a
+image-inspector us-west1-a
+instance-20250625-210718 australia-southeast1-c
+  gcloud compute instances delete "a4he340-a4highnodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4he340-a4highnodeset-1" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4he340-controller" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4he340-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "hpcdy-slurm-login-001" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "hpcimg-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "hpcimg-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "image-inspector-550" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+  gcloud compute instances delete "image-inspector" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+  gcloud compute instances delete "instance-20250625-210718" --project="hpc-toolkit-dev" --zone="australia-southeast1-c" --quiet
+--- Wed Nov 26 12:50:20 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 12:51:11 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+The following Instances are targeted for deletion in this run:
+a4he340-a4highnodeset-0 us-central1-b
+a4he340-a4highnodeset-1 us-central1-b
+a4he340-controller us-central1-b
+a4he340-slurm-login-001 us-central1-b
+hpcdy-slurm-login-001 europe-west4-c
+hpcimg-controller us-central1-a
+hpcimg-slurm-login-001 us-central1-a
+instance-20250625-210718 australia-southeast1-c
+instance-20250918-073640 us-central1-b
+instance-20251124-055307 us-central1-b
+  gcloud compute instances delete "a4he340-a4highnodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4he340-a4highnodeset-1" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4he340-controller" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "a4he340-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "hpcdy-slurm-login-001" --project="hpc-toolkit-dev" --zone="europe-west4-c" --quiet
+  gcloud compute instances delete "hpcimg-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "hpcimg-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "instance-20250625-210718" --project="hpc-toolkit-dev" --zone="australia-southeast1-c" --quiet
+  gcloud compute instances delete "instance-20250918-073640" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+  gcloud compute instances delete "instance-20251124-055307" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+--- Wed Nov 26 12:51:15 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 12:51:45 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+The following Instances are targeted for deletion in this run:
+a4he340-a4highnodeset-0 us-central1-b
+a4he340-a4highnodeset-1 us-central1-b
+a4he340-controller us-central1-b
+a4he340-slurm-login-001 us-central1-b
+hpcdy-slurm-login-001 europe-west4-c
+hpcimg-controller us-central1-a
+hpcimg-slurm-login-001 us-central1-a
+instance-20250625-210718 australia-southeast1-c
+instance-20250918-073640 us-central1-b
+instance-20251124-055307 us-central1-b
+[EXECUTE] Instance: Deleting a4he340-a4highnodeset-0 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4he340-a4highnodeset-0].
+[EXECUTE] Instance: Deleting a4he340-a4highnodeset-1 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4he340-a4highnodeset-1].
+[EXECUTE] Instance: Deleting a4he340-controller in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4he340-controller].
+[EXECUTE] Instance: Deleting a4he340-slurm-login-001 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4he340-slurm-login-001].
+[EXECUTE] Instance: Deleting hpcdy-slurm-login-001 in europe-west4-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-c/instances/hpcdy-slurm-login-001].
+[EXECUTE] Instance: Deleting hpcimg-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/hpcimg-controller].
+[EXECUTE] Instance: Deleting hpcimg-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/hpcimg-slurm-login-001].
+[EXECUTE] Instance: Deleting instance-20250625-210718 in australia-southeast1-c
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/australia-southeast1-c/instances/instance-20250625-210718].
+[EXECUTE] Instance: Deleting instance-20250918-073640 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/instance-20250918-073640].
+[EXECUTE] Instance: Deleting instance-20251124-055307 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/instance-20251124-055307].
+--- Wed Nov 26 01:04:17 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:05:06 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+The following Instances are targeted for deletion in this run:
+khu-h4d-cluster-test-0 us-central1-a
+khu-h4d-cluster-test-1 us-central1-a
+khushi-ansible-deb11-0 us-central1-a
+khushi-ansible-deb12-0 us-central1-a
+khushi-ansible-failed-deb11-0 us-central1-a
+khushi-ansible-failed-deb12-0 us-central1-a
+khushi-ansible-failed-rhel8-0 us-central1-a
+khushi-ansible-failed-rhel9-0 us-central1-a
+khushi-ansible-failed-rocky8-0 us-central1-a
+khushi-ansible-failed-rocky9-0 us-central1-a
+  gcloud compute instances delete "khu-h4d-cluster-test-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khu-h4d-cluster-test-1" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-deb11-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-deb12-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-deb11-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-deb12-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-rhel8-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-rhel9-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-rocky8-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-rocky9-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Wed Nov 26 01:05:11 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:05:28 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+The following Instances are targeted for deletion in this run:
+khu-h4d-cluster-test-0 us-central1-a
+khu-h4d-cluster-test-1 us-central1-a
+khushi-ansible-deb11-0 us-central1-a
+khushi-ansible-deb12-0 us-central1-a
+khushi-ansible-failed-deb11-0 us-central1-a
+khushi-ansible-failed-deb12-0 us-central1-a
+khushi-ansible-failed-rhel8-0 us-central1-a
+khushi-ansible-failed-rhel9-0 us-central1-a
+khushi-ansible-failed-rocky8-0 us-central1-a
+khushi-ansible-failed-rocky9-0 us-central1-a
+[EXECUTE] Instance: Deleting khu-h4d-cluster-test-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-h4d-cluster-test-0].
+[EXECUTE] Instance: Deleting khu-h4d-cluster-test-1 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-h4d-cluster-test-1].
+[EXECUTE] Instance: Deleting khushi-ansible-deb11-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-deb11-0].
+[EXECUTE] Instance: Deleting khushi-ansible-deb12-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-deb12-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-deb11-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-deb11-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-deb12-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-deb12-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-rhel8-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-rhel8-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-rhel9-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-rhel9-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-rocky8-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-rocky8-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-rocky9-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-rocky9-0].
+--- Wed Nov 26 01:16:48 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:17:01 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+The following Instances are targeted for deletion in this run:
+khushi-ansible-failed-ubuntu2204-0 us-central1-a
+khushi-ansible-failed-ubuntu2404-0 us-central1-a
+khushi-ansible-failed-ubuntu2404arm-0 us-central1-a
+khushi-ansible-rhel8-0 us-central1-a
+khushi-ansible-rhel9-0 us-central1-a
+khushi-ansible-rocky8-0 us-central1-a
+khushi-ansible-rocky9-0 us-central1-a
+khushi-ansible-ubuntu2204-0 us-central1-a
+khushi-ansible-ubuntu2404-0 us-central1-a
+khushi-ansible-ubuntu2404arm-0 us-central1-a
+khu-test-ansible-sleep-ubuntu2204-0 us-central1-a
+khu-test-ansible-sleep-ubuntu2404-0 us-central1-a
+khu-test-ansible-sleep-ubuntu2404arm-0 us-central1-a
+khu-test-ansible-ubuntu2204-0 us-central1-a
+khu-test-ansible-ubuntu2404-0 us-central1-a
+khu-test-ansible-ubuntu2404arm-0 us-central1-a
+ml-gke-e2e-a8fae6-0 asia-southeast1-b
+my-a3-spot-vm us-central1-a
+packer-119ae1 us-west1-a
+packer-2c0c79 asia-southeast1-b
+packer-3e3b45 us-west1-a
+packer-59a068 us-west1-a
+packer-5c41cc us-south1-b
+packer-84a235 europe-west4-b
+packer-90b969 us-west4-a
+packer-a947ca us-west1-a
+temp-image-check us-west1-a
+test us-central1-a
+testvm01 us-central1-a
+testvm727 us-central1-b
+  gcloud compute instances delete "khushi-ansible-failed-ubuntu2204-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-ubuntu2404-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-failed-ubuntu2404arm-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-rhel8-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-rhel9-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-rocky8-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-rocky9-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-ubuntu2204-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-ubuntu2404-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khushi-ansible-ubuntu2404arm-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khu-test-ansible-sleep-ubuntu2204-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khu-test-ansible-sleep-ubuntu2404-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khu-test-ansible-sleep-ubuntu2404arm-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khu-test-ansible-ubuntu2204-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khu-test-ansible-ubuntu2404-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "khu-test-ansible-ubuntu2404arm-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "ml-gke-e2e-a8fae6-0" --project="hpc-toolkit-dev" --zone="asia-southeast1-b" --quiet
+  gcloud compute instances delete "my-a3-spot-vm" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "packer-119ae1" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+  gcloud compute instances delete "packer-2c0c79" --project="hpc-toolkit-dev" --zone="asia-southeast1-b" --quiet
+  gcloud compute instances delete "packer-3e3b45" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+  gcloud compute instances delete "packer-59a068" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+  gcloud compute instances delete "packer-5c41cc" --project="hpc-toolkit-dev" --zone="us-south1-b" --quiet
+  gcloud compute instances delete "packer-84a235" --project="hpc-toolkit-dev" --zone="europe-west4-b" --quiet
+  gcloud compute instances delete "packer-90b969" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+  gcloud compute instances delete "packer-a947ca" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+  gcloud compute instances delete "temp-image-check" --project="hpc-toolkit-dev" --zone="us-west1-a" --quiet
+  gcloud compute instances delete "test" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "testvm01" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "testvm727" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+--- Wed Nov 26 01:17:06 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:17:30 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+The following Instances are targeted for deletion in this run:
+khushi-ansible-failed-ubuntu2204-0 us-central1-a
+khushi-ansible-failed-ubuntu2404-0 us-central1-a
+khushi-ansible-failed-ubuntu2404arm-0 us-central1-a
+khushi-ansible-rhel8-0 us-central1-a
+khushi-ansible-rhel9-0 us-central1-a
+khushi-ansible-rocky8-0 us-central1-a
+khushi-ansible-rocky9-0 us-central1-a
+khushi-ansible-ubuntu2204-0 us-central1-a
+khushi-ansible-ubuntu2404-0 us-central1-a
+khushi-ansible-ubuntu2404arm-0 us-central1-a
+khu-test-ansible-sleep-ubuntu2204-0 us-central1-a
+khu-test-ansible-sleep-ubuntu2404-0 us-central1-a
+khu-test-ansible-sleep-ubuntu2404arm-0 us-central1-a
+khu-test-ansible-ubuntu2204-0 us-central1-a
+khu-test-ansible-ubuntu2404-0 us-central1-a
+khu-test-ansible-ubuntu2404arm-0 us-central1-a
+ml-gke-e2e-a8fae6-0 asia-southeast1-b
+my-a3-spot-vm us-central1-a
+packer-119ae1 us-west1-a
+packer-2c0c79 asia-southeast1-b
+packer-3e3b45 us-west1-a
+packer-59a068 us-west1-a
+packer-5c41cc us-south1-b
+packer-84a235 europe-west4-b
+packer-90b969 us-west4-a
+packer-a947ca us-west1-a
+temp-image-check us-west1-a
+test us-central1-a
+testvm01 us-central1-a
+testvm727 us-central1-b
+[EXECUTE] Instance: Deleting khushi-ansible-failed-ubuntu2204-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-ubuntu2204-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-ubuntu2404-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-ubuntu2404-0].
+[EXECUTE] Instance: Deleting khushi-ansible-failed-ubuntu2404arm-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-failed-ubuntu2404arm-0].
+[EXECUTE] Instance: Deleting khushi-ansible-rhel8-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-rhel8-0].
+[EXECUTE] Instance: Deleting khushi-ansible-rhel9-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-rhel9-0].
+[EXECUTE] Instance: Deleting khushi-ansible-rocky8-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-rocky8-0].
+[EXECUTE] Instance: Deleting khushi-ansible-rocky9-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-rocky9-0].
+[EXECUTE] Instance: Deleting khushi-ansible-ubuntu2204-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-ubuntu2204-0].
+[EXECUTE] Instance: Deleting khushi-ansible-ubuntu2404-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-ubuntu2404-0].
+[EXECUTE] Instance: Deleting khushi-ansible-ubuntu2404arm-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khushi-ansible-ubuntu2404arm-0].
+[EXECUTE] Instance: Deleting khu-test-ansible-sleep-ubuntu2204-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-test-ansible-sleep-ubuntu2204-0].
+[EXECUTE] Instance: Deleting khu-test-ansible-sleep-ubuntu2404-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-test-ansible-sleep-ubuntu2404-0].
+[EXECUTE] Instance: Deleting khu-test-ansible-sleep-ubuntu2404arm-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-test-ansible-sleep-ubuntu2404arm-0].
+[EXECUTE] Instance: Deleting khu-test-ansible-ubuntu2204-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-test-ansible-ubuntu2204-0].
+[EXECUTE] Instance: Deleting khu-test-ansible-ubuntu2404-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-test-ansible-ubuntu2404-0].
+[EXECUTE] Instance: Deleting khu-test-ansible-ubuntu2404arm-0 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/khu-test-ansible-ubuntu2404arm-0].
+[EXECUTE] Instance: Deleting ml-gke-e2e-a8fae6-0 in asia-southeast1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/asia-southeast1-b/instances/ml-gke-e2e-a8fae6-0].
+[EXECUTE] Instance: Deleting my-a3-spot-vm in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/my-a3-spot-vm].
+[EXECUTE] Instance: Deleting packer-119ae1 in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/packer-119ae1].
+[EXECUTE] Instance: Deleting packer-2c0c79 in asia-southeast1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/asia-southeast1-b/instances/packer-2c0c79].
+[EXECUTE] Instance: Deleting packer-3e3b45 in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/packer-3e3b45].
+[EXECUTE] Instance: Deleting packer-59a068 in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/packer-59a068].
+[EXECUTE] Instance: Deleting packer-5c41cc in us-south1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-south1-b/instances/packer-5c41cc].
+[EXECUTE] Instance: Deleting packer-84a235 in europe-west4-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/europe-west4-b/instances/packer-84a235].
+[EXECUTE] Instance: Deleting packer-90b969 in us-west4-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west4-a/instances/packer-90b969].
+[EXECUTE] Instance: Deleting packer-a947ca in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/packer-a947ca].
+[EXECUTE] Instance: Deleting temp-image-check in us-west1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a/instances/temp-image-check].
+[EXECUTE] Instance: Deleting test in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/test].
+[EXECUTE] Instance: Deleting testvm01 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/testvm01].
+[EXECUTE] Instance: Deleting testvm727 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/testvm727].
+--- Wed Nov 26 01:41:23 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:41:38 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+today24 us-central1-b
+  gcloud compute instances delete "today24" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+--- Wed Nov 26 01:41:42 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:41:56 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+today24 us-central1-b
+[EXECUTE] Instance: Deleting today24 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/today24].
+--- Wed Nov 26 01:42:48 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Thu Nov 27 03:21:06 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:21:06+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+./cleanup.sh: line 72: ---: command not found
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+The following GKE clusters are targeted for deletion in this run:
+gke-a3-nccl-test us-west4
+ gcloud container clusters delete "gke-a3-nccl-test" --project="hpc-toolkit-dev" --location="us-west4" --quiet
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+a4hc0e2-a4highnodeset-0 us-central1-b
+a4hc0e2-a4highnodeset-1 us-central1-b
+a4hc0e2-controller us-central1-b
+a4hc0e2-slurm-login-001 us-central1-b
+gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk us-west4-a
+gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 us-west4-a
+gke-gke-a3-nccl-test-system-17f71453-fns8 us-west4-c
+ gcloud compute instances delete "a4hc0e2-a4highnodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+ gcloud compute instances delete "a4hc0e2-a4highnodeset-1" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+ gcloud compute instances delete "a4hc0e2-controller" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+ gcloud compute instances delete "a4hc0e2-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+ gcloud compute instances delete "gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+ gcloud compute instances delete "gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+ gcloud compute instances delete "gke-gke-a3-nccl-test-system-17f71453-fns8" --project="hpc-toolkit-dev" --zone="us-west4-c" --quiet
+--- Thu Nov 27 03:21:10 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:27:17 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:27:17+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+./cleanup.sh: line 77: ---: command not found
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+./cleanup.sh: line 50: resource_name: unbound variable
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+./cleanup.sh: line 50: resource_name: unbound variable
+No Instances found to delete in this run.
+--- Thu Nov 27 03:27:22 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:27:52 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:27:52+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+./cleanup.sh: line 77: ---: command not found
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+a4hc0e2-a4highnodeset-0 us-central1-b
+a4hc0e2-a4highnodeset-1 us-central1-b
+a4hc0e2-controller us-central1-b
+a4hc0e2-slurm-login-001 us-central1-b
+ gcloud compute instances delete "a4hc0e2-a4highnodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+ gcloud compute instances delete "a4hc0e2-a4highnodeset-1" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+ gcloud compute instances delete "a4hc0e2-controller" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+ gcloud compute instances delete "a4hc0e2-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-b" --quiet
+--- Thu Nov 27 03:27:57 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:28:56 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:28:56+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+./cleanup.sh: line 77: ---: command not found
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+a4hc0e2-a4highnodeset-0 us-central1-b
+a4hc0e2-a4highnodeset-1 us-central1-b
+a4hc0e2-controller us-central1-b
+a4hc0e2-slurm-login-001 us-central1-b
+[EXECUTE] Instance: Deleting a4hc0e2-a4highnodeset-0 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4hc0e2-a4highnodeset-0].
+[EXECUTE] Instance: Deleting a4hc0e2-a4highnodeset-1 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4hc0e2-a4highnodeset-1].
+[EXECUTE] Instance: Deleting a4hc0e2-controller in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4hc0e2-controller].
+[EXECUTE] Instance: Deleting a4hc0e2-slurm-login-001 in us-central1-b
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-b/instances/a4hc0e2-slurm-login-001].
+--- Thu Nov 27 03:35:47 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:36:13 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:36:13+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+./cleanup.sh: line 77: ---: command not found
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+The following Filestore instances are targeted for deletion in this run:
+a4h-slurm-c0e262-f5260d85 
+[DRY RUN] Filestore Instance: Would delete a4h-slurm-c0e262-f5260d85 in 
+  Command: gcloud filestore instances delete "a4h-slurm-c0e262-f5260d85" --project="hpc-toolkit-dev" --location="" --quiet --force
+--- Thu Nov 27 03:36:19 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:36:45 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:36:45+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+./cleanup.sh: line 77: ---: command not found
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+The following Filestore instances are targeted for deletion in this run:
+a4h-slurm-c0e262-f5260d85 
+[EXECUTE] Filestore Instance: Deleting a4h-slurm-c0e262-f5260d85 in 
+ERROR: (gcloud.filestore.instances.delete) Error parsing [instance].
+The [instance] resource is not properly specified.
+Failed to find attribute [zone]. The attribute can be set in the following ways: 
+- provide the argument `instance` on the command line with a fully specified name
+- provide the argument `--zone` on the command line
+- provide the argument `region` on the command line
+- provide the argument `location` on the command line
+- set the property `filestore/zone`
+- set the property `filestore/region`
+- set the property `filestore/location`
+--- Thu Nov 27 03:36:52 AM UTC 2025 --- Cleanup Script Run Finished ---
+
