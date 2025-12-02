@@ -1,0 +1,2155 @@
+--- Thu Nov 27 03:47:02 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:47:02+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-all (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-all (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-vms (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+a4h-slurm-c0e262
+a4h-slurm-internal-0
+a4h-slurm-internal-1
+a4h-slurm-net-0-fw-allow-iap-ingress
+a4h-slurm-net-1-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-internal-traffic
+mainek-net-fw-allow-iap-ingress
+mainek-net-fw-allow-internal-traffic
+managed-lustre-03-net-fw-allow-iap-ingress
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-c0e262
+  Command: gcloud compute firewall-rules delete "a4h-slurm-c0e262" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-internal-0
+  Command: gcloud compute firewall-rules delete "a4h-slurm-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-internal-1
+  Command: gcloud compute firewall-rules delete "a4h-slurm-internal-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-1-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mainek-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "mainek-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mainek-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "mainek-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete managed-lustre-03-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "managed-lustre-03-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 03:47:13 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:49:36 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:49:36+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 60 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - managed-lustre-03-net-fw-allow-iap-ingress
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-all (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-all (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-vms (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: managed-lustre-03-net-fw-allow-iap-ingress (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+a4h-slurm-c0e262
+a4h-slurm-internal-0
+a4h-slurm-internal-1
+a4h-slurm-net-0-fw-allow-iap-ingress
+a4h-slurm-net-1-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-internal-traffic
+mainek-net-fw-allow-iap-ingress
+mainek-net-fw-allow-internal-traffic
+managed-lustre-03-net-fw-allow-internal-traffic
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-c0e262
+  Command: gcloud compute firewall-rules delete "a4h-slurm-c0e262" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-internal-0
+  Command: gcloud compute firewall-rules delete "a4h-slurm-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-internal-1
+  Command: gcloud compute firewall-rules delete "a4h-slurm-internal-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-1-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mainek-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "mainek-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mainek-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "mainek-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete managed-lustre-03-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "managed-lustre-03-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 03:49:46 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:50:25 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:50:25+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-all (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-all (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-vms (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+a4h-slurm-c0e262
+a4h-slurm-internal-0
+a4h-slurm-internal-1
+a4h-slurm-net-0-fw-allow-iap-ingress
+a4h-slurm-net-1-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-internal-traffic
+mainek-net-fw-allow-iap-ingress
+mainek-net-fw-allow-internal-traffic
+managed-lustre-03-net-fw-allow-iap-ingress
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-c0e262
+  Command: gcloud compute firewall-rules delete "a4h-slurm-c0e262" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-internal-0
+  Command: gcloud compute firewall-rules delete "a4h-slurm-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-internal-1
+  Command: gcloud compute firewall-rules delete "a4h-slurm-internal-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-1-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4h-slurm-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a4h-slurm-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mainek-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "mainek-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mainek-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "mainek-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete managed-lustre-03-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "managed-lustre-03-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 03:50:37 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:51:13 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:51:13+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-all (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-all (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-vms (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+a4h-slurm-c0e262
+a4h-slurm-internal-0
+a4h-slurm-internal-1
+a4h-slurm-net-0-fw-allow-iap-ingress
+a4h-slurm-net-1-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-iap-ingress
+a4h-slurm-net-fw-allow-internal-traffic
+mainek-net-fw-allow-iap-ingress
+mainek-net-fw-allow-internal-traffic
+managed-lustre-03-net-fw-allow-iap-ingress
+[EXECUTE] Firewall Rule: Deleting a4h-slurm-c0e262
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4h-slurm-c0e262].
+[EXECUTE] Firewall Rule: Deleting a4h-slurm-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4h-slurm-internal-0].
+[EXECUTE] Firewall Rule: Deleting a4h-slurm-internal-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4h-slurm-internal-1].
+[EXECUTE] Firewall Rule: Deleting a4h-slurm-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4h-slurm-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4h-slurm-net-1-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4h-slurm-net-1-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4h-slurm-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4h-slurm-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4h-slurm-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4h-slurm-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting mainek-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mainek-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting mainek-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mainek-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting managed-lustre-03-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/managed-lustre-03-net-fw-allow-iap-ingress].
+--- Thu Nov 27 03:52:42 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 04:01:50 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-27T00:01:50+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-0-cd329e7681dcd885-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-1-7c5eefba7a3794dd-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-2-a471ab1bfba32e34-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-3-ecde7ab14b91f3fa-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-4-706f8cbf69c0667b-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-5-00641f6a2fe63813-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-6-6d9463728e1194f8-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl--gke-a3-nccl-test-gpunet-7-75cf5c746c638c3d-vms (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-all (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-all (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-exkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-inkubelet (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-d5d4e9ce-vms (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-gke-a3-nccl-test-d5d4e9ce-vms (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+managed-lustre-03-net-fw-allow-internal-traffic
+mglsa-net-fw-allow-iap-ingress
+mglsa-net-fw-allow-internal-traffic
+mglsard-net-fw-allow-iap-ingress
+mglsard-net-fw-allow-internal-traffic
+ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress
+ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic
+ml-gke-net-fw-allow-iap-ingress
+ml-gke-net-fw-allow-internal-traffic
+monitoring-8323fe-net-fw-allow-iap-ingress
+[DRY RUN] Firewall Rule: Would delete managed-lustre-03-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "managed-lustre-03-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsa-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "mglsa-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsa-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "mglsa-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsard-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "mglsard-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsard-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "mglsard-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "ml-gke-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "ml-gke-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete monitoring-8323fe-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "monitoring-8323fe-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 04:02:00 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 05:08:31 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-27T01:08:31+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+managed-lustre-03-net-fw-allow-internal-traffic
+mglsa-net-fw-allow-iap-ingress
+mglsa-net-fw-allow-internal-traffic
+mglsard-net-fw-allow-iap-ingress
+mglsard-net-fw-allow-internal-traffic
+ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress
+ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic
+ml-gke-net-fw-allow-iap-ingress
+ml-gke-net-fw-allow-internal-traffic
+monitoring-8323fe-net-fw-allow-iap-ingress
+[DRY RUN] Firewall Rule: Would delete managed-lustre-03-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "managed-lustre-03-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsa-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "mglsa-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsa-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "mglsa-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsard-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "mglsard-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete mglsard-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "mglsard-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "ml-gke-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete ml-gke-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "ml-gke-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete monitoring-8323fe-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "monitoring-8323fe-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 05:08:43 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 05:09:35 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-27T01:09:35+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+managed-lustre-03-net-fw-allow-internal-traffic
+mglsa-net-fw-allow-iap-ingress
+mglsa-net-fw-allow-internal-traffic
+mglsard-net-fw-allow-iap-ingress
+mglsard-net-fw-allow-internal-traffic
+ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress
+ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic
+ml-gke-net-fw-allow-iap-ingress
+ml-gke-net-fw-allow-internal-traffic
+monitoring-8323fe-net-fw-allow-iap-ingress
+[EXECUTE] Firewall Rule: Deleting managed-lustre-03-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/managed-lustre-03-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting mglsa-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mglsa-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting mglsa-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mglsa-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting mglsard-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mglsard-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting mglsard-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mglsard-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/ml-gke-e2e-a8fae6-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/ml-gke-e2e-a8fae6-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting ml-gke-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/ml-gke-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting ml-gke-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/ml-gke-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting monitoring-8323fe-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/monitoring-8323fe-net-fw-allow-iap-ingress].
+--- Thu Nov 27 05:10:55 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 05:11:11 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-27T01:11:11+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-7-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+monitoring-8323fe-net-fw-allow-internal-traffic
+sa-chs-ops-internal-0
+sa-chs-ops-net-0-fw-allow-iap-ingress
+sispot3u-internal-0
+sispot3u-net-0-fw-allow-iap-ingress
+slurm-a3-base-sysnet-fw-allow-iap-ingress
+slurm-a3-base-sysnet-fw-allow-internal-traffic
+sp-helmtest1-net-fw-allow-iap-ingress
+sp-helmtest1-net-fw-allow-internal-traffic
+static-sarthakag-net-fw-allow-iap-ingress
+[DRY RUN] Firewall Rule: Would delete monitoring-8323fe-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "monitoring-8323fe-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete sa-chs-ops-internal-0
+  Command: gcloud compute firewall-rules delete "sa-chs-ops-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete sa-chs-ops-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "sa-chs-ops-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete sispot3u-internal-0
+  Command: gcloud compute firewall-rules delete "sispot3u-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete sispot3u-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "sispot3u-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete slurm-a3-base-sysnet-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "slurm-a3-base-sysnet-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete slurm-a3-base-sysnet-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "slurm-a3-base-sysnet-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete sp-helmtest1-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "sp-helmtest1-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete sp-helmtest1-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "sp-helmtest1-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete static-sarthakag-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "static-sarthakag-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 05:11:21 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 05:11:39 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-27T01:11:39+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+WARNING: The following filter keys were not present in any resource : createTime
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Resource: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-0-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-1-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-2-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-3-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-4-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-5-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-gpunet-6-fw-allow-internal-traffic (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-iap-ingress (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-iap-ingress (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-fw-allow-internal-traffic (Contains protected substring: gke-a3-nccl-test)
+Skip Firewall: gke-a3-nccl-test-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+monitoring-8323fe-net-fw-allow-internal-traffic
+sa-chs-ops-internal-0
+sa-chs-ops-net-0-fw-allow-iap-ingress
+sispot3u-internal-0
+sispot3u-net-0-fw-allow-iap-ingress
+slurm-a3-base-sysnet-fw-allow-iap-ingress
+slurm-a3-base-sysnet-fw-allow-internal-traffic
+sp-helmtest1-net-fw-allow-iap-ingress
+sp-helmtest1-net-fw-allow-internal-traffic
+static-sarthakag-net-fw-allow-iap-ingress
+[EXECUTE] Firewall Rule: Deleting monitoring-8323fe-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/monitoring-8323fe-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting sa-chs-ops-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/sa-chs-ops-internal-0].
+[EXECUTE] Firewall Rule: Deleting sa-chs-ops-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/sa-chs-ops-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting sispot3u-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/sispot3u-internal-0].
+[EXECUTE] Firewall Rule: Deleting sispot3u-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/sispot3u-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting slurm-a3-base-sysnet-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/slurm-a3-base-sysnet-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting slurm-a3-base-sysnet-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/slurm-a3-base-sysnet-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting sp-helmtest1-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/sp-helmtest1-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting sp-helmtest1-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/sp-helmtest1-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting static-sarthakag-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/static-sarthakag-net-fw-allow-iap-ingress].
+--- Thu Nov 27 05:12:55 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 05:14:50 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-27T01:14:50+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+WARNING: The following filter keys were not present in any resource : createTime
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+static-sarthakag-net-fw-allow-internal-traffic
+[DRY RUN] Firewall Rule: Would delete static-sarthakag-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "static-sarthakag-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 05:15:00 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 05:15:13 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-27T01:15:13+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+WARNING: The following filter keys were not present in any resource : createTime
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 10) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+static-sarthakag-net-fw-allow-internal-traffic
+[EXECUTE] Firewall Rule: Deleting static-sarthakag-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/static-sarthakag-net-fw-allow-internal-traffic].
+--- Thu Nov 27 05:15:30 AM UTC 2025 --- Cleanup Script Run Finished ---
+

@@ -1,0 +1,1350 @@
+--- Wed Nov 26 01:51:04 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+The following Cloud Routers are targeted for deletion in this run:
+a3mega-sys-net-shu7-router us-west4
+a3u-slurm-net-router us-south1
+a4hsarthakag-net-router us-central1
+a4htest-net-0-router us-central1
+a4newimgek-net-0-router us-south1
+a4newimgek-net-1-router us-south1
+a4newimgek-net-router europe-west4
+a4oldimgek-net-0-router europe-west4
+a4oldimgek-net-1-router europe-west4
+a4oldimgek-net-router europe-west4
+  gcloud compute routers delete "a3mega-sys-net-shu7-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "a3u-slurm-net-router" --project="hpc-toolkit-dev" --region="us-south1" --quiet
+  gcloud compute routers delete "a4hsarthakag-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "a4htest-net-0-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "a4newimgek-net-0-router" --project="hpc-toolkit-dev" --region="us-south1" --quiet
+  gcloud compute routers delete "a4newimgek-net-1-router" --project="hpc-toolkit-dev" --region="us-south1" --quiet
+  gcloud compute routers delete "a4newimgek-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "a4oldimgek-net-0-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "a4oldimgek-net-1-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "a4oldimgek-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+--- Wed Nov 26 01:51:11 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:51:59 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+The following Cloud Routers are targeted for deletion in this run:
+a3mega-sys-net-shu7-router us-west4
+a3u-slurm-net-router us-south1
+a4hsarthakag-net-router us-central1
+a4htest-net-0-router us-central1
+a4newimgek-net-0-router us-south1
+a4newimgek-net-1-router us-south1
+a4newimgek-net-router europe-west4
+a4oldimgek-net-0-router europe-west4
+a4oldimgek-net-1-router europe-west4
+a4oldimgek-net-router europe-west4
+[EXECUTE] Cloud Router: Deleting a3mega-sys-net-shu7-router in us-west4
+[EXECUTE] Cloud Router: Deleting a3u-slurm-net-router in us-south1
+[EXECUTE] Cloud Router: Deleting a4hsarthakag-net-router in us-central1
+[EXECUTE] Cloud Router: Deleting a4htest-net-0-router in us-central1
+[EXECUTE] Cloud Router: Deleting a4newimgek-net-0-router in us-south1
+[EXECUTE] Cloud Router: Deleting a4newimgek-net-1-router in us-south1
+[EXECUTE] Cloud Router: Deleting a4newimgek-net-router in europe-west4
+[EXECUTE] Cloud Router: Deleting a4oldimgek-net-0-router in europe-west4
+[EXECUTE] Cloud Router: Deleting a4oldimgek-net-1-router in europe-west4
+[EXECUTE] Cloud Router: Deleting a4oldimgek-net-router in europe-west4
+--- Wed Nov 26 01:52:07 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:52:24 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+The following Cloud Routers are targeted for deletion in this run:
+a3mega-sys-net-shu7-router us-west4
+a3u-slurm-net-router us-south1
+a4hsarthakag-net-router us-central1
+a4htest-net-0-router us-central1
+a4newimgek-net-0-router us-south1
+a4newimgek-net-1-router us-south1
+a4newimgek-net-router europe-west4
+a4oldimgek-net-0-router europe-west4
+a4oldimgek-net-1-router europe-west4
+a4oldimgek-net-router europe-west4
+[EXECUTE] Cloud Router: Deleting a3mega-sys-net-shu7-router in us-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-west4/routers/a3mega-sys-net-shu7-router].
+[EXECUTE] Cloud Router: Deleting a3u-slurm-net-router in us-south1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-south1/routers/a3u-slurm-net-router].
+[EXECUTE] Cloud Router: Deleting a4hsarthakag-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/a4hsarthakag-net-router].
+[EXECUTE] Cloud Router: Deleting a4htest-net-0-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/a4htest-net-0-router].
+[EXECUTE] Cloud Router: Deleting a4newimgek-net-0-router in us-south1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-south1/routers/a4newimgek-net-0-router].
+[EXECUTE] Cloud Router: Deleting a4newimgek-net-1-router in us-south1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-south1/routers/a4newimgek-net-1-router].
+[EXECUTE] Cloud Router: Deleting a4newimgek-net-router in europe-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west4/routers/a4newimgek-net-router].
+[EXECUTE] Cloud Router: Deleting a4oldimgek-net-0-router in europe-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west4/routers/a4oldimgek-net-0-router].
+[EXECUTE] Cloud Router: Deleting a4oldimgek-net-1-router in europe-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west4/routers/a4oldimgek-net-1-router].
+[EXECUTE] Cloud Router: Deleting a4oldimgek-net-router in europe-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west4/routers/a4oldimgek-net-router].
+--- Wed Nov 26 01:53:20 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:56:35 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 30 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+a4oldimg-net-router europe-west4
+a4xlavhpcnew-a4x-net-0-router us-west8
+a4xlavhpcnew-a4x-net-1-router us-west8
+a4xslurm-net-router us-west8
+cx-a3u-net-0-router europe-west1
+db451c7-ml-slurm-v6-net-router asia-southeast1
+default-net-router us-central1
+default-router-australia-southeast1 australia-southeast1
+default-router-us-east4 us-east4
+dynpoc-net-router us-central1
+  gcloud compute routers delete "a4oldimg-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "a4xlavhpcnew-a4x-net-0-router" --project="hpc-toolkit-dev" --region="us-west8" --quiet
+  gcloud compute routers delete "a4xlavhpcnew-a4x-net-1-router" --project="hpc-toolkit-dev" --region="us-west8" --quiet
+  gcloud compute routers delete "a4xslurm-net-router" --project="hpc-toolkit-dev" --region="us-west8" --quiet
+  gcloud compute routers delete "cx-a3u-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "db451c7-ml-slurm-v6-net-router" --project="hpc-toolkit-dev" --region="asia-southeast1" --quiet
+  gcloud compute routers delete "default-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "default-router-australia-southeast1" --project="hpc-toolkit-dev" --region="australia-southeast1" --quiet
+  gcloud compute routers delete "default-router-us-east4" --project="hpc-toolkit-dev" --region="us-east4" --quiet
+  gcloud compute routers delete "dynpoc-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Wed Nov 26 01:56:43 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:57:33 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 33 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+a4oldimg-net-router europe-west4
+a4xlavhpcnew-a4x-net-0-router us-west8
+a4xlavhpcnew-a4x-net-1-router us-west8
+a4xslurm-net-router us-west8
+cx-a3u-net-0-router europe-west1
+db451c7-ml-slurm-v6-net-router asia-southeast1
+dynpoc-net-router us-central1
+g4-dwsq-1-net-1-router us-central1
+g4qclav-net-router us-central1
+gke-1395b4-net-router us-central1
+  gcloud compute routers delete "a4oldimg-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "a4xlavhpcnew-a4x-net-0-router" --project="hpc-toolkit-dev" --region="us-west8" --quiet
+  gcloud compute routers delete "a4xlavhpcnew-a4x-net-1-router" --project="hpc-toolkit-dev" --region="us-west8" --quiet
+  gcloud compute routers delete "a4xslurm-net-router" --project="hpc-toolkit-dev" --region="us-west8" --quiet
+  gcloud compute routers delete "cx-a3u-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "db451c7-ml-slurm-v6-net-router" --project="hpc-toolkit-dev" --region="asia-southeast1" --quiet
+  gcloud compute routers delete "dynpoc-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "g4-dwsq-1-net-1-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "g4qclav-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "gke-1395b4-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Wed Nov 26 01:57:40 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:57:54 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 33 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+a4oldimg-net-router europe-west4
+a4xlavhpcnew-a4x-net-0-router us-west8
+a4xlavhpcnew-a4x-net-1-router us-west8
+a4xslurm-net-router us-west8
+cx-a3u-net-0-router europe-west1
+db451c7-ml-slurm-v6-net-router asia-southeast1
+dynpoc-net-router us-central1
+g4-dwsq-1-net-1-router us-central1
+g4qclav-net-router us-central1
+gke-1395b4-net-router us-central1
+[EXECUTE] Cloud Router: Deleting a4oldimg-net-router in europe-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west4/routers/a4oldimg-net-router].
+[EXECUTE] Cloud Router: Deleting a4xlavhpcnew-a4x-net-0-router in us-west8
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-west8/routers/a4xlavhpcnew-a4x-net-0-router].
+[EXECUTE] Cloud Router: Deleting a4xlavhpcnew-a4x-net-1-router in us-west8
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-west8/routers/a4xlavhpcnew-a4x-net-1-router].
+[EXECUTE] Cloud Router: Deleting a4xslurm-net-router in us-west8
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-west8/routers/a4xslurm-net-router].
+[EXECUTE] Cloud Router: Deleting cx-a3u-net-0-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/cx-a3u-net-0-router].
+[EXECUTE] Cloud Router: Deleting db451c7-ml-slurm-v6-net-router in asia-southeast1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/asia-southeast1/routers/db451c7-ml-slurm-v6-net-router].
+[EXECUTE] Cloud Router: Deleting dynpoc-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/dynpoc-net-router].
+[EXECUTE] Cloud Router: Deleting g4-dwsq-1-net-1-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/g4-dwsq-1-net-1-router].
+[EXECUTE] Cloud Router: Deleting g4qclav-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/g4qclav-net-router].
+[EXECUTE] Cloud Router: Deleting gke-1395b4-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/gke-1395b4-net-router].
+--- Wed Nov 26 01:58:47 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 01:59:14 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 33 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+gke-managed-lustre-basic-net-router us-central1
+h4dqc-net-router us-central1
+h4d-res-swarnabm4-3-net-router us-central1
+hpc-01-net-router us-central1
+hpcdydis-net-router europe-west4
+hpcdy-net-router europe-west4
+hpc-exr-2-net-0-router europe-west1
+hpcimg-net-router us-central1
+hpc-lustre-test-02-net-router us-central1
+khu-h4d-cluster-test-net-router us-central1
+  gcloud compute routers delete "gke-managed-lustre-basic-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "h4dqc-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "h4d-res-swarnabm4-3-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "hpc-01-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "hpcdydis-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "hpcdy-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "hpc-exr-2-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "hpcimg-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "hpc-lustre-test-02-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "khu-h4d-cluster-test-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Wed Nov 26 01:59:23 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:02:27 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 33 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+gke-managed-lustre-basic-net-router us-central1
+h4dqc-net-router us-central1
+h4d-res-swarnabm4-3-net-router us-central1
+hpc-01-net-router us-central1
+hpcdydis-net-router europe-west4
+hpcdy-net-router europe-west4
+hpc-exr-2-net-0-router europe-west1
+hpcimg-net-router us-central1
+hpc-lustre-test-02-net-router us-central1
+khu-h4d-cluster-test-net-router us-central1
+  gcloud compute routers delete "gke-managed-lustre-basic-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "h4dqc-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "h4d-res-swarnabm4-3-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "hpc-01-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "hpcdydis-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "hpcdy-net-router" --project="hpc-toolkit-dev" --region="europe-west4" --quiet
+  gcloud compute routers delete "hpc-exr-2-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "hpcimg-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "hpc-lustre-test-02-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "khu-h4d-cluster-test-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Wed Nov 26 02:02:35 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:03:11 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 33 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+gke-managed-lustre-basic-net-router us-central1
+h4dqc-net-router us-central1
+h4d-res-swarnabm4-3-net-router us-central1
+hpc-01-net-router us-central1
+hpcdydis-net-router europe-west4
+hpcdy-net-router europe-west4
+hpc-exr-2-net-0-router europe-west1
+hpcimg-net-router us-central1
+hpc-lustre-test-02-net-router us-central1
+khu-h4d-cluster-test-net-router us-central1
+[EXECUTE] Cloud Router: Deleting gke-managed-lustre-basic-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/gke-managed-lustre-basic-net-router].
+[EXECUTE] Cloud Router: Deleting h4dqc-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/h4dqc-net-router].
+[EXECUTE] Cloud Router: Deleting h4d-res-swarnabm4-3-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/h4d-res-swarnabm4-3-net-router].
+[EXECUTE] Cloud Router: Deleting hpc-01-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/hpc-01-net-router].
+[EXECUTE] Cloud Router: Deleting hpcdydis-net-router in europe-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west4/routers/hpcdydis-net-router].
+[EXECUTE] Cloud Router: Deleting hpcdy-net-router in europe-west4
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west4/routers/hpcdy-net-router].
+[EXECUTE] Cloud Router: Deleting hpc-exr-2-net-0-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/hpc-exr-2-net-0-router].
+[EXECUTE] Cloud Router: Deleting hpcimg-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/hpcimg-net-router].
+[EXECUTE] Cloud Router: Deleting hpc-lustre-test-02-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/hpc-lustre-test-02-net-router].
+[EXECUTE] Cloud Router: Deleting khu-h4d-cluster-test-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/khu-h4d-cluster-test-net-router].
+--- Wed Nov 26 02:04:01 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:04:14 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 33 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+laveeek29-net-0-router europe-west1
+laveeek29-net-1-router europe-west1
+laveeek29-net-router europe-west1
+lavoldchk-net-router europe-west1
+lavrohek29-net-0-router europe-west1
+lustre-06-net-router us-central1
+lustre-test-06-net-router us-central1
+mainek-net-0-router europe-west1
+mainek-net-1-router europe-west1
+mainek-net-router europe-west1
+managed-lustre-03-net-router us-central1
+mglsa-net-router us-central1
+mglsard-net-router us-west4
+ml-gke-e2e-a8fae6-net-router asia-southeast1
+ml-gke-net-router us-central1
+monitoring-8323fe-net-router us-central1
+sa-chs-ops-net-0-router europe-west1
+sispot3u-net-0-router europe-west1
+slurm-a3-base-sysnet-router us-west1
+sp-helmtest1-net-router us-central1
+  gcloud compute routers delete "laveeek29-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "laveeek29-net-1-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "laveeek29-net-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "lavoldchk-net-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "lavrohek29-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "lustre-06-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "lustre-test-06-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "mainek-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "mainek-net-1-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "mainek-net-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "managed-lustre-03-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "mglsa-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "mglsard-net-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "ml-gke-e2e-a8fae6-net-router" --project="hpc-toolkit-dev" --region="asia-southeast1" --quiet
+  gcloud compute routers delete "ml-gke-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "monitoring-8323fe-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "sa-chs-ops-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "sispot3u-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "slurm-a3-base-sysnet-router" --project="hpc-toolkit-dev" --region="us-west1" --quiet
+  gcloud compute routers delete "sp-helmtest1-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Wed Nov 26 02:04:22 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:05:46 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+laveeek29-net-0-router europe-west1
+laveeek29-net-1-router europe-west1
+laveeek29-net-router europe-west1
+lavoldchk-net-router europe-west1
+lavrohek29-net-0-router europe-west1
+mainek-net-0-router europe-west1
+mainek-net-1-router europe-west1
+mainek-net-router europe-west1
+managed-lustre-03-net-router us-central1
+ml-gke-e2e-a8fae6-net-router asia-southeast1
+ml-gke-net-router us-central1
+monitoring-8323fe-net-router us-central1
+sa-chs-ops-net-0-router europe-west1
+sispot3u-net-0-router europe-west1
+slurm-a3-base-sysnet-router us-west1
+sp-helmtest1-net-router us-central1
+static-sarthakag-net-router us-central1
+  gcloud compute routers delete "laveeek29-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "laveeek29-net-1-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "laveeek29-net-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "lavoldchk-net-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "lavrohek29-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "mainek-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "mainek-net-1-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "mainek-net-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "managed-lustre-03-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "ml-gke-e2e-a8fae6-net-router" --project="hpc-toolkit-dev" --region="asia-southeast1" --quiet
+  gcloud compute routers delete "ml-gke-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "monitoring-8323fe-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "sa-chs-ops-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "sispot3u-net-0-router" --project="hpc-toolkit-dev" --region="europe-west1" --quiet
+  gcloud compute routers delete "slurm-a3-base-sysnet-router" --project="hpc-toolkit-dev" --region="us-west1" --quiet
+  gcloud compute routers delete "sp-helmtest1-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+  gcloud compute routers delete "static-sarthakag-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Wed Nov 26 02:05:53 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:06:46 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+laveeek29-net-0-router europe-west1
+laveeek29-net-1-router europe-west1
+laveeek29-net-router europe-west1
+lavoldchk-net-router europe-west1
+lavrohek29-net-0-router europe-west1
+mainek-net-0-router europe-west1
+mainek-net-1-router europe-west1
+mainek-net-router europe-west1
+managed-lustre-03-net-router us-central1
+ml-gke-e2e-a8fae6-net-router asia-southeast1
+ml-gke-net-router us-central1
+monitoring-8323fe-net-router us-central1
+sa-chs-ops-net-0-router europe-west1
+sispot3u-net-0-router europe-west1
+slurm-a3-base-sysnet-router us-west1
+sp-helmtest1-net-router us-central1
+static-sarthakag-net-router us-central1
+[EXECUTE] Cloud Router: Deleting laveeek29-net-0-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/laveeek29-net-0-router].
+[EXECUTE] Cloud Router: Deleting laveeek29-net-1-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/laveeek29-net-1-router].
+[EXECUTE] Cloud Router: Deleting laveeek29-net-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/laveeek29-net-router].
+[EXECUTE] Cloud Router: Deleting lavoldchk-net-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/lavoldchk-net-router].
+[EXECUTE] Cloud Router: Deleting lavrohek29-net-0-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/lavrohek29-net-0-router].
+[EXECUTE] Cloud Router: Deleting mainek-net-0-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/mainek-net-0-router].
+[EXECUTE] Cloud Router: Deleting mainek-net-1-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/mainek-net-1-router].
+[EXECUTE] Cloud Router: Deleting mainek-net-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/mainek-net-router].
+[EXECUTE] Cloud Router: Deleting managed-lustre-03-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/managed-lustre-03-net-router].
+[EXECUTE] Cloud Router: Deleting ml-gke-e2e-a8fae6-net-router in asia-southeast1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/asia-southeast1/routers/ml-gke-e2e-a8fae6-net-router].
+[EXECUTE] Cloud Router: Deleting ml-gke-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/ml-gke-net-router].
+[EXECUTE] Cloud Router: Deleting monitoring-8323fe-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/monitoring-8323fe-net-router].
+[EXECUTE] Cloud Router: Deleting sa-chs-ops-net-0-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/sa-chs-ops-net-0-router].
+[EXECUTE] Cloud Router: Deleting sispot3u-net-0-router in europe-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/europe-west1/routers/sispot3u-net-0-router].
+[EXECUTE] Cloud Router: Deleting slurm-a3-base-sysnet-router in us-west1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-west1/routers/slurm-a3-base-sysnet-router].
+[EXECUTE] Cloud Router: Deleting sp-helmtest1-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/sp-helmtest1-net-router].
+[EXECUTE] Cloud Router: Deleting static-sarthakag-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/static-sarthakag-net-router].
+--- Wed Nov 26 02:08:16 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:08:27 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Wed Nov 26 02:08:34 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Thu Nov 27 03:43:35 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:43:35+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+./cleanup.sh: line 77: ---: command not found
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+a4h-slurm-net-0-router us-central1
+a4h-slurm-net-1-router us-central1
+a4h-slurm-net-router us-central1
+[DRY RUN] Cloud Router: Would delete a4h-slurm-net-0-router in us-central1
+  Command: gcloud compute routers delete "a4h-slurm-net-0-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+[DRY RUN] Cloud Router: Would delete a4h-slurm-net-1-router in us-central1
+  Command: gcloud compute routers delete "a4h-slurm-net-1-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+[DRY RUN] Cloud Router: Would delete a4h-slurm-net-router in us-central1
+  Command: gcloud compute routers delete "a4h-slurm-net-router" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Thu Nov 27 03:43:45 AM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 03:44:29 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 10 resources of each type per run.
+Targeting resources created before: 2025-11-26T23:44:29+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 59 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+--- Deletion Phase 1: GKE Clusters (Top 10) ---
+Skip Resource: gke-a3-nccl-test (Contains protected substring: gke-a3-nccl-test)
+Skip GKE Cluster: gke-a3-nccl-test (In exclusion list)
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 10) ---
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-0xxk in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-a3-megagpu-8g-a3-44f10dba-8mx7 in us-west4-a (In exclusion list)
+Skip Resource: gke-gke-a3-nccl-test-system-17f71453-fns8 (Contains protected substring: gke-a3-nccl-test)
+Skip Instance: gke-gke-a3-nccl-test-system-17f71453-fns8 in us-west4-c (In exclusion list)
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 10) ---
+Skip Filestore Instance: a4h-slurm-c0e262-f5260d85 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 10) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-0-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-0-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-1-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-1-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-2-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-2-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-3-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-3-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-4-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-4-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-5-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-5-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-6-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-6-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-gpunet-7-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-gpunet-7-router (In exclusion list)
+Skip Resource: gke-a3-nccl-test-net-router (Contains protected substring: gke-a3-nccl-test)
+Skip Cloud Router: gke-a3-nccl-test-net-router (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+a4h-slurm-net-0-router us-central1
+a4h-slurm-net-1-router us-central1
+a4h-slurm-net-router us-central1
+[EXECUTE] Cloud Router: Deleting a4h-slurm-net-0-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/a4h-slurm-net-0-router].
+[EXECUTE] Cloud Router: Deleting a4h-slurm-net-1-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/a4h-slurm-net-1-router].
+[EXECUTE] Cloud Router: Deleting a4h-slurm-net-router in us-central1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/regions/us-central1/routers/a4h-slurm-net-router].
+--- Thu Nov 27 03:44:48 AM UTC 2025 --- Cleanup Script Run Finished ---

@@ -1,0 +1,2086 @@
+--- Wed Nov 26 02:16:54 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+a3mega-sys-net-shu7-fw-allow-iap-ingress
+a3mega-sys-net-shu7-fw-allow-internal-traffic
+a3u-slurm-net-fw-allow-iap-ingress
+a3u-slurm-net-fw-allow-internal-traffic
+a4hsarthakag-net-fw-allow-iap-ingress
+a4hsarthakag-net-fw-allow-internal-traffic
+a4htest-internal-0
+a4htest-net-0-fw-allow-iap-ingress
+a4newimgek-internal-0
+a4newimgek-internal-1
+a4newimgek-net-0-fw-allow-iap-ingress
+a4newimgek-net-1-fw-allow-iap-ingress
+a4newimgek-net-fw-allow-iap-ingress
+a4newimgek-net-fw-allow-internal-traffic
+a4oldimgek-internal-0
+a4oldimgek-internal-1
+a4oldimgek-net-0-fw-allow-iap-ingress
+a4oldimgek-net-1-fw-allow-iap-ingress
+a4oldimgek-net-fw-allow-iap-ingress
+a4oldimgek-net-fw-allow-internal-traffic
+[DRY RUN] Firewall Rule: Would delete a3mega-sys-net-shu7-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a3mega-sys-net-shu7-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a3mega-sys-net-shu7-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a3mega-sys-net-shu7-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a3u-slurm-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a3u-slurm-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a3u-slurm-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a3u-slurm-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4hsarthakag-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4hsarthakag-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4hsarthakag-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a4hsarthakag-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4htest-internal-0
+  Command: gcloud compute firewall-rules delete "a4htest-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4htest-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4htest-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4newimgek-internal-0
+  Command: gcloud compute firewall-rules delete "a4newimgek-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4newimgek-internal-1
+  Command: gcloud compute firewall-rules delete "a4newimgek-internal-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4newimgek-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4newimgek-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4newimgek-net-1-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4newimgek-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4newimgek-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4newimgek-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4newimgek-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a4newimgek-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4oldimgek-internal-0
+  Command: gcloud compute firewall-rules delete "a4oldimgek-internal-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4oldimgek-internal-1
+  Command: gcloud compute firewall-rules delete "a4oldimgek-internal-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4oldimgek-net-0-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4oldimgek-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4oldimgek-net-1-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4oldimgek-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4oldimgek-net-fw-allow-iap-ingress
+  Command: gcloud compute firewall-rules delete "a4oldimgek-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Firewall Rule: Would delete a4oldimgek-net-fw-allow-internal-traffic
+  Command: gcloud compute firewall-rules delete "a4oldimgek-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 02:17:04 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:17:44 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+a3mega-sys-net-shu7-fw-allow-iap-ingress
+a3mega-sys-net-shu7-fw-allow-internal-traffic
+a3u-slurm-net-fw-allow-iap-ingress
+a3u-slurm-net-fw-allow-internal-traffic
+a4hsarthakag-net-fw-allow-iap-ingress
+a4hsarthakag-net-fw-allow-internal-traffic
+a4htest-internal-0
+a4htest-net-0-fw-allow-iap-ingress
+a4newimgek-internal-0
+a4newimgek-internal-1
+a4newimgek-net-0-fw-allow-iap-ingress
+a4newimgek-net-1-fw-allow-iap-ingress
+a4newimgek-net-fw-allow-iap-ingress
+a4newimgek-net-fw-allow-internal-traffic
+a4oldimgek-internal-0
+a4oldimgek-internal-1
+a4oldimgek-net-0-fw-allow-iap-ingress
+a4oldimgek-net-1-fw-allow-iap-ingress
+a4oldimgek-net-fw-allow-iap-ingress
+a4oldimgek-net-fw-allow-internal-traffic
+[EXECUTE] Firewall Rule: Deleting a3mega-sys-net-shu7-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a3mega-sys-net-shu7-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a3mega-sys-net-shu7-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a3mega-sys-net-shu7-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting a3u-slurm-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a3u-slurm-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a3u-slurm-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a3u-slurm-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting a4hsarthakag-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4hsarthakag-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4hsarthakag-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4hsarthakag-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting a4htest-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4htest-internal-0].
+[EXECUTE] Firewall Rule: Deleting a4htest-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4htest-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4newimgek-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4newimgek-internal-0].
+[EXECUTE] Firewall Rule: Deleting a4newimgek-internal-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4newimgek-internal-1].
+[EXECUTE] Firewall Rule: Deleting a4newimgek-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4newimgek-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4newimgek-net-1-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4newimgek-net-1-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4newimgek-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4newimgek-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4newimgek-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4newimgek-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting a4oldimgek-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimgek-internal-0].
+[EXECUTE] Firewall Rule: Deleting a4oldimgek-internal-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimgek-internal-1].
+[EXECUTE] Firewall Rule: Deleting a4oldimgek-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimgek-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4oldimgek-net-1-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimgek-net-1-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4oldimgek-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimgek-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4oldimgek-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimgek-net-fw-allow-internal-traffic].
+--- Wed Nov 26 02:20:54 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:21:04 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+a4oldimg-net-fw-allow-iap-ingress
+a4oldimg-net-fw-allow-internal-traffic
+a4xlavhpcnew-a4x-internal-0
+a4xlavhpcnew-a4x-internal-1
+a4xlavhpcnew-a4x-net-0-fw-allow-iap-ingress
+a4xlavhpcnew-a4x-net-0-fw-allow-internal-traffic
+a4xlavhpcnew-a4x-net-0-fw-allow-ssh-ingress
+a4xlavhpcnew-a4x-net-1-fw-allow-iap-ingress
+a4xlavhpcnew-a4x-net-1-fw-allow-internal-traffic
+a4xslurm-net-fw-allow-iap-ingress
+a4xslurm-net-fw-allow-internal-traffic
+cx-a3u-internal-0
+cx-a3u-net-0-fw-allow-iap-ingress
+db451c7-ml-slurm-v6-net-fw-allow-iap-ingress
+db451c7-ml-slurm-v6-net-fw-allow-internal-traffic
+dynpoc-net-fw-allow-iap-ingress
+dynpoc-net-fw-allow-internal-traffic
+g4qclav-net-fw-allow-iap-ingress
+g4qclav-net-fw-allow-internal-traffic
+gke-1395b4-net-fw-allow-iap-ingress
+  gcloud compute firewall-rules delete "a4oldimg-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4oldimg-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xlavhpcnew-a4x-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xlavhpcnew-a4x-internal-1" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xlavhpcnew-a4x-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xlavhpcnew-a4x-net-0-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xlavhpcnew-a4x-net-0-fw-allow-ssh-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xlavhpcnew-a4x-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xlavhpcnew-a4x-net-1-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xslurm-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "a4xslurm-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "cx-a3u-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "cx-a3u-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "db451c7-ml-slurm-v6-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "db451c7-ml-slurm-v6-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "dynpoc-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "dynpoc-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "g4qclav-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "g4qclav-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-1395b4-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 02:21:13 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:21:47 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+a4oldimg-net-fw-allow-iap-ingress
+a4oldimg-net-fw-allow-internal-traffic
+a4xlavhpcnew-a4x-internal-0
+a4xlavhpcnew-a4x-internal-1
+a4xlavhpcnew-a4x-net-0-fw-allow-iap-ingress
+a4xlavhpcnew-a4x-net-0-fw-allow-internal-traffic
+a4xlavhpcnew-a4x-net-0-fw-allow-ssh-ingress
+a4xlavhpcnew-a4x-net-1-fw-allow-iap-ingress
+a4xlavhpcnew-a4x-net-1-fw-allow-internal-traffic
+a4xslurm-net-fw-allow-iap-ingress
+a4xslurm-net-fw-allow-internal-traffic
+cx-a3u-internal-0
+cx-a3u-net-0-fw-allow-iap-ingress
+db451c7-ml-slurm-v6-net-fw-allow-iap-ingress
+db451c7-ml-slurm-v6-net-fw-allow-internal-traffic
+dynpoc-net-fw-allow-iap-ingress
+dynpoc-net-fw-allow-internal-traffic
+g4qclav-net-fw-allow-iap-ingress
+g4qclav-net-fw-allow-internal-traffic
+gke-1395b4-net-fw-allow-iap-ingress
+[EXECUTE] Firewall Rule: Deleting a4oldimg-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimg-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4oldimg-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4oldimg-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting a4xlavhpcnew-a4x-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xlavhpcnew-a4x-internal-0].
+[EXECUTE] Firewall Rule: Deleting a4xlavhpcnew-a4x-internal-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xlavhpcnew-a4x-internal-1].
+[EXECUTE] Firewall Rule: Deleting a4xlavhpcnew-a4x-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xlavhpcnew-a4x-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4xlavhpcnew-a4x-net-0-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xlavhpcnew-a4x-net-0-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting a4xlavhpcnew-a4x-net-0-fw-allow-ssh-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xlavhpcnew-a4x-net-0-fw-allow-ssh-ingress].
+[EXECUTE] Firewall Rule: Deleting a4xlavhpcnew-a4x-net-1-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xlavhpcnew-a4x-net-1-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4xlavhpcnew-a4x-net-1-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xlavhpcnew-a4x-net-1-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting a4xslurm-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xslurm-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting a4xslurm-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/a4xslurm-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting cx-a3u-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/cx-a3u-internal-0].
+[EXECUTE] Firewall Rule: Deleting cx-a3u-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/cx-a3u-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting db451c7-ml-slurm-v6-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/db451c7-ml-slurm-v6-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting db451c7-ml-slurm-v6-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/db451c7-ml-slurm-v6-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting dynpoc-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/dynpoc-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting dynpoc-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/dynpoc-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting g4qclav-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/g4qclav-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting g4qclav-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/g4qclav-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting gke-1395b4-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/gke-1395b4-net-fw-allow-iap-ingress].
+--- Wed Nov 26 02:24:23 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:24:39 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+gke-1395b4-net-fw-allow-internal-traffic
+gke-managed-lustre-basic-net-fw-allow-iap-ingress
+gke-managed-lustre-basic-net-fw-allow-internal-traffic
+h4dqc-net-fw-allow-iap-ingress
+h4dqc-net-fw-allow-internal-traffic
+h4dqc-rdma-0
+h4dqc-rdma-net-0-fw-allow-iap-ingress
+h4dqc-rdma-net-0-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-internal
+h4d-res-swarnabm4-3-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-net-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic
+hpc-01-net-fw-allow-iap-ingress
+hpc-01-net-fw-allow-internal-traffic
+hpcdydis-net-fw-allow-iap-ingress
+hpcdydis-net-fw-allow-internal-traffic
+hpcdy-net-fw-allow-iap-ingress
+hpcdy-net-fw-allow-internal-traffic
+hpc-exr-2-internal-0
+  gcloud compute firewall-rules delete "gke-1395b4-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-managed-lustre-basic-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-managed-lustre-basic-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-net-0-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-internal" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-01-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-01-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdydis-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdydis-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdy-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdy-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-exr-2-internal-0" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 02:24:48 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:25:53 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 37 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+gke-1395b4-net-fw-allow-internal-traffic
+gke-managed-lustre-basic-net-fw-allow-iap-ingress
+gke-managed-lustre-basic-net-fw-allow-internal-traffic
+h4dqc-net-fw-allow-iap-ingress
+h4dqc-net-fw-allow-internal-traffic
+h4dqc-rdma-0
+h4dqc-rdma-net-0-fw-allow-iap-ingress
+h4dqc-rdma-net-0-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-internal
+h4d-res-swarnabm4-3-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-net-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic
+hpc-01-net-fw-allow-iap-ingress
+hpc-01-net-fw-allow-internal-traffic
+hpcdydis-net-fw-allow-iap-ingress
+hpcdydis-net-fw-allow-internal-traffic
+hpcdy-net-fw-allow-iap-ingress
+hpcdy-net-fw-allow-internal-traffic
+hpc-exr-2-internal-0
+  gcloud compute firewall-rules delete "gke-1395b4-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-managed-lustre-basic-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-managed-lustre-basic-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-net-0-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-internal" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-01-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-01-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdydis-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdydis-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdy-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdy-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-exr-2-internal-0" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 02:26:03 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:26:46 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 39 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+gke-1395b4-net-fw-allow-internal-traffic
+h4dqc-net-fw-allow-iap-ingress
+h4dqc-net-fw-allow-internal-traffic
+h4dqc-rdma-0
+h4dqc-rdma-net-0-fw-allow-iap-ingress
+h4dqc-rdma-net-0-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-internal
+h4d-res-swarnabm4-3-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-net-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic
+hpc-01-net-fw-allow-iap-ingress
+hpc-01-net-fw-allow-internal-traffic
+hpcdydis-net-fw-allow-iap-ingress
+hpcdydis-net-fw-allow-internal-traffic
+hpcdy-net-fw-allow-iap-ingress
+hpcdy-net-fw-allow-internal-traffic
+hpc-exr-2-internal-0
+hpc-exr-2-net-0-fw-allow-iap-ingress
+hpcimg-net-fw-allow-iap-ingress
+  gcloud compute firewall-rules delete "gke-1395b4-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4dqc-rdma-net-0-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-internal" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-01-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-01-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdydis-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdydis-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdy-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcdy-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-exr-2-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-exr-2-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpcimg-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 02:26:56 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 02:27:17 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 39 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+gke-1395b4-net-fw-allow-internal-traffic
+h4dqc-net-fw-allow-iap-ingress
+h4dqc-net-fw-allow-internal-traffic
+h4dqc-rdma-0
+h4dqc-rdma-net-0-fw-allow-iap-ingress
+h4dqc-rdma-net-0-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-internal
+h4d-res-swarnabm4-3-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-net-fw-allow-internal-traffic
+h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress
+h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic
+hpc-01-net-fw-allow-iap-ingress
+hpc-01-net-fw-allow-internal-traffic
+hpcdydis-net-fw-allow-iap-ingress
+hpcdydis-net-fw-allow-internal-traffic
+hpcdy-net-fw-allow-iap-ingress
+hpcdy-net-fw-allow-internal-traffic
+hpc-exr-2-internal-0
+hpc-exr-2-net-0-fw-allow-iap-ingress
+hpcimg-net-fw-allow-iap-ingress
+[EXECUTE] Firewall Rule: Deleting gke-1395b4-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/gke-1395b4-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting h4dqc-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4dqc-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting h4dqc-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4dqc-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting h4dqc-rdma-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4dqc-rdma-0].
+[EXECUTE] Firewall Rule: Deleting h4dqc-rdma-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4dqc-rdma-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting h4dqc-rdma-net-0-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4dqc-rdma-net-0-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting h4d-res-swarnabm4-3-internal
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4d-res-swarnabm4-3-internal].
+[EXECUTE] Firewall Rule: Deleting h4d-res-swarnabm4-3-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4d-res-swarnabm4-3-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting h4d-res-swarnabm4-3-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4d-res-swarnabm4-3-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4d-res-swarnabm4-3-rdma-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/h4d-res-swarnabm4-3-rdma-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting hpc-01-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpc-01-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting hpc-01-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpc-01-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting hpcdydis-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpcdydis-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting hpcdydis-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpcdydis-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting hpcdy-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpcdy-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting hpcdy-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpcdy-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting hpc-exr-2-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpc-exr-2-internal-0].
+[EXECUTE] Firewall Rule: Deleting hpc-exr-2-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpc-exr-2-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting hpcimg-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpcimg-net-fw-allow-iap-ingress].
+--- Wed Nov 26 02:29:58 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 03:11:18 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 39 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+a8a55slurm-nodeset-0 us-central1-a
+  gcloud compute instances delete "a8a55slurm-nodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+hpcimg-net-fw-allow-internal-traffic
+hpc-lustre-test-02-net-fw-allow-iap-ingress
+hpc-lustre-test-02-net-fw-allow-internal-traffic
+khu-h4d-cluster-test-net-fw-allow-iap-ingress
+khu-h4d-cluster-test-net-fw-allow-internal-traffic
+khu-h4d-cluster-test-rdma-net-0-fw-allow-iap-ingress
+laveeek29-internal-0
+laveeek29-internal-1
+laveeek29-net-0-fw-allow-iap-ingress
+laveeek29-net-1-fw-allow-iap-ingress
+laveeek29-net-fw-allow-iap-ingress
+laveeek29-net-fw-allow-internal-traffic
+lavoldchk-net-fw-allow-iap-ingress
+lavoldchk-net-fw-allow-internal-traffic
+lavrohek29-internal-0
+lavrohek29-net-0-fw-allow-iap-ingress
+lustre-06-net-fw-allow-iap-ingress
+lustre-06-net-fw-allow-internal-traffic
+lustre-test-06-net-fw-allow-iap-ingress
+lustre-test-06-net-fw-allow-internal-traffic
+  gcloud compute firewall-rules delete "hpcimg-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-lustre-test-02-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-lustre-test-02-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "khu-h4d-cluster-test-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "khu-h4d-cluster-test-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "khu-h4d-cluster-test-rdma-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-internal-1" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavoldchk-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavoldchk-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavrohek29-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavrohek29-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lustre-06-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lustre-06-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lustre-test-06-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lustre-test-06-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 03:11:28 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 03:12:06 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 43 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+a8a55slurm-nodeset-0 us-central1-a
+  gcloud compute instances delete "a8a55slurm-nodeset-0" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+hpcimg-net-fw-allow-internal-traffic
+hpc-lustre-test-02-net-fw-allow-iap-ingress
+hpc-lustre-test-02-net-fw-allow-internal-traffic
+khu-h4d-cluster-test-net-fw-allow-iap-ingress
+khu-h4d-cluster-test-net-fw-allow-internal-traffic
+khu-h4d-cluster-test-rdma-net-0-fw-allow-iap-ingress
+laveeek29-internal-0
+laveeek29-internal-1
+laveeek29-net-0-fw-allow-iap-ingress
+laveeek29-net-1-fw-allow-iap-ingress
+laveeek29-net-fw-allow-iap-ingress
+laveeek29-net-fw-allow-internal-traffic
+lavoldchk-net-fw-allow-iap-ingress
+lavoldchk-net-fw-allow-internal-traffic
+lavrohek29-internal-0
+lavrohek29-net-0-fw-allow-iap-ingress
+mainek-internal-0
+mainek-internal-1
+mainek-net-0-fw-allow-iap-ingress
+mainek-net-1-fw-allow-iap-ingress
+  gcloud compute firewall-rules delete "hpcimg-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-lustre-test-02-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "hpc-lustre-test-02-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "khu-h4d-cluster-test-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "khu-h4d-cluster-test-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "khu-h4d-cluster-test-rdma-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-internal-1" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "laveeek29-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavoldchk-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavoldchk-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavrohek29-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "lavrohek29-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "mainek-internal-0" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "mainek-internal-1" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "mainek-net-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "mainek-net-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 03:12:15 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 03:12:45 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 43 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+hpcimg-net-fw-allow-internal-traffic
+hpc-lustre-test-02-net-fw-allow-iap-ingress
+hpc-lustre-test-02-net-fw-allow-internal-traffic
+khu-h4d-cluster-test-net-fw-allow-iap-ingress
+khu-h4d-cluster-test-net-fw-allow-internal-traffic
+khu-h4d-cluster-test-rdma-net-0-fw-allow-iap-ingress
+laveeek29-internal-0
+laveeek29-internal-1
+laveeek29-net-0-fw-allow-iap-ingress
+laveeek29-net-1-fw-allow-iap-ingress
+laveeek29-net-fw-allow-iap-ingress
+laveeek29-net-fw-allow-internal-traffic
+lavoldchk-net-fw-allow-iap-ingress
+lavoldchk-net-fw-allow-internal-traffic
+lavrohek29-internal-0
+lavrohek29-net-0-fw-allow-iap-ingress
+mainek-internal-0
+mainek-internal-1
+mainek-net-0-fw-allow-iap-ingress
+mainek-net-1-fw-allow-iap-ingress
+[EXECUTE] Firewall Rule: Deleting hpcimg-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpcimg-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting hpc-lustre-test-02-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpc-lustre-test-02-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting hpc-lustre-test-02-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/hpc-lustre-test-02-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting khu-h4d-cluster-test-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/khu-h4d-cluster-test-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting khu-h4d-cluster-test-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/khu-h4d-cluster-test-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting khu-h4d-cluster-test-rdma-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/khu-h4d-cluster-test-rdma-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting laveeek29-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/laveeek29-internal-0].
+[EXECUTE] Firewall Rule: Deleting laveeek29-internal-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/laveeek29-internal-1].
+[EXECUTE] Firewall Rule: Deleting laveeek29-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/laveeek29-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting laveeek29-net-1-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/laveeek29-net-1-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting laveeek29-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/laveeek29-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting laveeek29-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/laveeek29-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting lavoldchk-net-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lavoldchk-net-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting lavoldchk-net-fw-allow-internal-traffic
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lavoldchk-net-fw-allow-internal-traffic].
+[EXECUTE] Firewall Rule: Deleting lavrohek29-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lavrohek29-internal-0].
+[EXECUTE] Firewall Rule: Deleting lavrohek29-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/lavrohek29-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting mainek-internal-0
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mainek-internal-0].
+[EXECUTE] Firewall Rule: Deleting mainek-internal-1
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mainek-internal-1].
+[EXECUTE] Firewall Rule: Deleting mainek-net-0-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mainek-net-0-fw-allow-iap-ingress].
+[EXECUTE] Firewall Rule: Deleting mainek-net-1-fw-allow-iap-ingress
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/global/firewalls/mainek-net-1-fw-allow-iap-ingress].
+--- Wed Nov 26 03:15:43 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 03:19:25 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 43 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+gke-a3mega-7b5154-remote-node-0 us-west4-a
+  gcloud compute instances delete "gke-a3mega-7b5154-remote-node-0" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+gke-a3mega-7b5154-gpunet-0-router us-west4
+gke-a3mega-7b5154-gpunet-1-router us-west4
+gke-a3mega-7b5154-gpunet-2-router us-west4
+gke-a3mega-7b5154-gpunet-3-router us-west4
+gke-a3mega-7b5154-gpunet-4-router us-west4
+gke-a3mega-7b5154-gpunet-5-router us-west4
+gke-a3mega-7b5154-gpunet-6-router us-west4
+gke-a3mega-7b5154-gpunet-7-router us-west4
+gke-a3mega-7b5154-net-router us-west4
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-0-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-1-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-2-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-3-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-4-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-5-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-6-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-7-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-net-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+The following Firewall Rules are targeted for deletion in this run:
+gke-a3mega-7b5154-gpunet-0-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-0-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-1-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-1-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-2-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-2-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-3-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-3-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-4-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-4-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-5-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-5-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-6-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-6-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-7-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-7-fw-allow-internal-traffic
+gke-a3mega-7b5154-net-fw-allow-iap-ingress
+gke-a3mega-7b5154-net-fw-allow-internal-traffic
+mainek-net-fw-allow-iap-ingress
+mainek-net-fw-allow-internal-traffic
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-0-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-1-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-2-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-2-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-3-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-3-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-4-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-4-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-5-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-5-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-6-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-6-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-7-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-7-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "mainek-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "mainek-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 03:19:35 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 03:23:12 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 43 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+The following GKE clusters are targeted for deletion in this run:
+gke-a3mega-7b5154 us-west4
+  gcloud container clusters delete "gke-a3mega-7b5154" --project="hpc-toolkit-dev" --location="us-west4"
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+d87d8bslur-controller us-central1-a
+d87d8bslur-slurm-login-001 us-central1-a
+gke-a3mega-7b5154-remote-node-0 us-west4-a
+gke-gke-a3mega-7b5154-default-pool-92973a4c-zdc6 us-west4-a
+gke-gke-a3mega-7b5154-default-pool-b8fa115c-f11p us-west4-b
+gke-gke-a3mega-7b5154-default-pool-cab11a55-856w us-west4-c
+  gcloud compute instances delete "d87d8bslur-controller" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "d87d8bslur-slurm-login-001" --project="hpc-toolkit-dev" --zone="us-central1-a" --quiet
+  gcloud compute instances delete "gke-a3mega-7b5154-remote-node-0" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+  gcloud compute instances delete "gke-gke-a3mega-7b5154-default-pool-92973a4c-zdc6" --project="hpc-toolkit-dev" --zone="us-west4-a" --quiet
+  gcloud compute instances delete "gke-gke-a3mega-7b5154-default-pool-b8fa115c-f11p" --project="hpc-toolkit-dev" --zone="us-west4-b" --quiet
+  gcloud compute instances delete "gke-gke-a3mega-7b5154-default-pool-cab11a55-856w" --project="hpc-toolkit-dev" --zone="us-west4-c" --quiet
+--- Deletion Phase 1: Filestore Instances (Top 20) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 2: Cloud Routers (Top 20) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+The following Cloud Routers are targeted for deletion in this run:
+gke-a3mega-7b5154-gpunet-0-router us-west4
+gke-a3mega-7b5154-gpunet-1-router us-west4
+gke-a3mega-7b5154-gpunet-2-router us-west4
+gke-a3mega-7b5154-gpunet-3-router us-west4
+gke-a3mega-7b5154-gpunet-4-router us-west4
+gke-a3mega-7b5154-gpunet-5-router us-west4
+gke-a3mega-7b5154-gpunet-6-router us-west4
+gke-a3mega-7b5154-gpunet-7-router us-west4
+gke-a3mega-7b5154-net-router us-west4
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-0-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-1-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-2-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-3-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-4-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-5-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-6-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-gpunet-7-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+  gcloud compute routers delete "gke-a3mega-7b5154-net-router" --project="hpc-toolkit-dev" --region="us-west4" --quiet
+--- Deletion Phase 3: Firewall Rules (Top 20) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+The following Firewall Rules are targeted for deletion in this run:
+gke-a3mega-7b5154-gpunet-0-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-0-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-1-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-1-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-2-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-2-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-3-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-3-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-4-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-4-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-5-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-5-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-6-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-6-fw-allow-internal-traffic
+gke-a3mega-7b5154-gpunet-7-fw-allow-iap-ingress
+gke-a3mega-7b5154-gpunet-7-fw-allow-internal-traffic
+gke-a3mega-7b5154-net-fw-allow-iap-ingress
+gke-a3mega-7b5154-net-fw-allow-internal-traffic
+gke-gke-a3mega-7b5154-2358afec-all
+gke-gke-a3mega-7b5154-2358afec-exkubelet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-0-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-0-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-1-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-1-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-2-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-2-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-3-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-3-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-4-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-4-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-5-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-5-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-6-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-6-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-7-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-gpunet-7-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-net-fw-allow-iap-ingress" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-a3mega-7b5154-net-fw-allow-internal-traffic" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-gke-a3mega-7b5154-2358afec-all" --project="hpc-toolkit-dev" --quiet
+  gcloud compute firewall-rules delete "gke-gke-a3mega-7b5154-2358afec-exkubelet" --project="hpc-toolkit-dev" --quiet
+--- Wed Nov 26 03:23:21 PM UTC 2025 --- Cleanup Script Run Finished ---
+--- Wed Nov 26 03:23:41 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 20 resources of each type per run.
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 43 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+--- Deletion Phase 1: GKE Clusters (Top 20) ---
+The following GKE clusters are targeted for deletion in this run:
+gke-a3mega-7b5154 us-west4
+[EXECUTE] GKE Cluster: Deleting gke-a3mega-7b5154 in us-west4
+The following clusters will be deleted.
+ - [gke-a3mega-7b5154] in [us-west4]
+
+Do you want to continue (Y/n)?  
+ERROR: (gcloud.container.clusters.delete) This prompt could not be answered because you are not in an interactive session.  You can re-run the command with the --quiet flag to accept default answers for all prompts.
+--- Deletion Phase 1: Compute Instances (Top 20) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+The following Instances are targeted for deletion in this run:
+d87d8bslur-controller us-central1-a
+d87d8bslur-slurm-login-001 us-central1-a
+gke-a3mega-7b5154-remote-node-0 us-west4-a
+gke-gke-a3mega-7b5154-default-pool-92973a4c-zdc6 us-west4-a
+gke-gke-a3mega-7b5154-default-pool-b8fa115c-f11p us-west4-b
+gke-gke-a3mega-7b5154-default-pool-cab11a55-856w us-west4-c
+[EXECUTE] Instance: Deleting d87d8bslur-controller in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d87d8bslur-controller].
+[EXECUTE] Instance: Deleting d87d8bslur-slurm-login-001 in us-central1-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-central1-a/instances/d87d8bslur-slurm-login-001].
+[EXECUTE] Instance: Deleting gke-a3mega-7b5154-remote-node-0 in us-west4-a
+Deleted [https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west4-a/instances/gke-a3mega-7b5154-remote-node-0].
+[EXECUTE] Instance: Deleting gke-gke-a3mega-7b5154-default-pool-92973a4c-zdc6 in us-west4-a
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-west4-a/instances/gke-gke-a3mega-7b5154-default-pool-92973a4c-zdc6' was not found
+
+[EXECUTE] Instance: Deleting gke-gke-a3mega-7b5154-default-pool-b8fa115c-f11p in us-west4-b
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-west4-b/instances/gke-gke-a3mega-7b5154-default-pool-b8fa115c-f11p' was not found
+
+[EXECUTE] Instance: Deleting gke-gke-a3mega-7b5154-default-pool-cab11a55-856w in us-west4-c
+ERROR: (gcloud.compute.instances.delete) Could not fetch resource:
+ - The resource 'projects/hpc-toolkit-dev/zones/us-west4-c/instances/gke-gke-a3mega-7b5154-default-pool-cab11a55-856w' was not found
+
+./cleanup.sh: line 134: syntax error near unexpected token `('
+./cleanup.sh: line 134: `echo "--- Deletion Phase 1: Filestore Instances (Top $DELETE_LIMIT) ---"'
+--- Thu Nov 27 09:50:25 AM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T05:50:25+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 60 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - lustretest-controller
+  - lustretest-slurm-login-001
+  - lustre06-controller
+  - lustre06-slurm-login-001
+  - default
+  - mglsard
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - lustre-06-net-router
+  - lustre-test-06-net-router
+  - mglsa-net-router
+  - mglsard-net-router
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - lustre-06-net-fw-allow-iap-ingress
+  - lustre-06-net-fw-allow-internal-traffic
+  - lustre-test-06-net-fw-allow-iap-ingress
+  - lustre-test-06-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: lustre06-controller in us-central1-a (In exclusion list)
+Skip Instance: lustre06-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: lustretest-controller in us-central1-a (In exclusion list)
+Skip Instance: lustretest-slurm-login-001 in us-central1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+Skip Cloud Router: lustre-06-net-router (In exclusion list)
+Skip Cloud Router: lustre-test-06-net-router (In exclusion list)
+Skip Cloud Router: mglsa-net-router (In exclusion list)
+Skip Cloud Router: mglsard-net-router (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: gke-managed-lustre-basic-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-06-net-fw-allow-internal-traffic (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-iap-ingress (In exclusion list)
+Skip Firewall: lustre-test-06-net-fw-allow-internal-traffic (In exclusion list)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+The following Subnetworks (and their dependent addresses) are targeted for deletion:
+lustre-06-primary-subnet in us-central1
+lustre-test-06-primary-subnet in us-central1
+--- Processing Subnet: lustre-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-06-primary-subnet in us-central1.
+[DRY RUN] Subnetwork: Would delete lustre-06-primary-subnet in us-central1
+  Command: gcloud compute networks subnets delete "lustre-06-primary-subnet" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Processing Subnet: lustre-test-06-primary-subnet in us-central1 ---
+WARNING: The following filter keys were not present in any resource : purpose, subnetwork
+No dependent addresses found for lustre-test-06-primary-subnet in us-central1.
+[DRY RUN] Subnetwork: Would delete lustre-test-06-primary-subnet in us-central1
+  Command: gcloud compute networks subnets delete "lustre-test-06-primary-subnet" --project="hpc-toolkit-dev" --region="us-central1" --quiet
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+The following Networks are targeted for deletion in this run:
+a3mega-sys-net-shu7
+a3u-onspot-slurm-829610-net-0
+a3u-slurm-net
+a4hsarthakag-net
+a4htest-net-0
+a4newimgek-net
+a4newimgek-net-0
+a4newimgek-net-1
+a4newimgek-rdma-net
+a4oldimgek-net
+a4oldimgek-net-0
+a4oldimgek-net-1
+a4oldimgek-rdma-net
+a4oldimg-net
+a4xlavhpcnew-a4x-net-0
+a4xlavhpcnew-a4x-net-1
+a4xlavhpcnew-a4x-rdma-net
+a4xslurm-net
+cx-a3u-net-0
+db451c7-ml-slurm-v6-net
+dynpoc-net
+g4-dwsq-1-net-1
+g4qclav-net
+gke-1395b4-net
+gke-managed-lustre-basic-net
+h4d-cluster-rdma-net-0
+h4dqc-net
+h4dqc-rdma-net-0
+h4d-res-swarnabm4-3-net
+h4d-res-swarnabm4-3-rdma-net
+[DRY RUN] Network: Would delete a3mega-sys-net-shu7
+  Command: gcloud compute networks delete "a3mega-sys-net-shu7" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a3u-onspot-slurm-829610-net-0
+  Command: gcloud compute networks delete "a3u-onspot-slurm-829610-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a3u-slurm-net
+  Command: gcloud compute networks delete "a3u-slurm-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4hsarthakag-net
+  Command: gcloud compute networks delete "a4hsarthakag-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4htest-net-0
+  Command: gcloud compute networks delete "a4htest-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4newimgek-net
+  Command: gcloud compute networks delete "a4newimgek-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4newimgek-net-0
+  Command: gcloud compute networks delete "a4newimgek-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4newimgek-net-1
+  Command: gcloud compute networks delete "a4newimgek-net-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4newimgek-rdma-net
+  Command: gcloud compute networks delete "a4newimgek-rdma-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4oldimgek-net
+  Command: gcloud compute networks delete "a4oldimgek-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4oldimgek-net-0
+  Command: gcloud compute networks delete "a4oldimgek-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4oldimgek-net-1
+  Command: gcloud compute networks delete "a4oldimgek-net-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4oldimgek-rdma-net
+  Command: gcloud compute networks delete "a4oldimgek-rdma-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4oldimg-net
+  Command: gcloud compute networks delete "a4oldimg-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4xlavhpcnew-a4x-net-0
+  Command: gcloud compute networks delete "a4xlavhpcnew-a4x-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4xlavhpcnew-a4x-net-1
+  Command: gcloud compute networks delete "a4xlavhpcnew-a4x-net-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4xlavhpcnew-a4x-rdma-net
+  Command: gcloud compute networks delete "a4xlavhpcnew-a4x-rdma-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete a4xslurm-net
+  Command: gcloud compute networks delete "a4xslurm-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete cx-a3u-net-0
+  Command: gcloud compute networks delete "cx-a3u-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete db451c7-ml-slurm-v6-net
+  Command: gcloud compute networks delete "db451c7-ml-slurm-v6-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete dynpoc-net
+  Command: gcloud compute networks delete "dynpoc-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete g4-dwsq-1-net-1
+  Command: gcloud compute networks delete "g4-dwsq-1-net-1" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete g4qclav-net
+  Command: gcloud compute networks delete "g4qclav-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete gke-1395b4-net
+  Command: gcloud compute networks delete "gke-1395b4-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete gke-managed-lustre-basic-net
+  Command: gcloud compute networks delete "gke-managed-lustre-basic-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete h4d-cluster-rdma-net-0
+  Command: gcloud compute networks delete "h4d-cluster-rdma-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete h4dqc-net
+  Command: gcloud compute networks delete "h4dqc-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete h4dqc-rdma-net-0
+  Command: gcloud compute networks delete "h4dqc-rdma-net-0" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete h4d-res-swarnabm4-3-net
+  Command: gcloud compute networks delete "h4d-res-swarnabm4-3-net" --project="hpc-toolkit-dev" --quiet
+[DRY RUN] Network: Would delete h4d-res-swarnabm4-3-rdma-net
+  Command: gcloud compute networks delete "h4d-res-swarnabm4-3-rdma-net" --project="hpc-toolkit-dev" --quiet
+--- Thu Nov 27 09:50:44 AM UTC 2025 --- Cleanup Script Run Finished ---
+

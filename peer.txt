@@ -1,0 +1,566 @@
+[2025-11-30 17:48:42] [INFO] STARTING RESOURCE CLEANUP: hpc-toolkit-dev
+[2025-11-30 17:48:42] [INFO] Time Cutoff (General): 2025-11-30T17:48:42+0000
+[2025-11-30 17:48:42] [INFO] Time Cutoff (Images): 2025-10-01T17:48:42+0000
+[2025-11-30 17:48:42] [INFO] Delete Limit per Type: 200
+[2025-11-30 17:48:42] [INFO] Loading exclusions from exclusions.txt...
+[2025-11-30 17:48:43] [INFO] --- Processing: Service Accounts (Prefix: test-sa-) ---
+[2025-11-30 17:48:45] [INFO] No Service Accounts found matching prefix.
+[2025-11-30 17:48:45] [INFO] --- Processing: GKE Cluster (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 17:48:47] [INFO] No GKE Cluster found matching criteria.
+[2025-11-30 17:48:47] [INFO] --- Processing: Compute Instance (Limit: 200) ---
+[2025-11-30 17:48:49] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 17:48:49] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 17:48:49] [SKIP] vertexui-do-not-kill (In Exclusion List)
+[2025-11-30 17:48:49] [INFO] --- Processing: Filestore Instances (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 17:48:52] [INFO] No Filestore instances found matching criteria.
+[2025-11-30 17:48:52] [INFO] --- Processing: VM Images (Limit: 200) ---
+[2025-11-30 17:48:55] [SKIP] a3u-image-u22-20250325t162635z (In Exclusion List)
+[2025-11-30 17:48:55] [SKIP] a4high-image-builder-20250214t220935z (In Exclusion List)
+[2025-11-30 17:48:55] [SKIP] chs-dcgmi-metric-u22-20250925t121709z (In Exclusion List)
+[2025-11-30 17:48:55] [SKIP] common-slurm-image-20250725t234825z (In Exclusion List)
+[2025-11-30 17:48:55] [SKIP] harsh-a4-image (In Exclusion List)
+[2025-11-30 17:48:56] [SKIP] pbspro0 (In Exclusion List)
+[2025-11-30 17:48:56] [SKIP] rocka4h-rocky9-20250908t175724z (In Exclusion List)
+[2025-11-30 17:48:56] [SKIP] rocka4hf-rocky9-20250910t040750z (In Exclusion List)
+[2025-11-30 17:48:56] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1739990978 (In Exclusion List)
+[2025-11-30 17:48:56] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1740100297 (In Exclusion List)
+[2025-11-30 17:48:56] [INFO] --- Processing: Docker Images for 'test-runner' (Artifact Registry) (Limit: 200) ---
+[2025-11-30 17:48:56] [INFO] Policy: Delete 'test-runner' images updated before 2025-11-16T17:48:56Z (Unix: 1763315336)
+[2025-11-30 17:48:56] [INFO] Scanning Target Package: us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner
+Listing items under project hpc-toolkit-dev, location us-central1, repository hpc-toolkit-repo.
+
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1fc1e00175b3700ed5d99c0f2dcc29f247ad5fe2a077710784c22937c187a719 (Updated: 2025-11-17T08:20:06 [TS: 1763367606] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:653b88835ab33bb89001d38d4695716c5018396a9c1e0c502d5d4e06338e3184 (Updated: 2025-11-17T08:20:17 [TS: 1763367617] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c13171c30dc1aa3d6ba3c34867fff6d39150e3fbd6b137c790fa551d372c3522 (Updated: 2025-11-18T08:20:47 [TS: 1763454047] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6236258042a997cc8e02e2f083051a54fb35ad3ff2abaedabbce6b423ffdde93 (Updated: 2025-11-18T08:20:55 [TS: 1763454055] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4c613ee2b8ed7ffae384bc4b2fda4ee21088403307fe51e8b0ac955e7a89328d (Updated: 2025-11-18T18:49:58 [TS: 1763491798] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:f24fa3856c03c6b6544d930fbbcc43ad357d9f138d1286f0675188aa0dec0f77 (Updated: 2025-11-18T18:50:13 [TS: 1763491813] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:b3a646a9fad927984980aef685aa581a60d5dc71c8c59bd8facada59ab77eed4 (Updated: 2025-11-19T18:51:39 [TS: 1763578299] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4af5db61700b8193a5a66f43de34b556d8c9f5863e980f6dae209e81e6aa17d5 (Updated: 2025-11-19T18:51:45 [TS: 1763578305] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:212b05a0a1c98b2d4563fb1d98bad05752b8c93aa2f1bdb5ac0f79f3070d4cf8 (Updated: 2025-11-20T18:49:17 [TS: 1763664557] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:55460dca917fe8dddcf0cfbfdd12807b9cecd829b30709d4cba8c60586885c73 (Updated: 2025-11-20T18:49:24 [TS: 1763664564] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2e61d182ab84124fac9fe2e5dcb0fd9be383cb66bd3d2a277cb8c1591f381790 (Updated: 2025-11-22T08:20:43 [TS: 1763799643] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6f2e2a759e9f543f6b3a177d3e00326f1050bd7ba7a08d1e61b3b3e50a9fa175 (Updated: 2025-11-22T08:20:52 [TS: 1763799652] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e5fa39311fc457f4efcb60de5ceb650c822ae6a42e6dd12f758dc84d3f9e699 (Updated: 2025-11-23T08:17:47 [TS: 1763885867] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1efa59c424c2dacdf48f28745bd942bfcef4625cfc7dc254748bdc5cbb5fc222 (Updated: 2025-11-23T08:17:54 [TS: 1763885874] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:35ec3b3c50826e42ba2de89ff70e4665b4ace4636180092863221132af98dbc7 (Updated: 2025-11-24T08:21:56 [TS: 1763972516] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:eba09b99da72473216349995f209a523b8afd0f6b9267ef7733c4439d8c17ad2 (Updated: 2025-11-24T08:22:03 [TS: 1763972523] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c4040d6826710ffbe9fb83a55acda55c023feead80e477f0243ee3020fd290e6 (Updated: 2025-11-24T18:50:51 [TS: 1764010251] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:00bf2c87e858b285f2623e0adc51bf6770989112457fee5c07f8b102bcdcea2b (Updated: 2025-11-24T18:50:57 [TS: 1764010257] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:e79b8ff506e79f05a06c60b882b9718164ef4aa1ea72faffb50fb3db34c0217f (Updated: 2025-11-25T18:51:48 [TS: 1764096708] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:bef4aa2caca0a52bf1e2a7ba6c33a1d66e7524f20b6ac731e2ebb7eec013e47f (Updated: 2025-11-25T18:51:54 [TS: 1764096714] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:58] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e1a2f8e6f92ca443b0eb2252ffc0ed863dde4835046c5e8a4f435a9067530f1 (Updated: 2025-11-26T18:47:53 [TS: 1764182873] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:59] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:242c018d4024df0ff4273df37ae9d097e84b9dd633632655973d7224b2fc9db0 (Updated: 2025-11-26T18:47:59 [TS: 1764182879] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:59] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:63838c0a300bb40209deb226acfc4132381b32610de89cfa3705b7efd5c1b393 (Updated: 2025-11-27T18:50:46 [TS: 1764269446] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:59] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:657b36041ee460dd7275ec8b63e90965a82b14f5691147ef7fd43a90256b6f63 (Updated: 2025-11-27T18:50:53 [TS: 1764269453] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:59] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4f84e97c1a57fce13fa7892cb453168b59c696c6b0fca8954f7ac3dba7a9faf5 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:59] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6b33f72b4aa26059e5283a5951a3942da2f4d316ff5b0a7ffc62c9221fcff118 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:59] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2dadc2e85ec041d14dda5a32a5693622f855e326ac2ac4baa3abef86f809c3e1 (Updated: 2025-11-28T18:48:01 [TS: 1764355681] >= Cutoff: [TS: 1763315336])
+[2025-11-30 17:48:59] [INFO] Finished Docker Image processing for test-runner. 0 images marked for deletion.
+[2025-11-30 17:48:59] [INFO] --- Processing: Cloud Router (Limit: 200) ---
+[2025-11-30 17:49:01] [SKIP] default-net-router (In Exclusion List)
+[2025-11-30 17:49:01] [SKIP] default-router-australia-southeast1 (In Exclusion List)
+[2025-11-30 17:49:01] [SKIP] default-router-us-east4 (In Exclusion List)
+[2025-11-30 17:49:01] [SKIP] default-router-us-west1 (In Exclusion List)
+[2025-11-30 17:49:01] [SKIP] default-router-us-west4 (In Exclusion List)
+[2025-11-30 17:49:01] [INFO] --- Processing: Firewall Rules (Limit: 200) ---
+[2025-11-30 17:49:03] [INFO] --- Processing: Compute Addresses ---
+[2025-11-30 17:49:03] [INFO] --- Processing: Regional Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 17:49:05] [INFO] No Regional Address found matching criteria.
+[2025-11-30 17:49:05] [INFO] --- Processing: Global Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 17:49:08] [INFO] No Global Address found matching criteria.
+[2025-11-30 17:49:08] [INFO] --- Processing: VPC Peerings (Limit: 200) ---
+[2025-11-30 17:49:12] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:12] [INFO] --- Processing: Zonal Disk (Limit: 200) ---
+[2025-11-30 17:49:15] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 17:49:15] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 17:49:15] [SKIP] vertexui-do-not-kill-boot (In Exclusion List)
+[2025-11-30 17:49:15] [SKIP] vertexui-do-not-kill-data (In Exclusion List)
+[2025-11-30 17:49:15] [INFO] --- Processing: Subnetworks (Limit: 200) ---
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:17] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:18] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:18] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:18] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:18] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:18] [INFO] --- Processing: VPC Networks (Limit: 200) ---
+[2025-11-30 17:49:20] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:49:20] [INFO] --- Processing: IAM Role Bindings for Deleted SAs (Limit: 200) ---
+[2025-11-30 17:49:22] [INFO] No 'deleted:serviceAccount' bindings found.
+[2025-11-30 17:49:22] [INFO] CLEANUP RUN FINISHED
+./cleanup.sh: line 636: syntax error near unexpected token `in'
+./cleanup.sh: line 636: `in'
+[2025-11-30 17:58:51] [INFO] STARTING RESOURCE CLEANUP: hpc-toolkit-dev
+[2025-11-30 17:58:51] [INFO] Time Cutoff (General): 2025-11-30T17:58:51+0000
+[2025-11-30 17:58:51] [INFO] Time Cutoff (Images): 2025-10-01T17:58:51+0000
+[2025-11-30 17:58:51] [INFO] Delete Limit per Type: 200
+[2025-11-30 17:58:51] [INFO] Loading exclusions from exclusions.txt...
+[2025-11-30 17:58:52] [INFO] --- Processing: Service Accounts (Prefix: test-sa-) ---
+[2025-11-30 17:58:54] [INFO] No Service Accounts found matching prefix.
+[2025-11-30 17:58:54] [INFO] --- Processing: GKE Cluster (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 17:58:56] [INFO] No GKE Cluster found matching criteria.
+[2025-11-30 17:58:56] [INFO] --- Processing: Compute Instance (Limit: 200) ---
+[2025-11-30 17:58:58] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 17:58:58] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 17:58:58] [SKIP] vertexui-do-not-kill (In Exclusion List)
+[2025-11-30 17:58:58] [INFO] --- Processing: Filestore Instances (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 17:59:01] [INFO] No Filestore instances found matching criteria.
+[2025-11-30 17:59:01] [INFO] --- Processing: VM Images (Limit: 200) ---
+[2025-11-30 17:59:04] [SKIP] a3u-image-u22-20250325t162635z (In Exclusion List)
+[2025-11-30 17:59:04] [SKIP] a4high-image-builder-20250214t220935z (In Exclusion List)
+[2025-11-30 17:59:04] [SKIP] chs-dcgmi-metric-u22-20250925t121709z (In Exclusion List)
+[2025-11-30 17:59:04] [SKIP] common-slurm-image-20250725t234825z (In Exclusion List)
+[2025-11-30 17:59:04] [SKIP] harsh-a4-image (In Exclusion List)
+[2025-11-30 17:59:04] [SKIP] pbspro0 (In Exclusion List)
+[2025-11-30 17:59:04] [SKIP] rocka4h-rocky9-20250908t175724z (In Exclusion List)
+[2025-11-30 17:59:04] [SKIP] rocka4hf-rocky9-20250910t040750z (In Exclusion List)
+[2025-11-30 17:59:05] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1739990978 (In Exclusion List)
+[2025-11-30 17:59:05] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1740100297 (In Exclusion List)
+[2025-11-30 17:59:05] [INFO] --- Processing: Docker Images for 'test-runner' (Artifact Registry) (Limit: 200) ---
+[2025-11-30 17:59:05] [INFO] Policy: Delete 'test-runner' images updated before 2025-11-16T17:59:05Z (Unix: 1763315945)
+[2025-11-30 17:59:05] [INFO] Scanning Target Package: us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner
+Listing items under project hpc-toolkit-dev, location us-central1, repository hpc-toolkit-repo.
+
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1fc1e00175b3700ed5d99c0f2dcc29f247ad5fe2a077710784c22937c187a719 (Updated: 2025-11-17T08:20:06 [TS: 1763367606] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:653b88835ab33bb89001d38d4695716c5018396a9c1e0c502d5d4e06338e3184 (Updated: 2025-11-17T08:20:17 [TS: 1763367617] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c13171c30dc1aa3d6ba3c34867fff6d39150e3fbd6b137c790fa551d372c3522 (Updated: 2025-11-18T08:20:47 [TS: 1763454047] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6236258042a997cc8e02e2f083051a54fb35ad3ff2abaedabbce6b423ffdde93 (Updated: 2025-11-18T08:20:55 [TS: 1763454055] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4c613ee2b8ed7ffae384bc4b2fda4ee21088403307fe51e8b0ac955e7a89328d (Updated: 2025-11-18T18:49:58 [TS: 1763491798] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:f24fa3856c03c6b6544d930fbbcc43ad357d9f138d1286f0675188aa0dec0f77 (Updated: 2025-11-18T18:50:13 [TS: 1763491813] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:b3a646a9fad927984980aef685aa581a60d5dc71c8c59bd8facada59ab77eed4 (Updated: 2025-11-19T18:51:39 [TS: 1763578299] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4af5db61700b8193a5a66f43de34b556d8c9f5863e980f6dae209e81e6aa17d5 (Updated: 2025-11-19T18:51:45 [TS: 1763578305] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:212b05a0a1c98b2d4563fb1d98bad05752b8c93aa2f1bdb5ac0f79f3070d4cf8 (Updated: 2025-11-20T18:49:17 [TS: 1763664557] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:55460dca917fe8dddcf0cfbfdd12807b9cecd829b30709d4cba8c60586885c73 (Updated: 2025-11-20T18:49:24 [TS: 1763664564] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2e61d182ab84124fac9fe2e5dcb0fd9be383cb66bd3d2a277cb8c1591f381790 (Updated: 2025-11-22T08:20:43 [TS: 1763799643] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6f2e2a759e9f543f6b3a177d3e00326f1050bd7ba7a08d1e61b3b3e50a9fa175 (Updated: 2025-11-22T08:20:52 [TS: 1763799652] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e5fa39311fc457f4efcb60de5ceb650c822ae6a42e6dd12f758dc84d3f9e699 (Updated: 2025-11-23T08:17:47 [TS: 1763885867] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1efa59c424c2dacdf48f28745bd942bfcef4625cfc7dc254748bdc5cbb5fc222 (Updated: 2025-11-23T08:17:54 [TS: 1763885874] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:35ec3b3c50826e42ba2de89ff70e4665b4ace4636180092863221132af98dbc7 (Updated: 2025-11-24T08:21:56 [TS: 1763972516] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:eba09b99da72473216349995f209a523b8afd0f6b9267ef7733c4439d8c17ad2 (Updated: 2025-11-24T08:22:03 [TS: 1763972523] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c4040d6826710ffbe9fb83a55acda55c023feead80e477f0243ee3020fd290e6 (Updated: 2025-11-24T18:50:51 [TS: 1764010251] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:00bf2c87e858b285f2623e0adc51bf6770989112457fee5c07f8b102bcdcea2b (Updated: 2025-11-24T18:50:57 [TS: 1764010257] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:e79b8ff506e79f05a06c60b882b9718164ef4aa1ea72faffb50fb3db34c0217f (Updated: 2025-11-25T18:51:48 [TS: 1764096708] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:bef4aa2caca0a52bf1e2a7ba6c33a1d66e7524f20b6ac731e2ebb7eec013e47f (Updated: 2025-11-25T18:51:54 [TS: 1764096714] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e1a2f8e6f92ca443b0eb2252ffc0ed863dde4835046c5e8a4f435a9067530f1 (Updated: 2025-11-26T18:47:53 [TS: 1764182873] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:242c018d4024df0ff4273df37ae9d097e84b9dd633632655973d7224b2fc9db0 (Updated: 2025-11-26T18:47:59 [TS: 1764182879] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:63838c0a300bb40209deb226acfc4132381b32610de89cfa3705b7efd5c1b393 (Updated: 2025-11-27T18:50:46 [TS: 1764269446] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:657b36041ee460dd7275ec8b63e90965a82b14f5691147ef7fd43a90256b6f63 (Updated: 2025-11-27T18:50:53 [TS: 1764269453] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4f84e97c1a57fce13fa7892cb453168b59c696c6b0fca8954f7ac3dba7a9faf5 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6b33f72b4aa26059e5283a5951a3942da2f4d316ff5b0a7ffc62c9221fcff118 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2dadc2e85ec041d14dda5a32a5693622f855e326ac2ac4baa3abef86f809c3e1 (Updated: 2025-11-28T18:48:01 [TS: 1764355681] >= Cutoff: [TS: 1763315945])
+[2025-11-30 17:59:07] [INFO] Finished Docker Image processing for test-runner. 0 images marked for deletion.
+[2025-11-30 17:59:07] [INFO] --- Processing: Cloud Router (Limit: 200) ---
+[2025-11-30 17:59:10] [SKIP] default-net-router (In Exclusion List)
+[2025-11-30 17:59:10] [SKIP] default-router-australia-southeast1 (In Exclusion List)
+[2025-11-30 17:59:10] [SKIP] default-router-us-east4 (In Exclusion List)
+[2025-11-30 17:59:10] [SKIP] default-router-us-west1 (In Exclusion List)
+[2025-11-30 17:59:10] [SKIP] default-router-us-west4 (In Exclusion List)
+[2025-11-30 17:59:10] [INFO] --- Processing: Firewall Rules (Limit: 200) ---
+[2025-11-30 17:59:12] [INFO] --- Processing: Compute Addresses ---
+[2025-11-30 17:59:12] [INFO] --- Processing: Regional Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 17:59:15] [INFO] No Regional Address found matching criteria.
+[2025-11-30 17:59:15] [INFO] --- Processing: Global Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 17:59:17] [INFO] No Global Address found matching criteria.
+[2025-11-30 17:59:17] [INFO] --- Processing: VPC Peerings (Limit: 200) ---
+[2025-11-30 17:59:24] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:24] [INFO] --- Processing: Zonal Disk (Limit: 200) ---
+[2025-11-30 17:59:26] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 17:59:26] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 17:59:26] [SKIP] vertexui-do-not-kill-boot (In Exclusion List)
+[2025-11-30 17:59:26] [SKIP] vertexui-do-not-kill-data (In Exclusion List)
+[2025-11-30 17:59:26] [INFO] --- Processing: Subnetworks (Limit: 200) ---
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:29] [INFO] --- Processing: VPC Networks (Limit: 200) ---
+[2025-11-30 17:59:31] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 17:59:31] [INFO] --- Processing: IAM Role Bindings for Deleted SAs (Limit: 200) ---
+[2025-11-30 17:59:33] [INFO] No 'deleted:serviceAccount' bindings found.
+[2025-11-30 17:59:33] [INFO] CLEANUP RUN FINISHED
+[2025-11-30 18:05:23] [INFO] STARTING RESOURCE CLEANUP: hpc-toolkit-dev
+[2025-11-30 18:05:23] [INFO] Time Cutoff (General): 2025-11-30T18:05:23+0000
+[2025-11-30 18:05:23] [INFO] Time Cutoff (Images): 2025-10-01T18:05:23+0000
+[2025-11-30 18:05:23] [INFO] Delete Limit per Type: 200
+[2025-11-30 18:05:23] [INFO] Loading exclusions from exclusions.txt...
+[2025-11-30 18:05:23] [INFO] --- Processing: Service Accounts (Prefix: test-sa-) ---
+[2025-11-30 18:05:26] [INFO] No Service Accounts found matching prefix.
+[2025-11-30 18:05:26] [INFO] --- Processing: GKE Cluster (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 18:05:27] [INFO] No GKE Cluster found matching criteria.
+[2025-11-30 18:05:27] [INFO] --- Processing: Compute Instance (Limit: 200) ---
+[2025-11-30 18:05:30] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 18:05:30] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 18:05:30] [SKIP] vertexui-do-not-kill (In Exclusion List)
+[2025-11-30 18:05:30] [INFO] --- Processing: Filestore Instances (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 18:05:33] [INFO] No Filestore instances found matching criteria.
+[2025-11-30 18:05:33] [INFO] --- Processing: VM Images (Limit: 200) ---
+[2025-11-30 18:05:35] [SKIP] a3u-image-u22-20250325t162635z (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] a4high-image-builder-20250214t220935z (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] chs-dcgmi-metric-u22-20250925t121709z (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] common-slurm-image-20250725t234825z (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] harsh-a4-image (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] pbspro0 (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] rocka4h-rocky9-20250908t175724z (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] rocka4hf-rocky9-20250910t040750z (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1739990978 (In Exclusion List)
+[2025-11-30 18:05:36] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1740100297 (In Exclusion List)
+[2025-11-30 18:05:36] [INFO] --- Processing: Docker Images for 'test-runner' (Artifact Registry) (Limit: 200) ---
+[2025-11-30 18:05:36] [INFO] Policy: Delete 'test-runner' images updated before 2025-11-16T18:05:36Z (Unix: 1763316336)
+[2025-11-30 18:05:36] [INFO] Scanning Target Package: us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner
+Listing items under project hpc-toolkit-dev, location us-central1, repository hpc-toolkit-repo.
+
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1fc1e00175b3700ed5d99c0f2dcc29f247ad5fe2a077710784c22937c187a719 (Updated: 2025-11-17T08:20:06 [TS: 1763367606] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:653b88835ab33bb89001d38d4695716c5018396a9c1e0c502d5d4e06338e3184 (Updated: 2025-11-17T08:20:17 [TS: 1763367617] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c13171c30dc1aa3d6ba3c34867fff6d39150e3fbd6b137c790fa551d372c3522 (Updated: 2025-11-18T08:20:47 [TS: 1763454047] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6236258042a997cc8e02e2f083051a54fb35ad3ff2abaedabbce6b423ffdde93 (Updated: 2025-11-18T08:20:55 [TS: 1763454055] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4c613ee2b8ed7ffae384bc4b2fda4ee21088403307fe51e8b0ac955e7a89328d (Updated: 2025-11-18T18:49:58 [TS: 1763491798] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:f24fa3856c03c6b6544d930fbbcc43ad357d9f138d1286f0675188aa0dec0f77 (Updated: 2025-11-18T18:50:13 [TS: 1763491813] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:b3a646a9fad927984980aef685aa581a60d5dc71c8c59bd8facada59ab77eed4 (Updated: 2025-11-19T18:51:39 [TS: 1763578299] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4af5db61700b8193a5a66f43de34b556d8c9f5863e980f6dae209e81e6aa17d5 (Updated: 2025-11-19T18:51:45 [TS: 1763578305] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:212b05a0a1c98b2d4563fb1d98bad05752b8c93aa2f1bdb5ac0f79f3070d4cf8 (Updated: 2025-11-20T18:49:17 [TS: 1763664557] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:55460dca917fe8dddcf0cfbfdd12807b9cecd829b30709d4cba8c60586885c73 (Updated: 2025-11-20T18:49:24 [TS: 1763664564] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2e61d182ab84124fac9fe2e5dcb0fd9be383cb66bd3d2a277cb8c1591f381790 (Updated: 2025-11-22T08:20:43 [TS: 1763799643] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6f2e2a759e9f543f6b3a177d3e00326f1050bd7ba7a08d1e61b3b3e50a9fa175 (Updated: 2025-11-22T08:20:52 [TS: 1763799652] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e5fa39311fc457f4efcb60de5ceb650c822ae6a42e6dd12f758dc84d3f9e699 (Updated: 2025-11-23T08:17:47 [TS: 1763885867] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1efa59c424c2dacdf48f28745bd942bfcef4625cfc7dc254748bdc5cbb5fc222 (Updated: 2025-11-23T08:17:54 [TS: 1763885874] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:35ec3b3c50826e42ba2de89ff70e4665b4ace4636180092863221132af98dbc7 (Updated: 2025-11-24T08:21:56 [TS: 1763972516] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:eba09b99da72473216349995f209a523b8afd0f6b9267ef7733c4439d8c17ad2 (Updated: 2025-11-24T08:22:03 [TS: 1763972523] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c4040d6826710ffbe9fb83a55acda55c023feead80e477f0243ee3020fd290e6 (Updated: 2025-11-24T18:50:51 [TS: 1764010251] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:00bf2c87e858b285f2623e0adc51bf6770989112457fee5c07f8b102bcdcea2b (Updated: 2025-11-24T18:50:57 [TS: 1764010257] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:e79b8ff506e79f05a06c60b882b9718164ef4aa1ea72faffb50fb3db34c0217f (Updated: 2025-11-25T18:51:48 [TS: 1764096708] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:bef4aa2caca0a52bf1e2a7ba6c33a1d66e7524f20b6ac731e2ebb7eec013e47f (Updated: 2025-11-25T18:51:54 [TS: 1764096714] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e1a2f8e6f92ca443b0eb2252ffc0ed863dde4835046c5e8a4f435a9067530f1 (Updated: 2025-11-26T18:47:53 [TS: 1764182873] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:242c018d4024df0ff4273df37ae9d097e84b9dd633632655973d7224b2fc9db0 (Updated: 2025-11-26T18:47:59 [TS: 1764182879] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:63838c0a300bb40209deb226acfc4132381b32610de89cfa3705b7efd5c1b393 (Updated: 2025-11-27T18:50:46 [TS: 1764269446] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:657b36041ee460dd7275ec8b63e90965a82b14f5691147ef7fd43a90256b6f63 (Updated: 2025-11-27T18:50:53 [TS: 1764269453] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4f84e97c1a57fce13fa7892cb453168b59c696c6b0fca8954f7ac3dba7a9faf5 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6b33f72b4aa26059e5283a5951a3942da2f4d316ff5b0a7ffc62c9221fcff118 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2dadc2e85ec041d14dda5a32a5693622f855e326ac2ac4baa3abef86f809c3e1 (Updated: 2025-11-28T18:48:01 [TS: 1764355681] >= Cutoff: [TS: 1763316336])
+[2025-11-30 18:05:39] [INFO] Finished Docker Image processing for test-runner. 0 images marked for deletion.
+[2025-11-30 18:05:39] [INFO] --- Processing: Cloud Router (Limit: 200) ---
+[2025-11-30 18:05:41] [SKIP] default-net-router (In Exclusion List)
+[2025-11-30 18:05:41] [SKIP] default-router-australia-southeast1 (In Exclusion List)
+[2025-11-30 18:05:41] [SKIP] default-router-us-east4 (In Exclusion List)
+[2025-11-30 18:05:41] [SKIP] default-router-us-west1 (In Exclusion List)
+[2025-11-30 18:05:41] [SKIP] default-router-us-west4 (In Exclusion List)
+[2025-11-30 18:05:41] [INFO] --- Processing: Firewall Rules (Limit: 200) ---
+[2025-11-30 18:05:44] [INFO] --- Processing: Compute Addresses ---
+[2025-11-30 18:05:44] [INFO] --- Processing: Regional Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 18:05:46] [INFO] No Regional Address found matching criteria.
+[2025-11-30 18:05:46] [INFO] --- Processing: Global Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 18:05:48] [INFO] No Global Address found matching criteria.
+[2025-11-30 18:05:48] [INFO] --- Processing: VPC Peerings (Limit: 200) ---
+[2025-11-30 18:05:55] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:05:55] [INFO] --- Processing: Zonal Disk (Limit: 200) ---
+[2025-11-30 18:05:57] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 18:05:57] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 18:05:57] [SKIP] vertexui-do-not-kill-boot (In Exclusion List)
+[2025-11-30 18:05:57] [SKIP] vertexui-do-not-kill-data (In Exclusion List)
+[2025-11-30 18:05:57] [INFO] --- Processing: Subnetworks (Limit: 200) ---
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:00] [INFO] --- Processing: VPC Networks (Limit: 200) ---
+[2025-11-30 18:06:02] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:06:02] [INFO] --- Processing: IAM Role Bindings for Deleted SAs (Limit: 200) ---
+[2025-11-30 18:06:04] [INFO] No 'deleted:serviceAccount' bindings found.
+[2025-11-30 18:06:04] [INFO] CLEANUP RUN FINISHED
+[2025-11-30 18:06:34] [INFO] STARTING RESOURCE CLEANUP: hpc-toolkit-dev
+[2025-11-30 18:06:34] [INFO] Time Cutoff (General): 2025-11-30T18:06:34+0000
+[2025-11-30 18:06:34] [INFO] Time Cutoff (Images): 2025-10-01T18:06:34+0000
+[2025-11-30 18:06:34] [INFO] Delete Limit per Type: 200
+[2025-11-30 18:06:34] [INFO] Loading exclusions from exclusions.txt...
+[2025-11-30 18:06:35] [INFO] --- Processing: Service Accounts (Prefix: test-sa-) ---
+[2025-11-30 18:06:37] [INFO] No Service Accounts found matching prefix.
+[2025-11-30 18:06:37] [INFO] --- Processing: GKE Cluster (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 18:06:39] [INFO] No GKE Cluster found matching criteria.
+[2025-11-30 18:06:39] [INFO] --- Processing: Compute Instance (Limit: 200) ---
+[2025-11-30 18:06:42] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 18:06:42] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 18:06:42] [SKIP] vertexui-do-not-kill (In Exclusion List)
+[2025-11-30 18:06:42] [INFO] --- Processing: Filestore Instances (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 18:06:44] [INFO] No Filestore instances found matching criteria.
+[2025-11-30 18:06:44] [INFO] --- Processing: VM Images (Limit: 200) ---
+[2025-11-30 18:06:47] [SKIP] a3u-image-u22-20250325t162635z (In Exclusion List)
+[2025-11-30 18:06:47] [SKIP] a4high-image-builder-20250214t220935z (In Exclusion List)
+[2025-11-30 18:06:47] [SKIP] chs-dcgmi-metric-u22-20250925t121709z (In Exclusion List)
+[2025-11-30 18:06:47] [SKIP] common-slurm-image-20250725t234825z (In Exclusion List)
+[2025-11-30 18:06:47] [SKIP] harsh-a4-image (In Exclusion List)
+[2025-11-30 18:06:48] [SKIP] pbspro0 (In Exclusion List)
+[2025-11-30 18:06:48] [SKIP] rocka4h-rocky9-20250908t175724z (In Exclusion List)
+[2025-11-30 18:06:48] [SKIP] rocka4hf-rocky9-20250910t040750z (In Exclusion List)
+[2025-11-30 18:06:48] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1739990978 (In Exclusion List)
+[2025-11-30 18:06:48] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1740100297 (In Exclusion List)
+[2025-11-30 18:06:48] [INFO] --- Processing: Docker Images for 'test-runner' (Artifact Registry) (Limit: 200) ---
+[2025-11-30 18:06:48] [INFO] Policy: Delete 'test-runner' images updated before 2025-11-16T18:06:48Z (Unix: 1763316408)
+[2025-11-30 18:06:48] [INFO] Scanning Target Package: us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner
+Listing items under project hpc-toolkit-dev, location us-central1, repository hpc-toolkit-repo.
+
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1fc1e00175b3700ed5d99c0f2dcc29f247ad5fe2a077710784c22937c187a719 (Updated: 2025-11-17T08:20:06 [TS: 1763367606] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:653b88835ab33bb89001d38d4695716c5018396a9c1e0c502d5d4e06338e3184 (Updated: 2025-11-17T08:20:17 [TS: 1763367617] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c13171c30dc1aa3d6ba3c34867fff6d39150e3fbd6b137c790fa551d372c3522 (Updated: 2025-11-18T08:20:47 [TS: 1763454047] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6236258042a997cc8e02e2f083051a54fb35ad3ff2abaedabbce6b423ffdde93 (Updated: 2025-11-18T08:20:55 [TS: 1763454055] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4c613ee2b8ed7ffae384bc4b2fda4ee21088403307fe51e8b0ac955e7a89328d (Updated: 2025-11-18T18:49:58 [TS: 1763491798] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:f24fa3856c03c6b6544d930fbbcc43ad357d9f138d1286f0675188aa0dec0f77 (Updated: 2025-11-18T18:50:13 [TS: 1763491813] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:b3a646a9fad927984980aef685aa581a60d5dc71c8c59bd8facada59ab77eed4 (Updated: 2025-11-19T18:51:39 [TS: 1763578299] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4af5db61700b8193a5a66f43de34b556d8c9f5863e980f6dae209e81e6aa17d5 (Updated: 2025-11-19T18:51:45 [TS: 1763578305] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:212b05a0a1c98b2d4563fb1d98bad05752b8c93aa2f1bdb5ac0f79f3070d4cf8 (Updated: 2025-11-20T18:49:17 [TS: 1763664557] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:55460dca917fe8dddcf0cfbfdd12807b9cecd829b30709d4cba8c60586885c73 (Updated: 2025-11-20T18:49:24 [TS: 1763664564] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2e61d182ab84124fac9fe2e5dcb0fd9be383cb66bd3d2a277cb8c1591f381790 (Updated: 2025-11-22T08:20:43 [TS: 1763799643] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6f2e2a759e9f543f6b3a177d3e00326f1050bd7ba7a08d1e61b3b3e50a9fa175 (Updated: 2025-11-22T08:20:52 [TS: 1763799652] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e5fa39311fc457f4efcb60de5ceb650c822ae6a42e6dd12f758dc84d3f9e699 (Updated: 2025-11-23T08:17:47 [TS: 1763885867] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1efa59c424c2dacdf48f28745bd942bfcef4625cfc7dc254748bdc5cbb5fc222 (Updated: 2025-11-23T08:17:54 [TS: 1763885874] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:35ec3b3c50826e42ba2de89ff70e4665b4ace4636180092863221132af98dbc7 (Updated: 2025-11-24T08:21:56 [TS: 1763972516] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:eba09b99da72473216349995f209a523b8afd0f6b9267ef7733c4439d8c17ad2 (Updated: 2025-11-24T08:22:03 [TS: 1763972523] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:50] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c4040d6826710ffbe9fb83a55acda55c023feead80e477f0243ee3020fd290e6 (Updated: 2025-11-24T18:50:51 [TS: 1764010251] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:00bf2c87e858b285f2623e0adc51bf6770989112457fee5c07f8b102bcdcea2b (Updated: 2025-11-24T18:50:57 [TS: 1764010257] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:e79b8ff506e79f05a06c60b882b9718164ef4aa1ea72faffb50fb3db34c0217f (Updated: 2025-11-25T18:51:48 [TS: 1764096708] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:bef4aa2caca0a52bf1e2a7ba6c33a1d66e7524f20b6ac731e2ebb7eec013e47f (Updated: 2025-11-25T18:51:54 [TS: 1764096714] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e1a2f8e6f92ca443b0eb2252ffc0ed863dde4835046c5e8a4f435a9067530f1 (Updated: 2025-11-26T18:47:53 [TS: 1764182873] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:242c018d4024df0ff4273df37ae9d097e84b9dd633632655973d7224b2fc9db0 (Updated: 2025-11-26T18:47:59 [TS: 1764182879] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:63838c0a300bb40209deb226acfc4132381b32610de89cfa3705b7efd5c1b393 (Updated: 2025-11-27T18:50:46 [TS: 1764269446] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:657b36041ee460dd7275ec8b63e90965a82b14f5691147ef7fd43a90256b6f63 (Updated: 2025-11-27T18:50:53 [TS: 1764269453] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4f84e97c1a57fce13fa7892cb453168b59c696c6b0fca8954f7ac3dba7a9faf5 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6b33f72b4aa26059e5283a5951a3942da2f4d316ff5b0a7ffc62c9221fcff118 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2dadc2e85ec041d14dda5a32a5693622f855e326ac2ac4baa3abef86f809c3e1 (Updated: 2025-11-28T18:48:01 [TS: 1764355681] >= Cutoff: [TS: 1763316408])
+[2025-11-30 18:06:51] [INFO] Finished Docker Image processing for test-runner. 0 images marked for deletion.
+[2025-11-30 18:06:51] [INFO] --- Processing: Cloud Router (Limit: 200) ---
+[2025-11-30 18:06:53] [SKIP] default-net-router (In Exclusion List)
+[2025-11-30 18:06:53] [SKIP] default-router-australia-southeast1 (In Exclusion List)
+[2025-11-30 18:06:53] [SKIP] default-router-us-east4 (In Exclusion List)
+[2025-11-30 18:06:53] [SKIP] default-router-us-west1 (In Exclusion List)
+[2025-11-30 18:06:53] [SKIP] default-router-us-west4 (In Exclusion List)
+[2025-11-30 18:06:53] [INFO] --- Processing: Firewall Rules (Limit: 200) ---
+[2025-11-30 18:06:55] [INFO] --- Processing: Compute Addresses ---
+[2025-11-30 18:06:55] [INFO] --- Processing: Regional Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 18:06:58] [INFO] No Regional Address found matching criteria.
+[2025-11-30 18:06:58] [INFO] --- Processing: Global Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 18:07:00] [INFO] No Global Address found matching criteria.
+[2025-11-30 18:07:00] [INFO] --- Processing: VPC Peerings (Limit: 200) ---
+[2025-11-30 18:07:02] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:02] [INFO] Finished processing VPC Peerings. 0 peerings actioned.
+[2025-11-30 18:07:02] [INFO] --- Processing: Zonal Disk (Limit: 200) ---
+[2025-11-30 18:07:05] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 18:07:05] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 18:07:05] [SKIP] vertexui-do-not-kill-boot (In Exclusion List)
+[2025-11-30 18:07:05] [SKIP] vertexui-do-not-kill-data (In Exclusion List)
+[2025-11-30 18:07:05] [INFO] --- Processing: Subnetworks (Limit: 200) ---
+[2025-11-30 18:07:07] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:07] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:07] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:08] [INFO] --- Processing: VPC Networks (Limit: 200) ---
+[2025-11-30 18:07:10] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:07:10] [INFO] --- Processing: IAM Role Bindings for Deleted SAs (Limit: 200) ---
+[2025-11-30 18:07:12] [INFO] No 'deleted:serviceAccount' bindings found.
+[2025-11-30 18:07:12] [INFO] CLEANUP RUN FINISHED
+./cleanup.sh: line 235: syntax error near unexpected token `done'
+./cleanup.sh: line 235: `        done'
+./cleanup.sh: line 235: syntax error near unexpected token `done'
+./cleanup.sh: line 235: `        done'
+./cleanup.sh: line 235: syntax error near unexpected token `done'
+./cleanup.sh: line 235: `        done'
+./cleanup.sh: line 235: syntax error near unexpected token `done'
+./cleanup.sh: line 235: `        done'
+[2025-11-30 18:29:28] [INFO] STARTING RESOURCE CLEANUP: hpc-toolkit-dev
+[2025-11-30 18:29:28] [INFO] Time Cutoff (General): 2025-11-30T18:29:28+0000
+[2025-11-30 18:29:28] [INFO] Time Cutoff (Images): 2025-10-01T18:29:28+0000
+[2025-11-30 18:29:28] [INFO] Delete Limit per Type: 200
+[2025-11-30 18:29:28] [INFO] Loading exclusions from exclusions.txt...
+[2025-11-30 18:29:28] [INFO] --- Processing: Service Accounts (Prefix: test-sa-) ---
+[2025-11-30 18:29:31] [INFO] No Service Accounts found matching prefix.
+[2025-11-30 18:29:31] [INFO] --- Processing: GKE Cluster (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 18:29:33] [INFO] No GKE Cluster found matching criteria.
+[2025-11-30 18:29:33] [INFO] --- Processing: Compute Instance (Limit: 200) ---
+[2025-11-30 18:29:36] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 18:29:36] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 18:29:36] [SKIP] vertexui-do-not-kill (In Exclusion List)
+[2025-11-30 18:29:36] [INFO] --- Processing: Filestore Instances (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : createTime
+[2025-11-30 18:29:39] [INFO] No Filestore instances found matching criteria.
+[2025-11-30 18:29:39] [INFO] --- Processing: VM Images (Limit: 200) ---
+[2025-11-30 18:29:42] [SKIP] a3u-image-u22-20250325t162635z (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] a4high-image-builder-20250214t220935z (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] chs-dcgmi-metric-u22-20250925t121709z (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] common-slurm-image-20250725t234825z (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] harsh-a4-image (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] pbspro0 (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] rocka4h-rocky9-20250908t175724z (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] rocka4hf-rocky9-20250910t040750z (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1739990978 (In Exclusion List)
+[2025-11-30 18:29:43] [SKIP] slurm-gcp-next-hpc-rocky-linux-8-1740100297 (In Exclusion List)
+[2025-11-30 18:29:43] [INFO] --- Processing: Docker Images for 'test-runner' (Artifact Registry) (Limit: 200) ---
+[2025-11-30 18:29:43] [INFO] Policy: Delete 'test-runner' images updated before 2025-11-16T18:29:43Z (Unix: 1763317783)
+[2025-11-30 18:29:43] [INFO] Scanning Target Package: us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner
+Listing items under project hpc-toolkit-dev, location us-central1, repository hpc-toolkit-repo.
+
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1fc1e00175b3700ed5d99c0f2dcc29f247ad5fe2a077710784c22937c187a719 (Updated: 2025-11-17T08:20:06 [TS: 1763367606] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:653b88835ab33bb89001d38d4695716c5018396a9c1e0c502d5d4e06338e3184 (Updated: 2025-11-17T08:20:17 [TS: 1763367617] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c13171c30dc1aa3d6ba3c34867fff6d39150e3fbd6b137c790fa551d372c3522 (Updated: 2025-11-18T08:20:47 [TS: 1763454047] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6236258042a997cc8e02e2f083051a54fb35ad3ff2abaedabbce6b423ffdde93 (Updated: 2025-11-18T08:20:55 [TS: 1763454055] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4c613ee2b8ed7ffae384bc4b2fda4ee21088403307fe51e8b0ac955e7a89328d (Updated: 2025-11-18T18:49:58 [TS: 1763491798] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:f24fa3856c03c6b6544d930fbbcc43ad357d9f138d1286f0675188aa0dec0f77 (Updated: 2025-11-18T18:50:13 [TS: 1763491813] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:b3a646a9fad927984980aef685aa581a60d5dc71c8c59bd8facada59ab77eed4 (Updated: 2025-11-19T18:51:39 [TS: 1763578299] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4af5db61700b8193a5a66f43de34b556d8c9f5863e980f6dae209e81e6aa17d5 (Updated: 2025-11-19T18:51:45 [TS: 1763578305] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:212b05a0a1c98b2d4563fb1d98bad05752b8c93aa2f1bdb5ac0f79f3070d4cf8 (Updated: 2025-11-20T18:49:17 [TS: 1763664557] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:55460dca917fe8dddcf0cfbfdd12807b9cecd829b30709d4cba8c60586885c73 (Updated: 2025-11-20T18:49:24 [TS: 1763664564] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2e61d182ab84124fac9fe2e5dcb0fd9be383cb66bd3d2a277cb8c1591f381790 (Updated: 2025-11-22T08:20:43 [TS: 1763799643] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6f2e2a759e9f543f6b3a177d3e00326f1050bd7ba7a08d1e61b3b3e50a9fa175 (Updated: 2025-11-22T08:20:52 [TS: 1763799652] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e5fa39311fc457f4efcb60de5ceb650c822ae6a42e6dd12f758dc84d3f9e699 (Updated: 2025-11-23T08:17:47 [TS: 1763885867] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:1efa59c424c2dacdf48f28745bd942bfcef4625cfc7dc254748bdc5cbb5fc222 (Updated: 2025-11-23T08:17:54 [TS: 1763885874] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:35ec3b3c50826e42ba2de89ff70e4665b4ace4636180092863221132af98dbc7 (Updated: 2025-11-24T08:21:56 [TS: 1763972516] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:eba09b99da72473216349995f209a523b8afd0f6b9267ef7733c4439d8c17ad2 (Updated: 2025-11-24T08:22:03 [TS: 1763972523] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:c4040d6826710ffbe9fb83a55acda55c023feead80e477f0243ee3020fd290e6 (Updated: 2025-11-24T18:50:51 [TS: 1764010251] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:00bf2c87e858b285f2623e0adc51bf6770989112457fee5c07f8b102bcdcea2b (Updated: 2025-11-24T18:50:57 [TS: 1764010257] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:e79b8ff506e79f05a06c60b882b9718164ef4aa1ea72faffb50fb3db34c0217f (Updated: 2025-11-25T18:51:48 [TS: 1764096708] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:bef4aa2caca0a52bf1e2a7ba6c33a1d66e7524f20b6ac731e2ebb7eec013e47f (Updated: 2025-11-25T18:51:54 [TS: 1764096714] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:5e1a2f8e6f92ca443b0eb2252ffc0ed863dde4835046c5e8a4f435a9067530f1 (Updated: 2025-11-26T18:47:53 [TS: 1764182873] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:242c018d4024df0ff4273df37ae9d097e84b9dd633632655973d7224b2fc9db0 (Updated: 2025-11-26T18:47:59 [TS: 1764182879] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:63838c0a300bb40209deb226acfc4132381b32610de89cfa3705b7efd5c1b393 (Updated: 2025-11-27T18:50:46 [TS: 1764269446] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:657b36041ee460dd7275ec8b63e90965a82b14f5691147ef7fd43a90256b6f63 (Updated: 2025-11-27T18:50:53 [TS: 1764269453] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:4f84e97c1a57fce13fa7892cb453168b59c696c6b0fca8954f7ac3dba7a9faf5 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:6b33f72b4aa26059e5283a5951a3942da2f4d316ff5b0a7ffc62c9221fcff118 (Updated: 2025-11-28T18:47:55 [TS: 1764355675] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO]   [KEEP] us-central1-docker.pkg.dev/hpc-toolkit-dev/hpc-toolkit-repo/test-runner@sha256:2dadc2e85ec041d14dda5a32a5693622f855e326ac2ac4baa3abef86f809c3e1 (Updated: 2025-11-28T18:48:01 [TS: 1764355681] >= Cutoff: [TS: 1763317783])
+[2025-11-30 18:29:46] [INFO] Finished Docker Image processing for test-runner. 0 images marked for deletion.
+[2025-11-30 18:29:46] [INFO] --- Processing: Cloud Router (Limit: 200) ---
+[2025-11-30 18:29:48] [SKIP] default-net-router (In Exclusion List)
+[2025-11-30 18:29:48] [SKIP] default-router-australia-southeast1 (In Exclusion List)
+[2025-11-30 18:29:48] [SKIP] default-router-us-east4 (In Exclusion List)
+[2025-11-30 18:29:48] [SKIP] default-router-us-west1 (In Exclusion List)
+[2025-11-30 18:29:48] [SKIP] default-router-us-west4 (In Exclusion List)
+[2025-11-30 18:29:48] [INFO] --- Processing: Firewall Rules (Limit: 200) ---
+[2025-11-30 18:29:51] [INFO] --- Processing: Compute Addresses ---
+[2025-11-30 18:29:51] [INFO] --- Processing: Regional Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 18:29:53] [INFO] No Regional Address found matching criteria.
+[2025-11-30 18:29:53] [INFO] --- Processing: Global Address (Limit: 200) ---
+WARNING: The following filter keys were not present in any resource : creationTimestamp, region
+[2025-11-30 18:29:56] [INFO] No Global Address found matching criteria.
+[2025-11-30 18:29:56] [INFO] --- Processing: VPC Peerings (Limit: 200) ---
+[2025-11-30 18:29:58] [INFO] Finished processing VPC Peerings. 0 peerings actioned.
+[2025-11-30 18:29:58] [INFO] --- Processing: Zonal Disk (Limit: 200) ---
+[2025-11-30 18:30:01] [SKIP] image-inspector-550 (In Exclusion List)
+[2025-11-30 18:30:01] [SKIP] image-inspector (In Exclusion List)
+[2025-11-30 18:30:01] [SKIP] vertexui-do-not-kill-boot (In Exclusion List)
+[2025-11-30 18:30:01] [SKIP] vertexui-do-not-kill-data (In Exclusion List)
+[2025-11-30 18:30:01] [INFO] --- Processing: Subnetworks (Limit: 200) ---
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:03] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:04] [INFO] --- Processing: VPC Networks (Limit: 200) ---
+[2025-11-30 18:30:06] [SKIP] hpc-vpc (In Exclusion List)
+[2025-11-30 18:30:06] [INFO] --- Processing: IAM Role Bindings for Deleted SAs (Limit: 200) ---
+[2025-11-30 18:30:08] [INFO] No 'deleted:serviceAccount' bindings found.
+[2025-11-30 18:30:08] [INFO] CLEANUP RUN FINISHED

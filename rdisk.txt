@@ -1,0 +1,373 @@
+--- Thu Nov 27 02:16:12 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: false
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T10:16:12+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: a4h-slurm-c1a329-8ab4ad47 (Location not found in list output)
+Skip Filestore Instance: lustre-dev-06-3148a0ff (Location not found in list output)
+Skip Filestore Instance: lustre-dev-06-be0d3c5c (Location not found in list output)
+Skip Filestore Instance: lustre-prod-06-5b1cfd08 (Location not found in list output)
+Skip Filestore Instance: lustre-prod-06-90dc8167 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Traceback (most recent call last):
+  File "/usr/bin/../lib/google-cloud-sdk/lib/gcloud.py", line 193, in <module>
+    main()
+  File "/usr/bin/../lib/google-cloud-sdk/lib/gcloud.py", line 187, in main
+    gcloud_main = _import_gcloud_main()
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/bin/../lib/google-cloud-sdk/lib/gcloud.py", line 90, in _import_gcloud_main
+    import googlecloudsdk.gcloud_main
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/gcloud_main.py", line 42, in <module>
+    from googlecloudsdk.core.credentials import creds_context_managers
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/creds_context_managers.py", line 29, in <module>
+    from googlecloudsdk.core.credentials import store
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 34, in <module>
+    from googlecloudsdk.api_lib.auth import external_account as auth_external_account
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/auth/external_account.py", line 24, in <module>
+    from googlecloudsdk.core.credentials import creds as c_creds
+  File "/usr/bin/../lib/google-cloud-sdk/lib/googlecloudsdk/core/credentials/creds.py", line 33, in <module>
+    from google.auth import compute_engine as google_auth_compute_engine
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/google/auth/compute_engine/__init__.py", line 18, in <module>
+    from google.auth.compute_engine.credentials import Credentials
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1091, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1190, in get_data
+KeyboardInterrupt
+--- Thu Nov 27 02:16:41 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T10:16:41+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: a4h-slurm-c1a329-8ab4ad47 (Location not found in list output)
+Skip Filestore Instance: lustre-dev-06-3148a0ff (Location not found in list output)
+Skip Filestore Instance: lustre-dev-06-be0d3c5c (Location not found in list output)
+Skip Filestore Instance: lustre-prod-06-5b1cfd08 (Location not found in list output)
+Skip Filestore Instance: lustre-prod-06-90dc8167 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+--- Subnetwork Deletion Phase Complete ---
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-dev-06-net
+lustre-prod-06-net
+lustre-qa-05-net
+--- Processing Network: lustre-dev-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b99c802ac7b2e10 for network lustre-dev-06-net
+[DRY RUN] Route: Would delete peering-route-7869e60dfba46542 for network lustre-dev-06-net
+[DRY RUN] Route: Would delete peering-route-87752b9a8f2ebae2 for network lustre-dev-06-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-dev-06-net
+  Command: gcloud compute networks delete "lustre-dev-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-prod-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-0a55a53b5c4fdb82 for network lustre-prod-06-net
+[DRY RUN] Route: Would delete peering-route-eebb81463c1f952f for network lustre-prod-06-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-prod-06-net
+  Command: gcloud compute networks delete "lustre-prod-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b91a4552351d170 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-qa-05-net
+  Command: gcloud compute networks delete "lustre-qa-05-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Deletion Phase 4a: Zonal Persistent Disks (Top 30) ---
+Skip Zonal Disk: image-inspector-550 in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a (In exclusion list)
+Skip Zonal Disk: image-inspector in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a (In exclusion list)
+Skip Zonal Disk: vertexui-do-not-kill-boot in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-b (In exclusion list)
+Skip Zonal Disk: vertexui-do-not-kill-data in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-b (In exclusion list)
+No Zonal Disks to delete in this run.
+--- Deletion Phase 4b: Regional Persistent Disks (Top 30) ---
+WARNING: The following filter keys were not present in any resource : region
+No Regional Disks found matching criteria or list command failed.
+--- Thu Nov 27 02:17:13 PM UTC 2025 --- Cleanup Script Run Finished ---
+
+--- Thu Nov 27 02:18:53 PM UTC 2025 --- STARTING RESOURCE CLEANUP in project hpc-toolkit-dev ---
+DRY_RUN mode: true
+Will attempt to delete up to 30 resources of each type per run.
+Targeting resources created before: 2025-11-27T13:18:53+0000
+Reading exclusion list from local file: exclusions.txt
+Exclusion list loaded with 47 entries:
+  - vertexui-do-not-kill
+  - hpc-ctk1357
+  - hpc-toolkit-dev@appspot.gserviceaccount.com
+  - build-notifier@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-trigger-scheduler@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-run-pubsub-invoker@hpc-toolkit-dev.iam.gserviceaccount.com
+  - cloud-build-integration-tester@hpc-toolkit-dev.iam.gserviceaccount.com
+  - 508417052821-compute@developer.gserviceaccount.com
+  - hpc-toolkit-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-toolkit-build-notification@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-access@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-cm@hpc-toolkit-dev.iam.gserviceaccount.com
+  - htcondor-173362-execute@hpc-toolkit-dev.iam.gserviceaccount.com
+  - pcb-740@hpc-toolkit-dev.iam.gserviceaccount.com
+  - test-script-runner-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
+  - telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - vertexui-do-not-kill-boot
+  - vertexui-do-not-kill-data
+  - default
+  - default-router-us-west1
+  - default-router-us-west4
+  - default-net-router
+  - default-router-australia-southeast1
+  - default-router-us-east4
+  - image-inspector-550
+  - image-inspector
+  - gke-managed-lustre-basic-net-fw-allow-iap-ingress
+  - gke-managed-lustre-basic-net-fw-allow-internal-traffic
+  - a3m-sp-h13-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h2-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3m-sp-h5-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - a3-slurm-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-11-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-prod-6-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a3high-test-1-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-np-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - gke-a4-gke-wl-sa@hpc-toolkit-dev.iam.gserviceaccount.com
+  - hpc-vpc
+--- Deletion Phase 1: GKE Clusters (Top 30) ---
+No GKE clusters found to delete in this run.
+--- Deletion Phase 1: Compute Instances (Top 30) ---
+Skip Instance: image-inspector-550 in us-west1-a (In exclusion list)
+Skip Instance: image-inspector in us-west1-a (In exclusion list)
+Skip Instance: vertexui-do-not-kill in us-west1-b (In exclusion list)
+No Instances found to delete in this run.
+--- Deletion Phase 1: Filestore Instances (Top 30) ---
+Skip Filestore Instance: a4h-slurm-c1a329-8ab4ad47 (Location not found in list output)
+Skip Filestore Instance: lustre-dev-06-3148a0ff (Location not found in list output)
+Skip Filestore Instance: lustre-dev-06-be0d3c5c (Location not found in list output)
+Skip Filestore Instance: lustre-prod-06-5b1cfd08 (Location not found in list output)
+Skip Filestore Instance: lustre-prod-06-90dc8167 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-b7382e84 (Location not found in list output)
+Skip Filestore Instance: lustre-qa-05-c0248923 (Location not found in list output)
+No Filestore instances found to delete in this run.
+--- Deletion Phase 3: Cloud Routers (Top 30) ---
+Skip Cloud Router: default-net-router (In exclusion list)
+Skip Cloud Router: default-router-australia-southeast1 (In exclusion list)
+Skip Cloud Router: default-router-us-east4 (In exclusion list)
+Skip Cloud Router: default-router-us-west1 (In exclusion list)
+Skip Cloud Router: default-router-us-west4 (In exclusion list)
+No Cloud Routers found to delete in this run.
+--- Deletion Phase 4: Firewall Rules (Top 30) ---
+Skip Firewall: a3hc-308e7e (On default network)
+Skip Firewall: a3hc-754952 (On default network)
+Skip Firewall: a3hc-a628c1 (On default network)
+Skip Firewall: a3hc-b15fa8 (On default network)
+Skip Firewall: a3hc-c27fd0 (On default network)
+Skip Firewall: a3hc-df0061 (On default network)
+Skip Firewall: a3mc-c9f69e (On default network)
+Skip Firewall: a3mc-f7e2b2 (On default network)
+Skip Firewall: allow-internal (On default network)
+Skip Firewall: allow-ssh (On default network)
+Skip Firewall: default-allow-http (On default network)
+Skip Firewall: default-allow-https (On default network)
+No Firewall Rules found to delete in this run.
+--- Deletion Phase 5: Subnetworks (Top 30 across all regions) ---
+No Subnetworks found to delete in this run after filtering.
+--- Subnetwork Deletion Phase Complete ---
+--- Deletion Phase 6: Networks (Top 30) ---
+Skip Network: default (Is default)
+Skip Network: hpc-vpc (In exclusion list)
+The following Networks and their dependencies are targeted for deletion in this run:
+lustre-dev-06-net
+lustre-prod-06-net
+lustre-qa-05-net
+--- Processing Network: lustre-dev-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b99c802ac7b2e10 for network lustre-dev-06-net
+[DRY RUN] Route: Would delete peering-route-7869e60dfba46542 for network lustre-dev-06-net
+[DRY RUN] Route: Would delete peering-route-87752b9a8f2ebae2 for network lustre-dev-06-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-dev-06-net
+  Command: gcloud compute networks delete "lustre-dev-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-prod-06-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-0a55a53b5c4fdb82 for network lustre-prod-06-net
+[DRY RUN] Route: Would delete peering-route-eebb81463c1f952f for network lustre-prod-06-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-prod-06-net
+  Command: gcloud compute networks delete "lustre-prod-06-net" --project="hpc-toolkit-dev" --quiet
+--- Processing Network: lustre-qa-05-net ---
+Checking for dependent routes...
+[DRY RUN] Route: Would delete peering-route-3b91a4552351d170 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-6f7c1d8537c80540 for network lustre-qa-05-net
+[DRY RUN] Route: Would delete peering-route-c2ff29e0ce578be2 for network lustre-qa-05-net
+Checking for dependent firewall rules...
+No dependent firewall rules found.
+[DRY RUN] Network: Would delete lustre-qa-05-net
+  Command: gcloud compute networks delete "lustre-qa-05-net" --project="hpc-toolkit-dev" --quiet
+--- Network Deletion Process Complete ---
+--- Deletion Phase 4a: Zonal Persistent Disks (Top 30) ---
+Skip Zonal Disk: image-inspector-550 in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a (In exclusion list)
+Skip Zonal Disk: image-inspector in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-a (In exclusion list)
+Skip Zonal Disk: vertexui-do-not-kill-boot in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-b (In exclusion list)
+Skip Zonal Disk: vertexui-do-not-kill-data in https://www.googleapis.com/compute/v1/projects/hpc-toolkit-dev/zones/us-west1-b (In exclusion list)
+No Zonal Disks to delete in this run.
+--- Deletion Phase 4b: Regional Persistent Disks (Top 30) ---
+WARNING: The following filter keys were not present in any resource : region
+No Regional Disks found matching criteria or list command failed.
+--- Thu Nov 27 02:19:25 PM UTC 2025 --- Cleanup Script Run Finished ---
+
