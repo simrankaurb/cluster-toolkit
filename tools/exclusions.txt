@@ -18,7 +18,6 @@ telemetry-ingestor@hpc-toolkit-dev.iam.gserviceaccount.com
 telemetry-sa@hpc-toolkit-dev.iam.gserviceaccount.com
 vertexui-do-not-kill-boot
 vertexui-do-not-kill-data
-default
 default-router-us-west1
 default-router-us-west4
 default-net-router
