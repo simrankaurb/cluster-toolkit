@@ -6,7 +6,6 @@
 
 # Associative array for exclusions
 declare -A EXCLUSION_MAP
-DELETE_LIMIT=200
 ERROR_COUNT=0
 
 # Environment Variables expected from Cloud Build
@@ -122,7 +121,7 @@ process_resources() {
     local delete_command_base="$3"
     local scope_type="$4"
 
-    log "INFO" "--- Processing: $label (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: $label ---"
 
     local resources
     if ! resources=$(eval "$list_command"); then
@@ -139,10 +138,6 @@ process_resources() {
     local count=0
     while IFS=$'\t' read -r name scope labels_str; do
         [[ -z "$name" ]] && continue
-        if [[ $count -ge $DELETE_LIMIT ]]; then
-            log "INFO" "Hit delete limit ($DELETE_LIMIT) for $label."
-            break
-        fi
 
         if is_excluded "$name" "${labels_str:-}"; then continue; fi
 
@@ -161,7 +156,7 @@ process_resources() {
 # ==============================================================================
 
 process_instance_templates() {
-    log "INFO" "--- Processing: Instance Templates (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: Instance Templates ---"
     local templates
     if ! templates=$(gcloud compute instance-templates list \
         --project="$PROJECT_ID" \
@@ -176,7 +171,6 @@ process_instance_templates() {
     local count=0
     while IFS=$'\t' read -r name labels_str; do
         if [[ -z "$name" ]]; then continue; fi
-        if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for Instance Templates."; break; fi
         if is_excluded "$name" "${labels_str:-}"; then continue; fi
         execute_delete "Instance Template" "$name" \
             "gcloud compute instance-templates delete \"$name\" --project=\"$PROJECT_ID\" --quiet" \
@@ -198,7 +192,7 @@ process_addresses() {
 }
 
 process_vpc_peerings() {
-    log "INFO" "--- Processing: VPC Peerings (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: VPC Peerings---"
     local networks_json
     if ! networks_json=$(gcloud compute networks list --project="$PROJECT_ID" --format="json"); then
         log "ERROR" "Failed to list networks."
@@ -209,7 +203,6 @@ process_vpc_peerings() {
 
     local count=0
     while IFS= read -r net_obj; do
-        if [[ $count -ge $DELETE_LIMIT ]]; then break; fi
         local net_name
         net_name=$(echo "$net_obj" | jq -r '.name')
         if [[ -z "$net_name" || "$net_name" == "null" ]]; then continue; fi
@@ -219,7 +212,6 @@ process_vpc_peerings() {
         if [[ "$peerings_json" == "[]" || "$peerings_json" == "null" ]]; then continue; fi
 
         while IFS= read -r peering_obj; do
-            if [[ $count -ge $DELETE_LIMIT ]]; then break; fi
             local peering_name
             peering_name=$(echo "$peering_obj" | jq -r '.name')
             if [[ -z "$peering_name" || "$peering_name" == "null" ]]; then continue; fi
@@ -246,12 +238,11 @@ process_vpc_peerings() {
             fi
         done < <(echo "$peerings_json" | jq -c '.[]')
     done < <(echo "$networks_json" | jq -c '.[]')
-    if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for VPC Peerings."; fi
     log "INFO" "Finished processing VPC Peerings. $count peerings actioned."
 }
 
 process_iam_deleted_members() {
-    log "INFO" "--- Processing: IAM Role Bindings for Deleted SAs (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: IAM Role Bindings for Deleted SAs ---"
     local policy_json
     if ! policy_json=$(gcloud projects get-iam-policy "$PROJECT_ID" --format=json); then
         log "ERROR" "Failed to get IAM policy."
@@ -265,7 +256,6 @@ process_iam_deleted_members() {
     local count=0
     while IFS=$'\t' read -r role member; do
         if [[ -z "$role" || -z "$member" ]]; then continue; fi
-        if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for IAM Bindings."; break; fi
         
         local cmd="gcloud projects remove-iam-policy-binding \"$PROJECT_ID\" --member=\"$member\" --role=\"$role\" --condition=None --quiet"
         
@@ -283,7 +273,7 @@ process_iam_deleted_members() {
 }
 
 process_vm_images() {
-    log "INFO" "--- Processing: VM Images (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: VM Images ---"
     local images
     if ! images=$(gcloud compute images list --project="$PROJECT_ID" --no-standard-images \
         --format="value(name,creationTimestamp,labels)"); then
@@ -305,7 +295,6 @@ process_vm_images() {
     local count=0
     while IFS=$'\t' read -r name timestamp labels_str; do
         [[ -z "$name" ]] && continue
-        if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for VM Images."; break; fi
         if is_excluded "$name" "${labels_str:-}"; then continue; fi
 
         local ts_seconds
@@ -322,7 +311,7 @@ process_vm_images() {
 }
 
 process_docker_images() {
-    log "INFO" "--- Processing: Docker Images for 'test-runner' (Artifact Registry) (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: Docker Images for 'test-runner' (Artifact Registry) ---"
     local cutoff_date
     cutoff_date=$(date -u -d "14 days ago" '+%Y-%m-%dT%H:%M:%SZ')
     local cutoff_seconds
@@ -357,7 +346,6 @@ process_docker_images() {
 
          if [[ $image_seconds -ge $cutoff_seconds ]]; then continue; 
          else
-             if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for Docker Images."; break; fi
              if is_excluded "$package_name"; then continue; fi
              if is_excluded "$full_image_ref"; then continue; fi 
 
@@ -371,7 +359,7 @@ process_docker_images() {
 }
 
 process_firewalls() {
-    log "INFO" "--- Processing: Firewall Rules (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: Firewall Rules ---"
     local fws
     if ! fws=$(gcloud compute firewall-rules list --project="$PROJECT_ID" \
         --filter="creationTimestamp < '$CUTOFF_TIME'" \
@@ -388,7 +376,6 @@ process_firewalls() {
         local network_name
         network_name=$(basename "$network_uri")
         if [[ "$network_name" == "default" ]]; then continue; fi
-        if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for Firewall Rules."; break; fi
         if is_excluded "$name" "${labels_str:-}"; then continue; fi
         execute_delete "Firewall Rule" "$name" \
             "gcloud compute firewall-rules delete \"$name\" --project=\"$PROJECT_ID\" --quiet"
@@ -397,7 +384,7 @@ process_firewalls() {
 }
 
 process_filestore() {
-    log "INFO" "--- Processing: Filestore Instances (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: Filestore Instances ---"
     local fs_json
     if ! fs_json=$(gcloud filestore instances list --project="$PROJECT_ID" --filter="createTime < '$CUTOFF_TIME'" --format="json"); then
         log "ERROR" "Failed to list Filestore instances."
@@ -418,7 +405,6 @@ process_filestore() {
     while IFS=$'\t' read -r location name labels_str; do
         location=$(echo "$location" | awk '{$1=$1};1'); name=$(echo "$name" | awk '{$1=$1};1')
         if [[ -z "$location" || -z "$name" ]]; then continue; fi
-        if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for Filestore."; break; fi
         if is_excluded "$name" "${labels_str:-}"; then continue; fi
         local delete_cmd="gcloud filestore instances delete \"$name\" --project=\"$PROJECT_ID\" --location=\"$location\" --quiet --force"
         execute_delete "Filestore" "$name" "$delete_cmd" "($location)"
@@ -428,7 +414,7 @@ process_filestore() {
 }
 
 process_subnetworks() {
-    log "INFO" "--- Processing: Subnetworks (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: Subnetworks ---"
     local subnets
     if ! subnets=$(gcloud compute networks subnets list --project="$PROJECT_ID" --filter="creationTimestamp < '$CUTOFF_TIME'" --format="value(name,region,network,selfLink)"); then
         log "ERROR" "Failed to list subnets"
@@ -441,7 +427,6 @@ process_subnetworks() {
         [[ -z "$name" ]] && continue
         local network_name=$(basename "$network_uri")
         if [[ "$network_name" == "default" ]]; then continue; fi
-        if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for Subnetworks."; break; fi
         if is_excluded "$name"; then continue; fi
 
         # Note: listing dependents might fail, wrapping in error check not strictly necessary for deletion loop but good practice
@@ -457,7 +442,7 @@ process_subnetworks() {
 }
 
 process_networks() {
-    log "INFO" "--- Processing: VPC Networks (Limit: $DELETE_LIMIT) ---"
+    log "INFO" "--- Processing: VPC Networks ---"
     local networks
     if ! networks=$(gcloud compute networks list --project="$PROJECT_ID" --filter="creationTimestamp < '$CUTOFF_TIME'" --format="value(name,selfLink)"); then
         log "ERROR" "Failed to list networks"
@@ -469,7 +454,6 @@ process_networks() {
     while IFS=$'\t' read -r name self_link; do
         [[ -z "$name" ]] && continue
         if [[ "$name" == "default" ]]; then continue; fi
-        if [[ $count -ge $DELETE_LIMIT ]]; then log "INFO" "Hit delete limit ($DELETE_LIMIT) for Networks."; break; fi
         if is_excluded "$name"; then continue; fi
 
         local routes
@@ -493,7 +477,6 @@ main() {
     log "INFO" "STARTING RESOURCE CLEANUP: $PROJECT_ID"
     log "INFO" "Time Cutoff (General): $CUTOFF_TIME"
     log "INFO" "Time Cutoff (Images): $CUTOFF_TIME_IMAGES"
-    log "INFO" "Delete Limit per Type: $DELETE_LIMIT"
     log "INFO" "DRY_RUN: $DRY_RUN"
     log "INFO" "Exclusion File: $EXCLUSION_FILE"
 
