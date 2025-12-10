@@ -16,15 +16,15 @@
 terraform_backend_defaults:
   type: gcs
   configuration:
-    bucket: simranka
+    bucket: customer-bucket
 
 vars:
-  deployment_name: deletion-test
-  project_id: hpc-toolkit-dev
-  region: europe-west1
-  zone: europe-west1-c
-  network_name_system: deletion-test-sys-net
-  subnetwork_name_system: deletion-test-sys-subnet
+  deployment_name: a3mega-base
+  project_id: customer-project
+  region: customer-region
+  zone: customer-zone
+  network_name_system: a3mega-sys-net
+  subnetwork_name_system: a3mega-sys-subnet
   enable_ops_agent: true
   enable_nvidia_dcgm: true
   enable_nvidia_persistenced: true
@@ -32,4 +32,7 @@ vars:
   final_image_family: slurm-a3mega
   slurm_cluster_name: a3mega
   a3mega_cluster_size: 2 # supply cluster size
-  a3mega_enable_spot_vm: true # To make use of Spot VMs, for more info visit: https://cloud.google.com/compute/docs/instances/spot
+  a3mega_reservation_name: "" # supply reservation name
+  # Additional provisioning models (pick only one), can be used to substitute `a3mega_reservation_name`:
+  a3mega_dws_flex_enabled: false # To make use of DWS Flex-Start, for more info visit: https://github.com/GoogleCloudPlatform/cluster-toolkit/blob/main/docs/slurm-dws-flex.md
+  a3mega_enable_spot_vm: false # To make use of Spot VMs, for more info visit: https://cloud.google.com/compute/docs/instances/spot

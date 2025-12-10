@@ -21,26 +21,21 @@ steps:
   - "BUILD_ID=${BUILD_ID}"
   - "PROJECT_ID=${PROJECT_ID}"
   - "DRY_RUN=true"
-  - "EXCLUSION_FILE=tools/exclusions.txt"
+  - "EXCLUSION_FILE=gs://hpc-ctk1357/cleanup/exclusions.txt"
   args:
   - -c
   - |
     set -euo pipefail
 
-    # Install dependencies
-    echo "Installing jq..."
-    apt-get update -y && apt-get install -y jq
-    
     # Set time variables
-    export CUTOFF_TIME=$(date -d '2 hours ago' -u +%Y-%m-%dT%H:%M:%S%z)
+    export CUTOFF_TIME=$(date -d '2 days ago' -u +%Y-%m-%dT%H:%M:%S%z)
     export CUTOFF_TIME_IMAGES=$(date -d "60 days ago" -u +%Y-%m-%dT%H:%M:%S%z)
 
     attempt=1
-    max_retries=10
-    
+    max_retries=5
+
     while [ "$attempt" -le "$max_retries" ]; do
         echo "--- Execution Attempt ${attempt} of ${max_retries} ---"
-
         if /workspace/tools/cleanup.sh; then
             echo "Cleanup completed successfully."
             exit 0
