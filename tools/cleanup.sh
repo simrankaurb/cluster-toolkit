@@ -169,29 +169,43 @@ populate_protected_resources() {
                 IFS=';' read -ra ig_url_list <<< "$ig_urls"
                 for ig_url in "${ig_url_list[@]}"; do
                     local ig_name=$(basename "${ig_url}")
-                    local ig_scope_type=$(echo "${ig_url}" | awk -F'/' '{print $(NF-2)}')
-                    local ig_scope_name=$(echo "${ig_url}" | awk -F'/' '{print $(NF-3)}')
+                    # Corrected AWK indices
+                    local ig_scope_type=$(echo "${ig_url}" | awk -F'/' '{print $(NF-3)}')
+                    local ig_scope_name=$(echo "${ig_url}" | awk -F'/' '{print $(NF-2)}')
                     local scope_flag=""
+
                     if [[ "$ig_scope_type" == "zones" ]]; then
                         scope_flag="--zone=${ig_scope_name}"
                     elif [[ "$ig_scope_type" == "regions" ]]; then
                         scope_flag="--region=${ig_scope_name}"
                     else
-                        log "WARNING" "Unknown scope type for instance group: ${ig_url}"
+                        log "WARNING" "Unknown scope type ('${ig_scope_type}') for instance group: ${ig_url}"
                         continue
                     fi
+
+                    log "DEBUG" "Processing MIG: ${ig_name} (${scope_flag}) for cluster ${cluster_name}"
 
                     # Get the instance template from the MIG
                     local template_url_from_mig
                     if ! template_url_from_mig=$(gcloud compute instance-groups managed describe "${ig_name}" --project="${PROJECT_ID}" "${scope_flag}" --format="value(instanceTemplate)"); then
                         log "WARNING" "Failed to get instance template for MIG ${ig_name}."
                     else
-                        if [[ -n "$template_url_from_mig" ]]; then
+                        log "DEBUG" "MIG ${ig_name}: instanceTemplate URL is '${template_url_from_mig}'"
+                        if [[ -n "$template_url_from_mig" && "$template_url_from_mig" != "None" ]]; then
                             local template_name=$(basename "$template_url_from_mig")
-                            if [[ -n "$template_name" && -z "${EXCLUSION_MAP[${template_name}]:-}" ]]; then
-                                 log "INFO" "  > Excluding Instance Template (from GKE MIG ${ig_name}): ${template_name}"
-                                 EXCLUSION_MAP["${template_name}"]=1
+                            log "DEBUG" "MIG ${ig_name}: Extracted template name is '${template_name}'"
+                            if [[ -n "$template_name" && "$template_name" != "None" ]]; then
+                                if ! [[ -v EXCLUSION_MAP["$template_name"] ]]; then
+                                     log "INFO" "  > Excluding Instance Template (from GKE MIG ${ig_name}): ${template_name}"
+                                     EXCLUSION_MAP["${template_name}"]=1
+                                else
+                                     log "DEBUG" "  > Instance Template ${template_name} (from GKE MIG ${ig_name}) is already excluded."
+                                fi
+                            else
+                                log "WARNING" "  > Could not extract a valid template name from URL '${template_url_from_mig}' for MIG ${ig_name}"
                             fi
+                        else
+                            log "DEBUG" "MIG ${ig_name}: No instanceTemplate URL found or value is 'None'."
                         fi
                     fi
 
@@ -204,7 +218,7 @@ populate_protected_resources() {
                     while IFS=$'\t' read -r inst_name inst_zone_url; do
                         if [[ -n "$inst_name" ]]; then
                             local inst_zone=$(basename "$inst_zone_url")
-                            if [[ -z "${EXCLUSION_MAP[${inst_name}]:-}" ]]; then
+                            if ! [[ -v EXCLUSION_MAP["$inst_name"] ]]; then
                                 log "INFO" "  > Protecting Instance (from GKE ${cluster_name}): ${inst_name} in ${inst_zone}"
                                 EXCLUSION_MAP["${inst_name}"]=1
                             fi
@@ -228,7 +242,7 @@ populate_protected_resources() {
     else
         while IFS=$'\t' read -r inst_name zone labels_str; do
             if is_excluded "$inst_name" "$labels_str"; then # Returns 0 if excluded
-                if [[ -z "${EXCLUSION_MAP[${inst_name}]:-}" ]]; then
+                if ! [[ -v EXCLUSION_MAP["$inst_name"] ]]; then
                     log "INFO" "  > Protecting Instance (from Label): ${inst_name} in ${zone}"
                     EXCLUSION_MAP["${inst_name}"]=1
                 fi
@@ -253,13 +267,23 @@ populate_protected_resources() {
             local disks_list nets_list subs_list ips_list nat_ips_list template_url
             IFS=$'\t' read -r disks_list nets_list subs_list ips_list nat_ips_list template_url <<< "$inst_details"
 
+            log "DEBUG" "Instance ${inst_name}: sourceInstanceTemplate value: '${template_url}'"
+
             # Protect Instance Template (for non-MIG instances)
             if [[ -n "$template_url" ]]; then
                 local template_name=$(basename "$template_url")
-                if [[ -n "$template_name" && -z "${EXCLUSION_MAP[${template_name}]:-}" ]]; then
-                     log "INFO" "    > Excluding Instance Template (for ${inst_name}): ${template_name}"
-                     EXCLUSION_MAP["${template_name}"]=1
+                if [[ -n "$template_name" && "$template_name" != "None" ]]; then
+                    if ! [[ -v EXCLUSION_MAP["$template_name"] ]]; then
+                         log "INFO" "    > Excluding Instance Template (for ${inst_name}): ${template_name}"
+                         EXCLUSION_MAP["${template_name}"]=1
+                    else
+                         log "DEBUG" "    > Instance Template ${template_name} (for ${inst_name}) is already excluded."
+                    fi
+                else
+                    log "DEBUG" "Instance ${inst_name}: No valid template name found from URL '${template_url}'"
                 fi
+            else
+                 log "DEBUG" "Instance ${inst_name}: sourceInstanceTemplate is empty or not set."
             fi
 
             # Protect Attached Disks
@@ -282,7 +306,8 @@ populate_protected_resources() {
                     log "INFO" "    > Excluding Network (for ${inst_name}): ${net_name}"
                     EXCLUSION_MAP["${net_name}"]=1
                  fi
-                 PROTECTED_NETWORKS["${net_url}"]=1 # Store full network URL
+                 # Use network name as key
+                 [[ -n "${net_name}" ]] && PROTECTED_NETWORK_NAMES["${net_name}"]=1
             done
 
             IFS=';' read -ra sub_urls <<< "$subs_list"
@@ -316,30 +341,6 @@ populate_protected_resources() {
                     fi
                  fi
             done <<< "$addresses_data"
-        fi
-    fi
-
-    # Part 5: Protect Filestore instances on the same network
-    if ((${#PROTECTED_NETWORKS[@]} > 0)); then
-        log "INFO" "Checking for Filestore instances on protected networks..."
-        local fs_data
-        if ! fs_data=$(gcloud filestore instances list --project="$PROJECT_ID" --format="value(name.segment(5), networks[0].network)"); then
-            log "ERROR" "Failed to list Filestore instances for network check."
-            ((ERROR_COUNT++)) || true
-        else
-            while IFS=$'\t' read -r fs_name fs_network; do
-                 [[ -z "$fs_name" || -z "$fs_network" ]] && continue
-
-                 # Normalize fs_network URL to match the format from instance description
-                 local full_fs_network="https://www.googleapis.com/compute/v1/projects/${PROJECT_ID}/global/networks/${fs_network}"
-
-                 if [[ -n "${PROTECTED_NETWORKS[${full_fs_network}]:-}" ]]; then
-                     if [[ -z "${EXCLUSION_MAP[${fs_name}]:-}" ]]; then
-                         log "INFO" "  > Excluding Filestore (on network ${fs_network}): ${fs_name}"
-                         EXCLUSION_MAP["${fs_name}"]=1
-                     fi
-                 fi
-            done <<< "$fs_data"
         fi
     fi
 }
