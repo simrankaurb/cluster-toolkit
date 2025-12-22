@@ -87,25 +87,25 @@ is_excluded() {
             local KEY VAL
             KEY="${PAIR%%=*}"
             VAL="${PAIR#*=}"
-            if [[ "$KEY" == "do-not-delete" ]]; then
+            if [[ "$KEY" == "cleanup-exemption-date" ]]; then
                 if [[ "$VAL" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
                     local exp_seconds
                     if ! exp_seconds=$(date -d "$VAL + 1 day" -u +%s 2>/dev/null); then
-                         log "WARNING" "$resource_name (Label: do-not-delete invalid date value: $VAL)"
+                         log "WARNING" "$resource_name (Label: cleanup-exemption-date invalid date value: $VAL)"
                          return 1 # Not excluded
                     else
                         local current_seconds
                         current_seconds=$(date -u +%s)
                         if [[ "$exp_seconds" -gt "$current_seconds" ]]; then
-                            log "SKIP" "$resource_name (Label: do-not-delete=$VAL, valid)"
+                            log "SKIP" "$resource_name (Label: cleanup-exemption-date=$VAL, valid)"
                             return 0 # Excluded
                         else
-                            log "INFO" "$resource_name (Label: do-not-delete=$VAL expired)"
+                            log "INFO" "$resource_name (Label: cleanup-exemption-date=$VAL expired)"
                             return 1 # Not excluded
                         fi
                     fi
                 else
-                    log "WARNING" "$resource_name (Label: do-not-delete invalid date format: $VAL, expected YYYY-MM-DD)"
+                    log "WARNING" "$resource_name (Label: cleanup-exemption-date invalid date format: $VAL, expected YYYY-MM-DD)"
                     return 1 # Not excluded
                 fi
                 break
@@ -231,13 +231,13 @@ populate_protected_resources() {
     fi
 
     # Part 2: Instances protected via direct labels
-    log "INFO" "Checking for instances with do-not-delete label..."
+    log "INFO" "Checking for instances with cleanup-exemption-date label..."
     local labeled_instances_data
     if ! labeled_instances_data=$(gcloud compute instances list \
         --project="$PROJECT_ID" \
-        --filter="labels.do-not-delete:*" \
+        --filter="labels.cleanup-exemption-date:*" \
         --format="value(name,zone.basename(),labels.map())"); then
-        log "ERROR" "Failed to list instances with do-not-delete label."
+        log "ERROR" "Failed to list instances with cleanup-exemption-date label."
         ((ERROR_COUNT++)) || true
     else
         while IFS=$'\t' read -r inst_name zone labels_str; do
