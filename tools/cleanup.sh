@@ -138,7 +138,7 @@ populate_protected_resources() {
     log "INFO" "Identifying protected resources..."
     declare -A INSTANCES_TO_PROTECT # Map instance_name -> zone
 
-    # Part 1: Instances from EXCLUDED GKE clusters
+    # Part 1: Instances and Templates from EXCLUDED GKE clusters
     log "INFO" "Checking for instances in EXCLUDED GKE clusters..."
     local clusters_data
     if ! clusters_data=$(gcloud container clusters list --project="$PROJECT_ID" --format="value(name,location,resourceLabels.map())"); then
@@ -179,6 +179,20 @@ populate_protected_resources() {
                     else
                         log "WARNING" "Unknown scope type for instance group: ${ig_url}"
                         continue
+                    fi
+
+                    # Get the instance template from the MIG
+                    local template_url_from_mig
+                    if ! template_url_from_mig=$(gcloud compute instance-groups managed describe "${ig_name}" --project="${PROJECT_ID}" "${scope_flag}" --format="value(instanceTemplate)"); then
+                        log "WARNING" "Failed to get instance template for MIG ${ig_name}."
+                    else
+                        if [[ -n "$template_url_from_mig" ]]; then
+                            local template_name=$(basename "$template_url_from_mig")
+                            if [[ -n "$template_name" && -z "${EXCLUSION_MAP[${template_name}]:-}" ]]; then
+                                 log "INFO" "  > Excluding Instance Template (from GKE MIG ${ig_name}): ${template_name}"
+                                 EXCLUSION_MAP["${template_name}"]=1
+                            fi
+                        fi
                     fi
 
                     local instances_in_mig
@@ -231,13 +245,22 @@ populate_protected_resources() {
             log "DEBUG" "Fetching details for protected instance: ${inst_name} in ${zone}"
             local inst_details
             if ! inst_details=$(gcloud compute instances describe "${inst_name}" --zone="${zone}" --project="${PROJECT_ID}" \
-                --format="value(disks[].source.list(separator=';'),networkInterfaces[].network.list(separator=';'),networkInterfaces[].subnetwork.list(separator=';'),networkInterfaces[].networkIP.list(separator=';'),networkInterfaces[].accessConfigs[].natIP.list(separator=';'))"); then
+                --format="value(disks[].source.list(separator=';'),networkInterfaces[].network.list(separator=';'),networkInterfaces[].subnetwork.list(separator=';'),networkInterfaces[].networkIP.list(separator=';'),networkInterfaces[].accessConfigs[].natIP.list(separator=';'),sourceInstanceTemplate)"); then
                 log "WARNING" "Failed to describe protected instance ${inst_name} in ${zone}. Sub-resources might not be protected."
                 continue
             fi
 
-            local disks_list nets_list subs_list ips_list nat_ips_list
-            IFS=$'\t' read -r disks_list nets_list subs_list ips_list nat_ips_list <<< "$inst_details"
+            local disks_list nets_list subs_list ips_list nat_ips_list template_url
+            IFS=$'\t' read -r disks_list nets_list subs_list ips_list nat_ips_list template_url <<< "$inst_details"
+
+            # Protect Instance Template (for non-MIG instances)
+            if [[ -n "$template_url" ]]; then
+                local template_name=$(basename "$template_url")
+                if [[ -n "$template_name" && -z "${EXCLUSION_MAP[${template_name}]:-}" ]]; then
+                     log "INFO" "    > Excluding Instance Template (for ${inst_name}): ${template_name}"
+                     EXCLUSION_MAP["${template_name}"]=1
+                fi
+            fi
 
             # Protect Attached Disks
             IFS=';' read -ra disk_urls <<< "$disks_list"
@@ -250,7 +273,7 @@ populate_protected_resources() {
                 fi
             done
 
-            # Protect Network
+            # Protect Network & Subnetwork
             IFS=';' read -ra net_urls <<< "$nets_list"
             for net_url in "${net_urls[@]}"; do
                  [[ -z "$net_url" ]] && continue
@@ -259,9 +282,9 @@ populate_protected_resources() {
                     log "INFO" "    > Excluding Network (for ${inst_name}): ${net_name}"
                     EXCLUSION_MAP["${net_name}"]=1
                  fi
+                 PROTECTED_NETWORKS["${net_url}"]=1 # Store full network URL
             done
 
-            # Protect Subnetwork
             IFS=';' read -ra sub_urls <<< "$subs_list"
             for sub_url in "${sub_urls[@]}"; do
                  [[ -z "$sub_url" ]] && continue
@@ -278,7 +301,7 @@ populate_protected_resources() {
         done
     fi
 
-    # Find Address resource names for the PROTECTED_IPS
+    # Part 4: Find Address resource names for the PROTECTED_IPS
     if ((${#PROTECTED_IPS[@]} > 0)); then
         log "INFO" "Finding Address resource names for protected IPs..."
         local addresses_data
@@ -293,6 +316,30 @@ populate_protected_resources() {
                     fi
                  fi
             done <<< "$addresses_data"
+        fi
+    fi
+
+    # Part 5: Protect Filestore instances on the same network
+    if ((${#PROTECTED_NETWORKS[@]} > 0)); then
+        log "INFO" "Checking for Filestore instances on protected networks..."
+        local fs_data
+        if ! fs_data=$(gcloud filestore instances list --project="$PROJECT_ID" --format="value(name.segment(5), networks[0].network)"); then
+            log "ERROR" "Failed to list Filestore instances for network check."
+            ((ERROR_COUNT++)) || true
+        else
+            while IFS=$'\t' read -r fs_name fs_network; do
+                 [[ -z "$fs_name" || -z "$fs_network" ]] && continue
+
+                 # Normalize fs_network URL to match the format from instance description
+                 local full_fs_network="https://www.googleapis.com/compute/v1/projects/${PROJECT_ID}/global/networks/${fs_network}"
+
+                 if [[ -n "${PROTECTED_NETWORKS[${full_fs_network}]:-}" ]]; then
+                     if [[ -z "${EXCLUSION_MAP[${fs_name}]:-}" ]]; then
+                         log "INFO" "  > Excluding Filestore (on network ${fs_network}): ${fs_name}"
+                         EXCLUSION_MAP["${fs_name}"]=1
+                     fi
+                 fi
+            done <<< "$fs_data"
         fi
     fi
 }
