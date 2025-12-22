@@ -28,7 +28,7 @@ steps:
     set -euo pipefail
 
     # Set time variables
-    export CUTOFF_TIME=$(date -d '2 days ago' -u +%Y-%m-%dT%H:%M:%S%z)
+    export CUTOFF_TIME=$(date -d '2 hours ago' -u +%Y-%m-%dT%H:%M:%S%z)
     export CUTOFF_TIME_IMAGES=$(date -d "60 days ago" -u +%Y-%m-%dT%H:%M:%S%z)
 
     attempt=1

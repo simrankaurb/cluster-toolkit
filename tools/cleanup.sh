@@ -6,15 +6,17 @@
 declare -A EXCLUSION_MAP
 ERROR_COUNT=0
 
+# To store IPs of protected instances, to find matching Address resources
+declare -A PROTECTED_IPS
+# To store Network URIs used by protected instances
+declare -A PROTECTED_NETWORK_URIS
+
 # Environment Variables expected from Cloud Build
 PROJECT_ID="${PROJECT_ID:-hpc-toolkit-dev}"
 DRY_RUN="${DRY_RUN:-true}"
 EXCLUSION_FILE="${EXCLUSION_FILE:-gs://hpc-ctk1357/cleanup/exclusions.txt}"
 CUTOFF_TIME="${CUTOFF_TIME:-$(date -d '2 hours ago' -u +%Y-%m-%dT%H:%M:%S%z)}"
 CUTOFF_TIME_IMAGES="${CUTOFF_TIME_IMAGES:-$(date -d "60 days ago" -u +%Y-%m-%dT%H:%M:%S%z)}"
-
-# To store IPs of protected instances, to find matching Address resources
-declare -A PROTECTED_IPS
 
 # HELPER FUNCTIONS
 
@@ -306,8 +308,11 @@ populate_protected_resources() {
                     log "INFO" "    > Excluding Network (for ${inst_name}): ${net_name}"
                     EXCLUSION_MAP["${net_name}"]=1
                  fi
-                 # Use network name as key
-                 [[ -n "${net_name}" ]] && PROTECTED_NETWORK_NAMES["${net_name}"]=1
+                 # Store the full network URI for Filestore matching
+                 if [[ -n "${net_url}" ]]; then
+                    log "DEBUG" "Adding protected network URI: ${net_url}"
+                    PROTECTED_NETWORK_URIS["${net_url}"]=1
+                 fi
             done
 
             IFS=';' read -ra sub_urls <<< "$subs_list"
@@ -355,6 +360,18 @@ log_exclusion_map() {
         log "INFO" "EXCLUDED: $key"
     done
     log "INFO" "--- End of Exclusion Map ---"
+}
+
+log_protected_network_uris() {
+    log "INFO" "--- Protected Network URIs ---"
+    if [ ${#PROTECTED_NETWORK_URIS[@]} -eq 0 ]; then
+        log "INFO" "PROTECTED_NETWORK_URIS map is empty."
+        return
+    fi
+    for key in "${!PROTECTED_NETWORK_URIS[@]}"; do
+        log "INFO" "PROTECTED NET URI: $key"
+    done
+    log "INFO" "--- End of Protected Network URIs ---"
 }
 
 # STANDARD PROCESSOR
@@ -609,9 +626,9 @@ process_firewalls() {
 process_filestore() {
     log "INFO" "--- Processing: Filestore Instances ---"
     local fs_data
-    # Get instance name, location, and labels using segment projections
+    # Get instance name, location, labels, and network URI
     if ! fs_data=$(gcloud filestore instances list --project="$PROJECT_ID" --filter="createTime < '$CUTOFF_TIME'" \
-        --format="value(name.segment(5), name.segment(3), labels.map())"); then
+        --format="value(name.segment(5), name.segment(3), labels.map(), networks[0].network)"); then
         log "ERROR" "Failed to list Filestore instances."
         ((ERROR_COUNT++)) || true
         return 0
@@ -619,18 +636,39 @@ process_filestore() {
     if [[ -z "$fs_data" ]]; then log "INFO" "No Filestore instances found matching criteria."; return 0; fi
 
     local count=0
-    while IFS=$'\t' read -r name location labels_str; do
+    while IFS=$'\t' read -r name location labels_str network_uri; do
         # Trim potential whitespace
         name=$(echo "$name" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
         location=$(echo "$location" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
+        network_uri=$(echo "$network_uri" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')
 
         if [[ -z "$name" || "$name" == "None" || -z "$location" || "$location" == "None" ]]; then
-            log "WARNING" "Could not extract valid name or location for a Filestore instance from line: $name  $location    $labels_str"
+            log "WARNING" "Could not extract valid name or location for a Filestore instance."
             continue
         fi
 
+        log "DEBUG" "Filestore $name: Checking network URI: '$network_uri'"
+        # Protect Filestore if its network is used by any protected VM
+        local network_basename=$(basename "$network_uri")
+        # Construct the expected full URI format similar to compute instances
+        local full_network_uri="https://www.googleapis.com/compute/v1/projects/${PROJECT_ID}/global/networks/${network_basename}"
+
+        if [[ -n "${network_uri}" && -n "${PROTECTED_NETWORK_URIS[${full_network_uri}]:-}" ]]; then
+            if [[ -z "${EXCLUSION_MAP[${name}]:-}" ]]; then
+                log "INFO" "SKIP : Filestore $name ($location) on PROTECTED network $network_basename (URI: $full_network_uri)"
+                EXCLUSION_MAP["${name}"]=1
+            fi
+            continue
+        else
+            if [[ -n "${network_uri}" ]]; then
+                 log "DEBUG" "Filestore $name: Network URI '$full_network_uri' not found in PROTECTED_NETWORK_URIS."
+            else
+                 log "DEBUG" "Filestore $name: Network URI is empty."
+            fi
+        fi
+
         if ! is_excluded "$name" "${labels_str:-}"; then
-            log "INFO" "Processing Filestore instance: $name in $location"
+            log "INFO" "Processing Filestore instance for potential deletion: $name in $location"
 
             if [[ "$DRY_RUN" == "true" ]]; then
                 log "DRY-RUN" "Would disable deletion protection on Filestore: $name ($location)"
@@ -766,6 +804,7 @@ main() {
     check_dependencies
     load_exclusions
     populate_protected_resources
+    log_protected_network_uris # Log the protected network URIs
     log_exclusion_map # Log the map contents
 
     # --- Phase 1: High Level Resources ---
@@ -774,7 +813,7 @@ main() {
         "gcloud container clusters delete --project=\"$PROJECT_ID\"" "location"
     process_resources "Instance Template" \
         "gcloud compute instance-templates list --project=\"$PROJECT_ID\" --filter=\"creationTimestamp < '$CUTOFF_TIME'\" --format=\"value(name, 'Global', labels.map())\" | sort" \
-        "gcloud compute instance-templates delete --project=\"$PROJECT_ID\"" 
+        "gcloud compute instance-templates delete --project=\"$PROJECT_ID\""
     process_resources "Compute Instance" \
         "gcloud compute instances list --project=\"$PROJECT_ID\" --filter=\"creationTimestamp < '$CUTOFF_TIME'\" --format=\"value(name,zone.basename(),labels.map())\" | sort" \
         "gcloud compute instances delete --project=\"$PROJECT_ID\" --delete-disks=all" "zone"
