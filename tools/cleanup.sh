@@ -135,35 +135,117 @@ execute_delete() {
 }
 
 populate_protected_resources() {
-    log "INFO" "Identifying protected instances and their associated resources..."
-    local instances_data
-    if ! instances_data=$(gcloud compute instances list \
+    log "INFO" "Identifying protected resources..."
+    declare -A INSTANCES_TO_PROTECT # Map instance_name -> zone
+
+    # Part 1: Instances from EXCLUDED GKE clusters
+    log "INFO" "Checking for instances in EXCLUDED GKE clusters..."
+    local clusters_data
+    if ! clusters_data=$(gcloud container clusters list --project="$PROJECT_ID" --format="value(name,location,resourceLabels.map())"); then
+        log "ERROR" "Failed to list GKE clusters."
+        ((ERROR_COUNT++)) || true
+    else
+        while IFS=$'\t' read -r cluster_name location labels_str; do
+            if ! is_excluded "$cluster_name" "$labels_str"; then # Returns 1 if NOT excluded
+                 continue
+            fi
+
+            log "INFO" "GKE Cluster ${cluster_name} in ${location} is PROTECTED."
+            EXCLUSION_MAP["${cluster_name}"]=1 # Add cluster itself to exclusion map
+
+            local node_pools_data
+            if ! node_pools_data=$(gcloud container node-pools list --cluster="${cluster_name}" --location="${location}" --project="${PROJECT_ID}" --format="value(name)"); then
+                log "WARNING" "Failed to list node pools for protected cluster ${cluster_name}."
+                continue
+            fi
+
+            while IFS=$'\t' read -r np_name; do
+                local ig_urls
+                if ! ig_urls=$(gcloud container node-pools describe "${np_name}" --cluster="${cluster_name}" --location="${location}" --project="${PROJECT_ID}" --format="value(instanceGroupUrls)"); then
+                     log "WARNING" "Failed to describe node pool ${np_name} in cluster ${cluster_name}."
+                     continue
+                fi
+
+                IFS=';' read -ra ig_url_list <<< "$ig_urls"
+                for ig_url in "${ig_url_list[@]}"; do
+                    local ig_name=$(basename "${ig_url}")
+                    local ig_scope_type=$(echo "${ig_url}" | awk -F'/' '{print $(NF-2)}')
+                    local ig_scope_name=$(echo "${ig_url}" | awk -F'/' '{print $(NF-3)}')
+                    local scope_flag=""
+                    if [[ "$ig_scope_type" == "zones" ]]; then
+                        scope_flag="--zone=${ig_scope_name}"
+                    elif [[ "$ig_scope_type" == "regions" ]]; then
+                        scope_flag="--region=${ig_scope_name}"
+                    else
+                        log "WARNING" "Unknown scope type for instance group: ${ig_url}"
+                        continue
+                    fi
+
+                    local instances_in_mig
+                    if ! instances_in_mig=$(gcloud compute instance-groups managed list-instances "${ig_name}" --project="${PROJECT_ID}" "${scope_flag}" --format="value(NAME,ZONE)"); then
+                        log "WARNING" "Failed to list instances for MIG ${ig_name}."
+                        continue
+                    fi
+
+                    while IFS=$'\t' read -r inst_name inst_zone_url; do
+                        if [[ -n "$inst_name" ]]; then
+                            local inst_zone=$(basename "$inst_zone_url")
+                            if [[ -z "${EXCLUSION_MAP[${inst_name}]:-}" ]]; then
+                                log "INFO" "  > Protecting Instance (from GKE ${cluster_name}): ${inst_name} in ${inst_zone}"
+                                EXCLUSION_MAP["${inst_name}"]=1
+                            fi
+                            INSTANCES_TO_PROTECT["${inst_name}"]="${inst_zone}"
+                        fi
+                    done <<< "$instances_in_mig"
+                done
+            done <<< "$node_pools_data"
+        done <<< "$clusters_data"
+    fi
+
+    # Part 2: Instances protected via direct labels
+    log "INFO" "Checking for instances with do-not-delete label..."
+    local labeled_instances_data
+    if ! labeled_instances_data=$(gcloud compute instances list \
         --project="$PROJECT_ID" \
         --filter="labels.do-not-delete:*" \
-        --format="value(name,zone.basename(),labels.map(),disks[].source.list(separator=';'),networkInterfaces[].network.list(separator=';'),networkInterfaces[].subnetwork.list(separator=';'),networkInterfaces[].networkIP.list(separator=';'),networkInterfaces[].accessConfigs[].natIP.list(separator=';'))"); then
+        --format="value(name,zone.basename(),labels.map())"); then
         log "ERROR" "Failed to list instances with do-not-delete label."
         ((ERROR_COUNT++)) || true
-        return
+    else
+        while IFS=$'\t' read -r inst_name zone labels_str; do
+            if is_excluded "$inst_name" "$labels_str"; then # Returns 0 if excluded
+                if [[ -z "${EXCLUSION_MAP[${inst_name}]:-}" ]]; then
+                    log "INFO" "  > Protecting Instance (from Label): ${inst_name} in ${zone}"
+                    EXCLUSION_MAP["${inst_name}"]=1
+                fi
+                INSTANCES_TO_PROTECT["${inst_name}"]="${zone}"
+            fi
+        done <<< "$labeled_instances_data"
     fi
 
-    if [[ -z "$instances_data" ]]; then
-        log "INFO" "No instances found with do-not-delete label."
-        return
-    fi
+    # Part 3: Protect resources associated with the collected instances
+    if ((${#INSTANCES_TO_PROTECT[@]} > 0)); then
+        log "INFO" "Protecting sub-resources of ${#INSTANCES_TO_PROTECT[@]} instances..."
+        for inst_name in "${!INSTANCES_TO_PROTECT[@]}"; do
+            local zone="${INSTANCES_TO_PROTECT[$inst_name]}"
+            log "DEBUG" "Fetching details for protected instance: ${inst_name} in ${zone}"
+            local inst_details
+            if ! inst_details=$(gcloud compute instances describe "${inst_name}" --zone="${zone}" --project="${PROJECT_ID}" \
+                --format="value(disks[].source.list(separator=';'),networkInterfaces[].network.list(separator=';'),networkInterfaces[].subnetwork.list(separator=';'),networkInterfaces[].networkIP.list(separator=';'),networkInterfaces[].accessConfigs[].natIP.list(separator=';'))"); then
+                log "WARNING" "Failed to describe protected instance ${inst_name} in ${zone}. Sub-resources might not be protected."
+                continue
+            fi
 
-    while IFS=$'\t' read -r inst_name zone labels_str disks_list nets_list subs_list ips_list nat_ips_list; do
-        if is_excluded "$inst_name" "$labels_str"; then # Returns 0 if excluded
-            log "INFO" "Instance ${inst_name} in ${zone} is PROTECTED. Adding associated resources to exclusions."
-            EXCLUSION_MAP["${inst_name}"]=1
+            local disks_list nets_list subs_list ips_list nat_ips_list
+            IFS=$'\t' read -r disks_list nets_list subs_list ips_list nat_ips_list <<< "$inst_details"
 
             # Protect Attached Disks
             IFS=';' read -ra disk_urls <<< "$disks_list"
             for disk_url in "${disk_urls[@]}"; do
                 [[ -z "$disk_url" ]] && continue
-                local disk_name
-                disk_name=$(basename "${disk_url}")
+                local disk_name=$(basename "${disk_url}")
                 if [[ -n "${disk_name}" && -z "${EXCLUSION_MAP[${disk_name}]:-}" ]]; then
-                     log "INFO" "  > Excluding Disk: ${disk_name}"
+                     log "INFO" "    > Excluding Disk (for ${inst_name}): ${disk_name}"
                      EXCLUSION_MAP["${disk_name}"]=1
                 fi
             done
@@ -172,10 +254,9 @@ populate_protected_resources() {
             IFS=';' read -ra net_urls <<< "$nets_list"
             for net_url in "${net_urls[@]}"; do
                  [[ -z "$net_url" ]] && continue
-                 local net_name
-                 net_name=$(basename "${net_url}")
+                 local net_name=$(basename "${net_url}")
                  if [[ -n "${net_name}" && -z "${EXCLUSION_MAP[${net_name}]:-}" ]]; then
-                    log "INFO" "  > Excluding Network: ${net_name}"
+                    log "INFO" "    > Excluding Network (for ${inst_name}): ${net_name}"
                     EXCLUSION_MAP["${net_name}"]=1
                  fi
             done
@@ -184,27 +265,18 @@ populate_protected_resources() {
             IFS=';' read -ra sub_urls <<< "$subs_list"
             for sub_url in "${sub_urls[@]}"; do
                  [[ -z "$sub_url" ]] && continue
-                 local sub_name
-                 sub_name=$(basename "${sub_url}")
+                 local sub_name=$(basename "${sub_url}")
                  if [[ -n "${sub_name}" && -z "${EXCLUSION_MAP[${sub_name}]:-}" ]]; then
-                         log "INFO" "  > Excluding Subnetwork: ${sub_name}"
+                         log "INFO" "    > Excluding Subnetwork (for ${inst_name}): ${sub_name}"
                          EXCLUSION_MAP["${sub_name}"]=1
                  fi
             done
 
-            # Protect Network IPs
-            IFS=';' read -ra network_ips <<< "$ips_list"
-            for ip in "${network_ips[@]}"; do
-                [[ -n "$ip" ]] && PROTECTED_IPS["${ip}"]=1
-            done
-
-            # Protect External (NAT) IPs
-            IFS=';' read -ra nat_ips <<< "$nat_ips_list"
-            for ip in "${nat_ips[@]}"; do
-                 [[ -n "$ip" ]] && PROTECTED_IPS["${ip}"]=1
-            done
-        fi
-    done <<< "$instances_data"
+            # Collect IPs to protect Addresses later
+            IFS=';' read -ra network_ips <<< "$ips_list"; for ip in "${network_ips[@]}"; do [[ -n "$ip" ]] && PROTECTED_IPS["${ip}"]=1; done
+            IFS=';' read -ra nat_ips <<< "$nat_ips_list"; for ip in "${nat_ips[@]}"; do [[ -n "$ip" ]] && PROTECTED_IPS["${ip}"]=1; done
+        done
+    fi
 
     # Find Address resource names for the PROTECTED_IPS
     if ((${#PROTECTED_IPS[@]} > 0)); then
@@ -273,6 +345,7 @@ process_resources() {
             ((count++)) || true
         fi
     done <<< "$resources"
+    log "INFO" "Finished processing $label. $count resources actioned."
 }
 
 # SPECIFIC HANDLERS
@@ -338,7 +411,7 @@ process_addresses() {
             [[ -z "$name" ]] && continue
             if ! is_excluded "$name" "${labels_str:-}"; then
                  if [[ "$status" == "IN_USE" ]]; then
-                    log "WARNING" "Skipping IN_USE Global Address $name NOT explicitly excluded."
+                    log "DEBUG" "Skipping IN_USE Global Address $name NOT explicitly excluded."
                     continue
                  fi
                 execute_delete "Global Address" "$name" \
@@ -347,57 +420,6 @@ process_addresses() {
             fi
         done <<< "$global_addresses"
     fi
-}
-
-
-process_vpc_peerings() {
-    log "INFO" "--- Processing: VPC Peerings---"
-    local networks_data
-    if ! networks_data=$(gcloud compute networks list --project="$PROJECT_ID" --format="value(name)"); then
-        log "ERROR" "Failed to list networks."
-        ((ERROR_COUNT++)) || true
-        return 0
-    fi
-    if [[ -z "$networks_data" ]]; then log "INFO" "No networks found in project."; return 0; fi
-
-    local count=0
-    while IFS=$'\t' read -r net_name; do
-        if [[ -z "$net_name" ]]; then continue; fi
-
-        if [[ -n "${EXCLUSION_MAP[${net_name}]:-}" ]]; then
-            log "SKIP" "VPC Peerings for Network $net_name (Protected)"
-            continue
-        fi
-
-        local peerings_data
-        if ! peerings_data=$(gcloud compute networks peerings list --network="$net_name" --project="$PROJECT_ID" --format="value(name,network,state)"); then
-            log "WARNING" "Failed to list peerings for network $net_name"
-            continue
-        fi
-
-        if [[ -z "$peerings_data" ]]; then continue; fi
-
-        while IFS=$'\t' read -r peering_name peer_network state; do
-            if [[ -z "$peering_name" ]]; then continue; fi
-
-            if ! is_excluded "$peering_name"; then
-                if [[ "$peering_name" == "servicenetworking-googleapis-com" ]]; then
-                    execute_delete "Service Peering" "$peering_name" \
-                        "gcloud services vpc-peerings delete --service=servicenetworking.googleapis.com --network=\"$net_name\" --project=\"$PROJECT_ID\" --quiet" \
-                        "(Network: $net_name)"
-                    ((count++)) || true
-                elif [[ "$peering_name" == filestore-peer-* ]]; then continue;
-                elif [[ "$peer_network" == *"/global/networks/servicenetworking" ]]; then continue;
-                else
-                    execute_delete "VPC Peering" "$peering_name" \
-                       "gcloud compute networks peerings delete \"$peering_name\" --network=\"$net_name\" --project=\"$PROJECT_ID\" --quiet" \
-                       "(Network: $net_name, State: $state)"
-                    ((count++)) || true
-                fi
-            fi
-        done <<< "$peerings_data"
-    done <<< "$networks_data"
-    log "INFO" "Finished processing VPC Peerings. $count peerings actioned."
 }
 
 process_iam_deleted_members() {
@@ -713,10 +735,11 @@ main() {
     # --- Phase 2: Images & Artifacts ---
     process_vm_images
     process_docker_images
+    # process_instance_templates
 
     # --- Phase 3: Network Infrastructure ---
     process_routers
-    # process_firewalls # Called in process_networks for dependencies
+    process_firewalls
     process_addresses
     process_resources "Zonal Disk" \
         "gcloud compute disks list --project=\"$PROJECT_ID\" --filter=\"creationTimestamp < '$CUTOFF_TIME' AND zone:*\" --format=\"value(name,zone.basename(),labels.map())\" | sort" \
