@@ -136,9 +136,39 @@ execute_delete() {
     fi
 }
 
+# Helper function to add network/subnetwork to exclusion lists
+_protect_network_resources() {
+    local source_resource_type="$1"
+    local source_resource_name="$2"
+    local net_url="$3"
+    local sub_url="$4"
+
+    # Protect Network
+    if [[ -n "$net_url" && "$net_url" != "None" ]]; then
+         local net_name=$(basename "${net_url}")
+         if [[ -n "${net_name}" && -z "${EXCLUSION_MAP[${net_name}]:-}" ]]; then
+            log "INFO" "    > Excluding Network (for ${source_resource_type} ${source_resource_name}): ${net_name}"
+            EXCLUSION_MAP["${net_name}"]=1
+         fi
+         # Store the full network URI for Filestore matching
+         log "DEBUG" "Adding protected network URI (for ${source_resource_type} ${source_resource_name}): ${net_url}"
+         PROTECTED_NETWORK_URIS["${net_url}"]=1
+    fi
+
+    # Protect Subnetwork
+    if [[ -n "$sub_url" && "$sub_url" != "None" ]]; then
+         local sub_name=$(basename "${sub_url}")
+         if [[ -n "${sub_name}" && -z "${EXCLUSION_MAP[${sub_name}]:-}" ]]; then
+                 log "INFO" "    > Excluding Subnetwork (for ${source_resource_type} ${source_resource_name}): ${sub_name}"
+                 EXCLUSION_MAP["${sub_name}"]=1
+         fi
+    fi
+}
+
 populate_protected_resources() {
     log "INFO" "Identifying protected resources..."
     declare -A INSTANCES_TO_PROTECT # Map instance_name -> zone
+    declare -A TPUS_TO_PROTECT # Map tpu_name -> zone
 
     # Part 1: Instances and Templates from EXCLUDED GKE clusters
     log "INFO" "Checking for instances in EXCLUDED GKE clusters..."
@@ -232,25 +262,24 @@ populate_protected_resources() {
         done <<< "$clusters_data"
     fi
 
-    # Part 2: Instances protected via direct labels
-    log "INFO" "Checking for instances with cleanup-exemption-date label..."
-    local labeled_instances_data
-    if ! labeled_instances_data=$(gcloud compute instances list \
+    # Part 2: Instances protected via direct labels or name
+    log "INFO" "Checking for instances to protect..."
+    local instances_data
+    if ! instances_data=$(gcloud compute instances list \
         --project="$PROJECT_ID" \
-        --filter="labels.cleanup-exemption-date:*" \
         --format="value(name,zone.basename(),labels.map())"); then
-        log "ERROR" "Failed to list instances with cleanup-exemption-date label."
+        log "ERROR" "Failed to list instances."
         ((ERROR_COUNT++)) || true
     else
         while IFS=$'\t' read -r inst_name zone labels_str; do
             if is_excluded "$inst_name" "$labels_str"; then # Returns 0 if excluded
                 if ! [[ -v EXCLUSION_MAP["$inst_name"] ]]; then
-                    log "INFO" "  > Protecting Instance (from Label): ${inst_name} in ${zone}"
+                    log "INFO" "  > Protecting Instance: ${inst_name} in ${zone}"
                     EXCLUSION_MAP["${inst_name}"]=1
                 fi
                 INSTANCES_TO_PROTECT["${inst_name}"]="${zone}"
             fi
-        done <<< "$labeled_instances_data"
+        done <<< "$instances_data"
     fi
 
     # Part 3: Protect resources associated with the collected instances
@@ -299,30 +328,12 @@ populate_protected_resources() {
                 fi
             done
 
-            # Protect Network & Subnetwork
+            # Refactored Network & Subnetwork Protection
             IFS=';' read -ra net_urls <<< "$nets_list"
-            for net_url in "${net_urls[@]}"; do
-                 [[ -z "$net_url" ]] && continue
-                 local net_name=$(basename "${net_url}")
-                 if [[ -n "${net_name}" && -z "${EXCLUSION_MAP[${net_name}]:-}" ]]; then
-                    log "INFO" "    > Excluding Network (for ${inst_name}): ${net_name}"
-                    EXCLUSION_MAP["${net_name}"]=1
-                 fi
-                 # Store the full network URI for Filestore matching
-                 if [[ -n "${net_url}" ]]; then
-                    log "DEBUG" "Adding protected network URI: ${net_url}"
-                    PROTECTED_NETWORK_URIS["${net_url}"]=1
-                 fi
-            done
-
             IFS=';' read -ra sub_urls <<< "$subs_list"
-            for sub_url in "${sub_urls[@]}"; do
-                 [[ -z "$sub_url" ]] && continue
-                 local sub_name=$(basename "${sub_url}")
-                 if [[ -n "${sub_name}" && -z "${EXCLUSION_MAP[${sub_name}]:-}" ]]; then
-                         log "INFO" "    > Excluding Subnetwork (for ${inst_name}): ${sub_name}"
-                         EXCLUSION_MAP["${sub_name}"]=1
-                 fi
+            # Assuming the number of networks and subnetworks in the arrays match order
+            for i in "${!net_urls[@]}"; do
+                 _protect_network_resources "Instance" "$inst_name" "${net_urls[$i]:-}" "${sub_urls[$i]:-}"
             done
 
             # Collect IPs to protect Addresses later
@@ -331,7 +342,46 @@ populate_protected_resources() {
         done
     fi
 
-    # Part 4: Find Address resource names for the PROTECTED_IPS
+    # Part 4: TPU VMs protected via direct labels or name
+    log "INFO" "Checking for TPU VMs to protect..."
+    local tpus_data
+    if ! tpus_data=$(gcloud compute tpus tpu-vm list \
+        --project="$PROJECT_ID" \
+        --format="value(name,zone.basename(),labels.map())"); then
+        log "ERROR" "Failed to list TPU VMs."
+        ((ERROR_COUNT++)) || true
+    else
+        while IFS=$'\t' read -r tpu_name zone labels_str; do
+            if is_excluded "$tpu_name" "$labels_str"; then # Returns 0 if excluded
+                if ! [[ -v EXCLUSION_MAP["$tpu_name"] ]]; then
+                    log "INFO" "  > Protecting TPU VM: ${tpu_name} in ${zone}"
+                    EXCLUSION_MAP["${tpu_name}"]=1
+                fi
+                TPUS_TO_PROTECT["${tpu_name}"]="${zone}"
+            fi
+        done <<< "$tpus_data"
+    fi
+
+    # Part 5: Protect resources associated with the collected TPU VMs
+    if ((${#TPUS_TO_PROTECT[@]} > 0)); then
+        log "INFO" "Protecting sub-resources of ${#TPUS_TO_PROTECT[@]} TPU VMs..."
+        for tpu_name in "${!TPUS_TO_PROTECT[@]}"; do
+            local zone="${TPUS_TO_PROTECT[$tpu_name]}"
+            log "DEBUG" "Fetching details for protected TPU VM: ${tpu_name} in ${zone}"
+            local tpu_details
+            if ! tpu_details=$(gcloud compute tpus tpu-vm describe "${tpu_name}" --zone="${zone}" --project="${PROJECT_ID}" \
+                --format="value(networkEndpoints[0].network,networkEndpoints[0].subnetwork)"); then
+                log "WARNING" "Failed to describe protected TPU VM ${tpu_name} in ${zone}. Sub-resources might not be protected."
+                continue
+            fi
+
+            local net_url sub_url
+            IFS=$'\t' read -r net_url sub_url <<< "$tpu_details"
+            _protect_network_resources "TPU" "$tpu_name" "$net_url" "$sub_url"
+        done
+    fi
+
+    # Part 6: Find Address resource names for the PROTECTED_IPS
     if ((${#PROTECTED_IPS[@]} > 0)); then
         log "INFO" "Finding Address resource names for protected IPs..."
         local addresses_data
@@ -526,32 +576,21 @@ process_vm_images() {
     log "INFO" "--- Processing: VM Images ---"
     local images
     if ! images=$(gcloud compute images list --project="$PROJECT_ID" --no-standard-images \
+        --filter="creationTimestamp < '$CUTOFF_TIME_IMAGES'" \
         --format="value(name,creationTimestamp,labels.map())"); then
         log "ERROR" "Failed to list VM images"
         ((ERROR_COUNT++)) || true
         return 0
     fi
-    if [[ -z "$images" ]]; then log "INFO" "No custom VM images found."; return 0; fi
-    local cutoff_seconds
-    if ! cutoff_seconds=$(date -d "$CUTOFF_TIME_IMAGES" +%s); then
-        log "ERROR" "Failed to calculate cutoff time for images"
-        ((ERROR_COUNT++)) || true
-        return 0
-    fi
+    if [[ -z "$images" ]]; then log "INFO" "No custom VM images found matching criteria."; return 0; fi
+
     local count=0
     while IFS=$'\t' read -r name timestamp labels_str; do
         [[ -z "$name" ]] && continue
         if ! is_excluded "$name" "${labels_str:-}"; then
-            local ts_seconds
-            if ! ts_seconds=$(date -d "$timestamp" +%s 2>/dev/null); then
-                log "WARNING" "Could not parse timestamp '$timestamp' for image $name. Skipping."
-                continue
-            fi
-            if [[ $ts_seconds -lt $cutoff_seconds ]]; then
-                 execute_delete "VM Image" "$name" \
-                    "gcloud compute images delete \"$name\" --project=\"$PROJECT_ID\" --quiet"
-                 ((count++)) || true
-            fi
+             execute_delete "VM Image" "$name" \
+                "gcloud compute images delete \"$name\" --project=\"$PROJECT_ID\" --quiet"
+             ((count++)) || true
         fi
     done <<< "$images"
 }
@@ -807,13 +846,15 @@ main() {
     log_protected_network_uris # Log the protected network URIs
     log_exclusion_map # Log the map contents
 
-    # --- Phase 1: High Level Resources ---
+    # --- Phase 1: High Level Compute Resources ---
     process_resources "GKE Cluster" \
         "gcloud container clusters list --project=\"$PROJECT_ID\" --filter=\"createTime < '$CUTOFF_TIME'\" --format=\"value(name,location,resourceLabels.map())\" | sort" \
         "gcloud container clusters delete --project=\"$PROJECT_ID\"" "location"
-    process_resources "Instance Template" \
-        "gcloud compute instance-templates list --project=\"$PROJECT_ID\" --filter=\"creationTimestamp < '$CUTOFF_TIME'\" --format=\"value(name, 'Global', labels.map())\" | sort" \
-        "gcloud compute instance-templates delete --project=\"$PROJECT_ID\""
+
+    process_resources "TPU VM" \
+        "gcloud compute tpus tpu-vm list --project=\"$PROJECT_ID\" --filter=\"createTime < '$CUTOFF_TIME'\" --format=\"value(name,zone.basename(),labels.map())\" | sort" \
+        "gcloud compute tpus tpu-vm delete --project=\"$PROJECT_ID\"" "zone"
+
     process_resources "Compute Instance" \
         "gcloud compute instances list --project=\"$PROJECT_ID\" --filter=\"creationTimestamp < '$CUTOFF_TIME'\" --format=\"value(name,zone.basename(),labels.map())\" | sort" \
         "gcloud compute instances delete --project=\"$PROJECT_ID\" --delete-disks=all" "zone"
@@ -822,7 +863,7 @@ main() {
     # --- Phase 2: Images & Artifacts ---
     process_vm_images
     process_docker_images
-    # process_instance_templates
+    process_instance_templates
 
     # --- Phase 3: Network Infrastructure ---
     process_routers
