@@ -20,19 +20,18 @@ steps:
   env:
   - "BUILD_ID=${BUILD_ID}"
   - "PROJECT_ID=${PROJECT_ID}"
-  - "DRY_RUN=true"
+  - "DRY_RUN=false"
   - "EXCLUSION_FILE=gs://hpc-ctk1357/cleanup/exclusions.txt"
   args:
   - -c
   - |
     set -euo pipefail
-
     # Set time variables
     export CUTOFF_TIME=$(date -d '2 hours ago' -u +%Y-%m-%dT%H:%M:%S%z)
     export CUTOFF_TIME_IMAGES=$(date -d "60 days ago" -u +%Y-%m-%dT%H:%M:%S%z)
 
     attempt=1
-    max_retries=5
+    max_retries=3
 
     while [ "$attempt" -le "$max_retries" ]; do
         echo "--- Execution Attempt ${attempt} of ${max_retries} ---"
