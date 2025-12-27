@@ -11,13 +11,6 @@ declare -A PROTECTED_IPS
 # To store Network URIs used by protected instances
 declare -A PROTECTED_NETWORK_URIS
 
-# Environment Variables expected from Cloud Build
-PROJECT_ID="${PROJECT_ID:-hpc-toolkit-dev}"
-DRY_RUN="${DRY_RUN:-true}"
-EXCLUSION_FILE="${EXCLUSION_FILE:-gs://hpc-ctk1357/cleanup/exclusions.txt}"
-CUTOFF_TIME="${CUTOFF_TIME:-$(date -d '2 hours ago' -u +%Y-%m-%dT%H:%M:%S%z)}"
-CUTOFF_TIME_IMAGES="${CUTOFF_TIME_IMAGES:-$(date -d "60 days ago" -u +%Y-%m-%dT%H:%M:%S%z)}"
-
 # HELPER FUNCTIONS
 
 log() {
@@ -72,7 +65,7 @@ load_exclusions() {
 }
 
 
-# Returns 0 if EXCLUDED (do NOT delete)
+# Returns 0 if EXCLUDED (DO NOT delete)
 # Returns 1 if NOT excluded (OK to delete)
 is_excluded() {
     local resource_name="$1"
@@ -179,7 +172,7 @@ populate_protected_resources() {
     else
         while IFS=$'\t' read -r cluster_name location labels_str; do
             if ! is_excluded "$cluster_name" "$labels_str"; then # Returns 1 if NOT excluded
-                 continue
+                continue
             fi
 
             log "INFO" "GKE Cluster ${cluster_name} in ${location} is PROTECTED."
@@ -965,7 +958,7 @@ main() {
 
     # --- Phase 3: Network Infrastructure ---
     process_routers
-    process_firewalls
+    # process_firewalls
     process_addresses
     process_resources "Zonal Disk" \
         "gcloud compute disks list --project=\"$PROJECT_ID\" --filter=\"creationTimestamp < '$CUTOFF_TIME' AND zone:*\" --format=\"csv[no-heading](name,zone.basename(),labels.map())\" | sort" \

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 ---
-
+timeout: 28800s
 steps:
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: /bin/bash
