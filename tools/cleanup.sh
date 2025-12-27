@@ -721,38 +721,6 @@ process_docker_images() {
     done <<< "$images_output"
 }
 
-process_firewalls() {
-    log "INFO" "--- Processing: Firewall Rules ---"
-    local fws
-    if ! fws=$(gcloud compute firewall-rules list --project="$PROJECT_ID" \
-        --filter="creationTimestamp < '$CUTOFF_TIME'" \
-        --format="value(name,network,labels.map())" | sort); then
-        log "ERROR" "Failed to list firewall rules"
-        ((ERROR_COUNT++)) || true
-        return 0
-    fi
-    if [[ -z "$fws" ]]; then log "INFO" "No Firewall Rules found matching criteria."; return 0; fi
-
-    local count=0
-    while IFS=$'\t' read -r name network_uri labels_str; do
-        [[ -z "$name" ]] && continue
-        local network_name
-        network_name=$(basename "$network_uri")
-        if [[ "$network_name" == "default" ]]; then continue; fi
-
-        if [[ -n "${EXCLUSION_MAP[${network_name}]:-}" ]]; then
-            log "SKIP" "Firewall Rule $name - Network $network_name is protected."
-            continue
-        fi
-
-        if ! is_excluded "$name" "${labels_str:-}"; then
-            execute_delete "Firewall Rule" "$name" \
-                "gcloud compute firewall-rules delete \"$name\" --project=\"$PROJECT_ID\" --quiet"
-            ((count++)) || true
-        fi
-    done <<< "$fws"
-}
-
 process_filestore() {
     log "INFO" "--- Processing: Filestore Instances ---"
     local fs_data
@@ -958,7 +926,6 @@ main() {
 
     # --- Phase 3: Network Infrastructure ---
     process_routers
-    # process_firewalls
     process_addresses
     process_resources "Zonal Disk" \
         "gcloud compute disks list --project=\"$PROJECT_ID\" --filter=\"creationTimestamp < '$CUTOFF_TIME' AND zone:*\" --format=\"csv[no-heading](name,zone.basename(),labels.map())\" | sort" \
