@@ -21,7 +21,7 @@ steps:
   - "BUILD_ID=${BUILD_ID}"
   - "PROJECT_ID=${PROJECT_ID}"
   - "DRY_RUN=false"
-  - "EXCLUSION_FILE=gs://hpc-ctk1357/cleanup/exclusions.txt"
+  - "EXCLUSION_FILE=gs://hpc-ctk1357/cleanup/${PROJECT_ID}-exclusions.txt"
   args:
   - -c
   - |
