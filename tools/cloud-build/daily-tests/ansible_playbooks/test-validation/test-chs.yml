@@ -111,6 +111,68 @@
       loop_control:
         label: "{{ item.item }}"
 
+    - name: Validate CHS Bill of Health JSON report for non-success results
+      ansible.builtin.shell: |
+        python3 -c '
+        import json, glob, sys, os, subprocess
+
+        paths = set(
+            glob.glob("./*.json") +
+            glob.glob("./results/*.json") +
+            glob.glob("{{ chs_temp_dir.path }}/**/*.json", recursive=True) +
+            glob.glob(os.path.expanduser("~/.chs/**/*.json"), recursive=True) +
+            glob.glob("/tmp/**/*.json", recursive=True)
+        )
+
+        failures = []
+        found_reports = 0
+
+        def check_data(data):
+            nonlocal found_reports
+            if isinstance(data, dict) and "test_results" in data:
+                found_reports += 1
+                for tr in data.get("test_results", []):
+                    name = tr.get("test_name", "unknown")
+                    level = tr.get("test_level", "")
+                    status = tr.get("result_status")
+                    if status and status != "RESULT_STATUS_SUCCESS":
+                        failures.append(f"{name} ({level}): {status}")
+                    for m in tr.get("metrics", []):
+                        vc = m.get("validation_criteria", {})
+                        vc_status = vc.get("result_status")
+                        if vc_status and vc_status != "RESULT_STATUS_SUCCESS":
+                            k = m.get("key")
+                            failures.append(f"{name} ({level}) metric '\''{k}'\'': {vc_status}")
+
+        for p in paths:
+            try:
+                with open(p) as f:
+                    data = json.load(f)
+                check_data(data)
+            except Exception:
+                pass
+
+        if found_reports == 0:
+            try:
+                latest_obj = subprocess.check_output(
+                    ["gcloud", "storage", "ls", "gs://chs-results/bills_of_health/*.json"],
+                    stderr=subprocess.DEVNULL
+                ).decode().strip().splitlines()[-1]
+                raw = subprocess.check_output(["gcloud", "storage", "cat", latest_obj], stderr=subprocess.DEVNULL)
+                check_data(json.loads(raw))
+            except Exception:
+                pass
+
+        if failures:
+            print("ERROR: CHS Bill of Health contains non-success test result(s):")
+            for f in sorted(set(failures)):
+                print(f"  - {f}")
+            sys.exit(1)
+
+        print(f"CHS Bill of Health validation passed ({found_reports} report(s) checked, 0 failures).")
+        '
+      changed_when: false
+
   rescue:
   - name: CHS Test Failure
     ansible.builtin.debug:
